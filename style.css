@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "Karla";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/karla/Karla-VariableFont_wght.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Fira Code";
+  font-style: normal;
+  font-weight: 400;
+  src: url("assets/fonts/fira_code/FiraCode-VariableFont_wght.ttf");
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla";
+  color: #d9d9d9;
+}
+
+body {
+  background-color: #1c1c1c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 128px;
+  font-weight: 700;
+}
+
+h2 {
+  font-family: "Fira Code";
+  font-size: 40px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  padding: 0;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(255, 255, 255, 0.3);
+}
+
+.home-section {
+  background-image: linear-gradient(45deg, #1c1c1c, #08463b);
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title-buttons-container {
+  display: flex;
+  width: 363px;
+  gap: 48px;
+  padding-top: 40px;
+}
+
+.home-button {
+  background-color: transparent;
+  color: #d9d9d9;
+  font-size: 18px;
+  width: 172px;
+  height: 48px;
+  border: 1px solid #ffffff;
+  border-radius: 24px;
+}
+
+.navbar {
+  font-family: "Fira Code";
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  left: 112px;
+  right: 112px;
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 409px;
+  text-decoration: none;
+  list-style: none;
+}
+
+.nav-links a:hover {
+  cursor: pointer;
+  border-bottom: 3px dotted #ffffff;
+}
+
+.navbar-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 32px;
+}
+
+.aboutme-section {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  padding: 112px;
+  width: 100%;
+  max-width: 1232px;
+}
+
+.aboutme-part {
+  flex: 1;
+  max-width: 568px;
+  height: auto;
+  max-height: 568px;
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.aboutme-image-container {
+  align-self: flex-start;
+  justify-self: flex-start;
+  border: 1px solid #d9d9d9;
+}
+
+.aboutme-text-container {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-self: flex-end;
+  border: 1px solid #d9d9d9;
+  background-color: #3dcfb61a;
+}
+
+.aboutme-text-container .aboutme-intro {
+  position: relative;
+  top: -60px;
+}

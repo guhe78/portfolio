@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Günter Heldt Portfolio</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <navbar class="navbar">
+      <ul class="nav-links">
+        <a href="#aboutme">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </ul>
+      <div class="navbar-name"><span>Günter</span> <span>Heldt</span></div>
+    </navbar>
+    <section id="home" class="home-section">
+      <h2 class="home-title">Frontend Developer</h2>
+      <h1 class="home-name">Günter Heldt</h1>
+      <div class="title-buttons-container">
+        <button class="home-button" onclick="scrollToSection('projects')">View Projects</button>
+        <button class="home-button" onclick="scrollToSection('contact')">Contact Me</button>
+      </div>
+    </section>
+    <section id="aboutme" class="aboutme-section">
+      <div class="aboutme-image-container aboutme-part aboutme-left-part">
+        <img src="assets/profile.jpg" alt="Günter Heldt" class="aboutme-image" />
+      </div>
+      <div class="aboutme-text-container aboutme-part">
+        <p class="aboutme-intro">Über mich</p>
+        <h2>Wer bin ich</h2>
+        <p>
+          I am a passionate frontend developer with a strong background in creating engaging and
+          user-friendly web applications. With experience in HTML, CSS, JavaScript, and modern
+          frameworks like React, I strive to build seamless and responsive interfaces that provide
+          an exceptional user experience.
+        </p>
+      </div>
+    </section>
+    <section id="skills" class="skills-section">
+      <h2>Skills</h2>
+      <div class="skills-container">
+        <div class="skill-item">
+          <h3>HTML</h3>
+          <p>Proficient in semantic HTML5 and accessibility best practices.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
