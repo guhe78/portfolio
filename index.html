@@ -35,7 +35,6 @@
         <a href="#aboutme">About Me</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
       </ul>
       <div class="navbar-name"><span>Günter</span> <span>Heldt</span></div>
     </navbar>
@@ -51,8 +50,8 @@
       <div class="aboutme-image-container aboutme-part aboutme-left-part">
         <img src="assets/profile.jpg" alt="Günter Heldt" class="aboutme-image" />
       </div>
-      <div class="aboutme-text-container aboutme-part">
-        <p class="aboutme-intro">Über mich</p>
+      <div class="aboutme-text-container text-border-container">
+        <p class="textcontainer-intro">Über mich</p>
         <h2>Wer bin ich</h2>
         <p>
           I am a passionate frontend developer with a strong background in creating engaging and
@@ -63,13 +62,93 @@
       </div>
     </section>
     <section id="skills" class="skills-section">
-      <h2>Skills</h2>
-      <div class="skills-container">
-        <div class="skill-item">
-          <h3>HTML</h3>
-          <p>Proficient in semantic HTML5 and accessibility best practices.</p>
+      <div class="skillset-container">
+        <div class="skill-item text-border-container">
+          <p class="textcontainer-intro">Technologies</p>
+          <h2>Skills</h2>
+          <p>
+            A short introduction of your skills. Highlight your experience of using different
+            front-end technologies and emphasise your openness to learning and adapting to new
+            technologies. Show how important it is for you to keep up with the rapid changes in web
+            development.
+          </p>
+          <h3>You need another skill?</h3>
+          <p>
+            No problem! I am always eager to learn new technologies and expand my skill set. If
+            there is a specific skill you are looking for, please let me know, and I will be more
+            than happy to acquire it to meet your project requirements.
+          </p>
         </div>
       </div>
+      <div class="skill-badges-container">
+        <div class="skill-item"></div>
+      </div>
     </section>
+    <section id="portfolio" class="portfolio-section">
+      <div class="portfolio-item">
+        <p>Portfolio</p>
+        <h2>Featured Projects</h2>
+        <p>
+          Explore a selection of my work here - Interact with projects to see my skills in action.
+        </p>
+        <table class="portfolio-table">
+          <tr>
+            <th>Join</th>
+            <td>HTML, CSS, JavaScript</td>
+          </tr>
+          <tr>
+            <th>Sharkie</th>
+            <td>HTML, CSS, JavaScript</td>
+          </tr>
+          <tr>
+            <th>Pokedex</th>
+            <td>HTML, CSS, JavaScript</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section id="contact" class="contact-section">
+      <div class="contact-item contact-left-part">
+        <p>Contact me</p>
+        <h2>Let's work together</h2>
+        <h3>Got a problem to solve?</h3>
+        <p>
+          Encourage people to contact you and describe what role you are interested in. Show that
+          you will add value to their projects through your work. Need a Frontend developer? Let’s
+          talk!
+        </p>
+      </div>
+      <div class="contact-item contact-right-part">
+        <form class="contact-form">
+          <div class="seperator"></div>
+          <label for="name">What's your name?</label>
+          <input type="text" id="name" name="name" required />
+          <div class="seperator"></div>
+          <label for="email">What's your email?</label>
+          <input type="email" id="email" name="email" required />
+          <div class="seperator"></div>
+          <label for="message">How can I help you?</label>
+          <textarea id="message" name="message" required></textarea>
+          <div class="seperator"></div>
+          <label for="privacy">
+            <input type="checkbox" id="privacy" name="privacy" required />
+            I've read the privacy policy and agree to the processing of my data as outlined.</label
+          >
+          <button type="button">Say hello ;)</button>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div>
+        <p>Web Developer</p>
+        <p>Füssen Germany</p>
+      </div>
+      <p>&copy; Günter Heldt 2024</p>
+      <ul class="social-links">
+        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        <a href="mailto:your.email@example.com">Email</a>
+        <a href="#legal-notice">Legal Notice</a>
+      </ul>
+    </footer>
   </body>
 </html>
