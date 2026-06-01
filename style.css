@@ -9,7 +9,6 @@
 @font-face {
   font-family: "Fira Code";
   font-style: normal;
-  font-weight: 400;
   src: url("assets/fonts/fira_code/FiraCode-VariableFont_wght.ttf");
   font-display: swap;
 }
@@ -17,7 +16,6 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Karla";
   color: #d9d9d9;
 }
 
@@ -26,6 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Fira Code";
 }
 
 section {
@@ -33,6 +32,7 @@ section {
 }
 
 h1 {
+  font-family: "Karla";
   font-size: 128px;
   font-weight: 700;
 }
@@ -40,7 +40,10 @@ h1 {
 h2 {
   font-family: "Fira Code";
   font-size: 40px;
-  font-weight: 400;
+  font-weight: 700;
+}
+
+h4 {
 }
 
 a {
@@ -74,6 +77,11 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.home-title {
+  font-family: "Fira Code";
+  font-size: 40px;
 }
 
 .title-buttons-container {
@@ -168,6 +176,10 @@ button:hover {
   border-collapse: collapse;
 }
 
+.portfolio-table tr {
+  width: 750px;
+}
+
 .portfolio-table th,
 td {
   border-top: 1px solid #d9d9d9;
@@ -192,6 +204,7 @@ td {
 
 .contact-form input,
 textarea {
+  font-size: 18px;
   background-color: transparent;
   border: none;
 }
@@ -201,8 +214,42 @@ textarea {
   width: 100%;
 }
 
+p.font-bold {
+  font-weight: bold;
+}
+
+.text-side-by-side {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px;
+}
+
 footer {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  position: relative;
+}
+
+footer li::after {
+  content: "•";
+  position: absolute;
+  left: 0%;
+  transform: translateX(-50%);
+  left: -6px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+footer li:hover::after {
+  opacity: 1;
 }
