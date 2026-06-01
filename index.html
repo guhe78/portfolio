@@ -30,16 +30,16 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <navbar class="navbar">
+    <nav class="navbar">
       <ul class="nav-links">
-        <a href="#aboutme">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
       </ul>
       <div class="navbar-name"><span>Günter</span> <span>Heldt</span></div>
-    </navbar>
+    </nav>
     <section id="home" class="home-section">
-      <h2 class="home-title">Frontend Developer</h2>
+      <p class="home-title">Frontend Developer</p>
       <h1 class="home-name">Günter Heldt</h1>
       <div class="title-buttons-container">
         <button class="home-button" onclick="scrollToSection('projects')">View Projects</button>
@@ -91,20 +91,21 @@
         <p>
           Explore a selection of my work here - Interact with projects to see my skills in action.
         </p>
-        <table class="portfolio-table">
-          <tr>
-            <th>Join</th>
-            <td>HTML, CSS, JavaScript</td>
-          </tr>
-          <tr>
-            <th>Sharkie</th>
-            <td>HTML, CSS, JavaScript</td>
-          </tr>
-          <tr>
-            <th>Pokedex</th>
-            <td>HTML, CSS, JavaScript</td>
-          </tr>
-        </table>
+        <div class="portfolio-table">
+          <div class="seperator text-side-by-side">
+            <p class="font-bold">Join</p>
+            <p>HTML | CSS | JavaScript | Firebase</p>
+          </div>
+          <div class="seperator text-side-by-side">
+            <p class="font-bold">Sharkie</p>
+            <p>HTML | CSS | JavaScript</p>
+          </div>
+          <div class="seperator text-side-by-side">
+            <p class="font-bold">Pokedex</p>
+            <p>HTML | CSS | JavaScript</p>
+          </div>
+          <div class="seperator"></div>
+        </div>
       </div>
     </section>
     <section id="contact" class="contact-section">
@@ -119,7 +120,7 @@
         </p>
       </div>
       <div class="contact-item contact-right-part">
-        <form class="contact-form">
+        <div class="contact-form">
           <div class="seperator"></div>
           <label for="name">What's your name?</label>
           <input type="text" id="name" name="name" required />
@@ -135,7 +136,7 @@
             I've read the privacy policy and agree to the processing of my data as outlined.</label
           >
           <button type="button">Say hello ;)</button>
-        </form>
+        </div>
       </div>
     </section>
     <footer class="footer">
@@ -145,9 +146,9 @@
       </div>
       <p>&copy; Günter Heldt 2024</p>
       <ul class="social-links">
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a>
-        <a href="mailto:your.email@example.com">Email</a>
-        <a href="#legal-notice">Legal Notice</a>
+        <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+        <li><a href="mailto:your.email@example.com">Email</a></li>
+        <li><a href="#legal-notice">Legal Notice</a></li>
       </ul>
     </footer>
   </body>
