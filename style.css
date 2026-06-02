@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Karla";
   font-style: normal;
-  font-weight: 400;
   src: url("assets/fonts/karla/Karla-VariableFont_wght.ttf");
   font-display: swap;
 }
@@ -28,22 +27,40 @@ body {
 }
 
 section {
-  padding: 112px;
+  max-width: 1920px;
+  padding: clamp(48px, 6vw, 112px);
 }
 
 h1 {
   font-family: "Karla";
-  font-size: 128px;
+  font-size: clamp(2.5rem, 7vw, 8rem);
   font-weight: 700;
+  line-height: 1.1;
 }
 
 h2 {
   font-family: "Fira Code";
-  font-size: 40px;
-  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 h4 {
+  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  line-height: 1.2;
 }
 
 a {
@@ -81,7 +98,7 @@ button:hover {
 
 .home-title {
   font-family: "Fira Code";
-  font-size: 40px;
+  font-size: clamp(1.5rem, 3vw, 3rem);
 }
 
 .title-buttons-container {
@@ -99,10 +116,8 @@ button:hover {
   font-family: "Fira Code";
   background-color: transparent;
   position: absolute;
-  top: 0;
-  left: 112px;
-  right: 112px;
-  height: 96px;
+  width: 100%;
+  padding: 0 112px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -124,16 +139,54 @@ button:hover {
   font-size: 32px;
 }
 
+.info-strip {
+  transform: rotate(-3deg);
+  position: absolute;
+  bottom: 32px;
+
+  padding: 12px 32px;
+
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.12);
+
+  overflow: hidden;
+  width: 100%;
+}
+
+.info-track {
+  display: flex;
+  gap: 2rem;
+  width: fit-content;
+
+  animation: scroll-left 20s linear infinite;
+}
+
+.info-item {
+  flex-shrink: 0;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 2rem));
+  }
+}
+
 .aboutme-section {
   display: flex;
   justify-content: center;
   gap: 32px;
   width: 100%;
   max-width: 1232px;
+  flex-wrap: wrap;
 }
 
 .aboutme-part {
-  flex: 1;
+  flex: 1 1 300px;
   max-width: 568px;
   height: auto;
   max-height: 568px;
@@ -145,6 +198,35 @@ button:hover {
   align-self: flex-start;
   justify-self: flex-start;
   border: 1px solid #d9d9d9;
+  width: clamp(300px, 50vw, 600px);
+}
+
+.aboutme-text-container {
+  width: clamp(300px, 50vw, 600px);
+}
+
+.skills-section {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+}
+
+.skillset-container {
+  flex: 1;
+}
+
+.skill-badges-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+
+  padding: 10px 14px;
 }
 
 .text-border-container {
@@ -156,6 +238,7 @@ button:hover {
   background-color: #3dcfb61a;
   border-radius: 30px;
   padding: 30px;
+  width: clamp(300px, 50vw, 600px);
 }
 
 .textcontainer-intro {
@@ -167,18 +250,33 @@ button:hover {
   align-self: flex-start;
 }
 
-.portfolio-table {
-  border-collapse: collapse;
+.portfolio-head {
+  width: 450px;
 }
 
-.portfolio-table tr {
-  width: 750px;
+.project-list {
+  list-style: none;
+  padding: 0;
+  padding-top: 24px;
+  width: clamp(320px, 40vw, 1200px);
 }
 
-.portfolio-table th,
-td {
+.project-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 24px 0;
   border-top: 1px solid #d9d9d9;
+}
+
+.project-row:last-child {
   border-bottom: 1px solid #d9d9d9;
+}
+
+.project-name {
+  font-weight: bold;
+  font-size: 1.25rem;
 }
 
 .contact-section {
@@ -224,6 +322,8 @@ footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 footer ul {
