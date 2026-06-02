@@ -117,11 +117,6 @@ button:hover {
   list-style: none;
 }
 
-.nav-links a:hover {
-  cursor: pointer;
-  border-bottom: 3px dotted #ffffff;
-}
-
 .navbar-name {
   display: flex;
   flex-direction: column;
@@ -235,21 +230,34 @@ footer ul {
   list-style: none;
 }
 
+nav li,
 footer li {
   position: relative;
 }
 
+nav li::after,
 footer li::after {
+  font-size: 24px;
   content: "•";
   position: absolute;
-  left: 0%;
-  transform: translateX(-50%);
-  left: -6px;
 
   opacity: 0;
   transition: opacity 0.3s;
 }
 
+nav li:hover::after,
 footer li:hover::after {
   opacity: 1;
+}
+
+nav li::after {
+  left: 50%;
+  bottom: -24px;
+  transform: translateX(-50%);
+}
+
+footer li::after {
+  left: -16px;
+  top: 50%;
+  transform: translateY(-50%);
 }
