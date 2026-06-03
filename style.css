@@ -12,6 +12,10 @@
   font-display: swap;
 }
 
+:root {
+  --section-width: 1920px;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -27,7 +31,9 @@ body {
 }
 
 section {
-  max-width: 1920px;
+  max-width: var(--section-width);
+  width: 100%;
+
   padding: clamp(48px, 6vw, 112px);
 }
 
@@ -92,7 +98,6 @@ button:hover {
 
 .home-section {
   background-image: linear-gradient(45deg, #1c1c1c, #08463b);
-  width: 100%;
   height: 100vh;
 
   display: flex;
@@ -175,14 +180,9 @@ button:hover {
   display: flex;
   justify-content: center;
   gap: 32px;
-  width: 100%;
-  max-width: 1232px;
-  flex-wrap: wrap;
 }
 
 .aboutme-part {
-  flex: 1 1 300px;
-  max-width: 568px;
   height: auto;
   max-height: 568px;
   border-radius: 30px;
@@ -198,19 +198,23 @@ button:hover {
 
 .aboutme-text-container {
   width: clamp(300px, 50vw, 600px);
+  margin-top: 112px;
 }
 
 .skills-section {
   display: flex;
-  gap: 64px;
   align-items: center;
+  gap: 64px;
 }
 
 .skillset-container {
-  flex: 1;
+  flex: 2;
 }
 
 .skill-badges-container {
+  flex: 1;
+  border: 1px solid black;
+
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -227,13 +231,11 @@ button:hover {
 .text-border-container {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
-  justify-self: flex-end;
+
   border: 1px solid #d9d9d9;
   background-color: #3dcfb61a;
   border-radius: 30px;
   padding: 30px;
-  width: clamp(300px, 50vw, 600px);
 }
 
 .textcontainer-intro {
@@ -241,11 +243,22 @@ button:hover {
   top: -60px;
 }
 
-.portfolio-section {
-  align-self: flex-start;
+.projects-section {
+  display: flex;
+
+  gap: 32px;
 }
 
-.portfolio-head {
+.project-list-container {
+  flex: 2;
+}
+
+.project-info-container {
+  flex: 1;
+  border: 1px solid black;
+}
+
+.projects-head {
   width: 450px;
 }
 
@@ -267,6 +280,11 @@ button:hover {
 
 .project-row:last-child {
   border-bottom: 1px solid #d9d9d9;
+}
+
+.project-row:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
 }
 
 .project-name {
@@ -295,6 +313,16 @@ textarea {
   font-size: 18px;
   background-color: transparent;
   border: none;
+  border-radius: 8px;
+
+  padding: 8px;
+}
+
+.contact-form input:hover,
+textarea:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
 }
 
 .seperator {
@@ -313,6 +341,7 @@ p.font-bold {
 }
 
 footer {
+  max-width: var(--section-width);
   width: 100%;
   display: flex;
   justify-content: space-around;
