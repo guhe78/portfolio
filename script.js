@@ -9,18 +9,21 @@ const projects = [
   {
     name: "Join",
     description: "Beschreibung von Projekt 1",
+    tech: "HTML | CSS | JavaScript | Firebase",
     image: "projekt1.png",
     link: "https://example.com/projekt1",
   },
   {
     name: "Sharkie",
     description: "Beschreibung von Projekt 2",
+    tech: "HTML | CSS | JavaScript",
     image: "projekt2.png",
     link: "https://example.com/projekt2",
   },
   {
     name: "Pokedex",
     description: "Beschreibung von Projekt 3",
+    tech: "HTML | CSS | JavaScript",
     image: "projekt3.png",
     link: "https://example.com/projekt3",
   },
@@ -37,6 +40,34 @@ programmingLanguages.forEach((lang) => {
   `;
 });
 
+projects.forEach((project) => {
+  const projectList = document.getElementById("project-list");
+  const projectRow = document.createElement("li");
+  projectRow.classList.add("project-row");
+
+  projectRow.innerHTML = `
+  <div class="project-name-tech">
+    <span class="project-name">${project.name}</span>
+    <span class="project-tech">${project.tech}</span>
+    <div id="project-info" class="project-info"></div>
+  </div>
+  `;
+
+  projectRow.addEventListener("mouseover", () => {
+    const projectInfo = projectRow.querySelector(".project-info");
+    projectInfo.innerHTML = `
+    <img src="${project.image}" alt="${project.name}" class="project-image" />
+  `;
+  });
+
+  projectRow.addEventListener("mouseout", () => {
+    const projectInfo = projectRow.querySelector(".project-info");
+    projectInfo.innerHTML = "";
+  });
+
+  projectList.appendChild(projectRow);
+});
+
 const infoTrack = document.querySelector(".info-track");
 const infoItems = [
   "Frontend Developer",
@@ -51,7 +82,7 @@ infoTrack.innerHTML = duplicatedItems
   .join("");
 
 let position = 0;
-const animationSpeed = 1;
+const animationSpeed = 0.5;
 
 function animateInfoStrip() {
   const trackWidth = infoTrack.scrollWidth / 2;
