@@ -5,6 +5,27 @@ const programmingLanguages = [
   { name: "Git", icon: "git" },
 ];
 
+const projects = [
+  {
+    name: "Join",
+    description: "Beschreibung von Projekt 1",
+    image: "projekt1.png",
+    link: "https://example.com/projekt1",
+  },
+  {
+    name: "Sharkie",
+    description: "Beschreibung von Projekt 2",
+    image: "projekt2.png",
+    link: "https://example.com/projekt2",
+  },
+  {
+    name: "Pokedex",
+    description: "Beschreibung von Projekt 3",
+    image: "projekt3.png",
+    link: "https://example.com/projekt3",
+  },
+];
+
 const container = document.querySelector(".skill-badges-container");
 
 programmingLanguages.forEach((lang) => {

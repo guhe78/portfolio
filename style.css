@@ -260,13 +260,20 @@ button:hover {
 
 .projects-section {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100vw;
+  min-height: 565px;
   gap: 32px;
 }
 
-.project-list-container {
-  flex: 3;
-  width: 60%;
+.projects-list-container {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 880px;
+  gap: 41px;
 }
 
 .project-info-container {
@@ -274,14 +281,10 @@ button:hover {
   border: 1px solid black;
 }
 
-.projects-head {
-}
-
 .project-list {
   list-style: none;
   padding: 0;
   padding-top: 24px;
-  width: clamp(320px, 40vw, 1200px);
 }
 
 .project-row {
@@ -309,6 +312,20 @@ button:hover {
 
 .contact-section {
   display: flex;
+  gap: 96px;
+}
+
+.contact-left-part {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-right-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .contact-left-part,
@@ -319,8 +336,15 @@ button:hover {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  padding: 24px;
+  justify-content: center;
+}
+
+.contact-form > div {
+  border-top: 1px solid #d9d9d9;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .contact-form input,
@@ -329,8 +353,6 @@ textarea {
   background-color: transparent;
   border: none;
   border-radius: 8px;
-
-  padding: 8px;
 }
 
 .contact-form input:hover,
@@ -340,9 +362,12 @@ textarea:hover {
   border-radius: 8px;
 }
 
-.seperator {
-  border-top: 1px solid #d9d9d9;
-  width: 100%;
+.contact-form input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+.send-button {
+  align-self: center;
 }
 
 p.font-bold {
