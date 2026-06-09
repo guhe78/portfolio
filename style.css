@@ -260,7 +260,7 @@ button:hover {
 
 .projects-section {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100vw;
   min-height: 565px;
@@ -272,13 +272,29 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 880px;
+  max-width: 1440px;
   gap: 41px;
 }
 
 .project-info-container {
   flex: 1;
   border: 1px solid black;
+  display: flex;
+  height: 100px;
+}
+
+.project-info {
+  background-color: black;
+  display: none;
+}
+
+.visible {
+  display: flex;
+}
+
+.project-description {
+  width: 60%;
+  padding-top: 32px;
 }
 
 .project-list {
@@ -291,12 +307,18 @@ button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
 
-  padding: 24px 0;
+.project-name-tech {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 880px;
+  padding: 40px 32px;
   border-top: 1px solid #d9d9d9;
 }
 
-.project-row:last-child {
+.project-row:last-child .project-name-tech {
   border-bottom: 1px solid #d9d9d9;
 }
 
