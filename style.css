@@ -207,22 +207,31 @@ button:hover {
   margin-top: 112px;
 }
 
+.skills-section-background {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  background-image: radial-gradient(circle at 0%, rgba(8, 70, 59, 0.3), rgba(28, 28, 28, 1));
+}
+
 .skills-section {
   display: flex;
-  align-items: center;
+  justify-content: center;
   gap: 64px;
 }
 
 .skillset-container {
   flex: 2;
+  max-width: 960px;
 }
 
 .skill-badges-container {
   flex: 1;
-  border: 1px solid black;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -251,12 +260,13 @@ button:hover {
 
 .projects-section {
   display: flex;
-  width: 100%;
+  width: 100vw;
   gap: 32px;
 }
 
 .project-list-container {
-  flex: 2;
+  flex: 3;
+  width: 60%;
 }
 
 .project-info-container {
@@ -265,7 +275,6 @@ button:hover {
 }
 
 .projects-head {
-  width: 450px;
 }
 
 .project-list {
@@ -326,7 +335,7 @@ textarea {
 
 .contact-form input:hover,
 textarea:hover {
-  cursor: pointer;
+  cursor: text;
   background-color: rgba(255, 255, 255, 0.12);
   border-radius: 8px;
 }
