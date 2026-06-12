@@ -10,22 +10,28 @@ const projects = [
     name: "Join",
     description: "Beschreibung von Projekt 1",
     tech: "HTML | CSS | JavaScript | Firebase",
-    image: "projekt1.png",
+    image: "assets/images/dummy.png",
     link: "https://example.com/projekt1",
+    github: "https://github.com/guhe78/join",
+    id: "project-1",
   },
   {
     name: "Sharkie",
     description: "Beschreibung von Projekt 2",
     tech: "HTML | CSS | JavaScript",
-    image: "projekt2.png",
+    image: "assets/images/sharkie.png",
     link: "https://example.com/projekt2",
+    github: "https://github.com/guhe78/sharkie",
+    id: "project-2",
   },
   {
     name: "Pokedex",
     description: "Beschreibung von Projekt 3",
     tech: "HTML | CSS | JavaScript",
-    image: "projekt3.png",
+    image: "assets/images/pokedex.png",
     link: "https://example.com/projekt3",
+    github: "https://github.com/guhe78/pokedex",
+    id: "project-3",
   },
 ];
 
@@ -41,31 +47,28 @@ programmingLanguages.forEach((lang) => {
 });
 
 projects.forEach((project) => {
-  const projectList = document.getElementById("project-list");
-  const projectRow = document.createElement("li");
-  projectRow.classList.add("project-row");
+  const projectRow = document.getElementById(project.id);
+  const projectInfo = document.getElementById(`project-info-container`);
 
   projectRow.innerHTML = `
-  <div class="project-name-tech">
-    <span class="project-name">${project.name}</span>
-    <span class="project-tech">${project.tech}</span>
-    <div id="project-info" class="project-info"></div>
-  </div>
+  <span id="project-name-${project.id}" class="project-name">${project.name}</span>
+  <span class="project-tech">${project.tech}</span>
   `;
+  const projectName = document.getElementById(`project-name-${project.id}`);
 
   projectRow.addEventListener("mouseover", () => {
-    const projectInfo = projectRow.querySelector(".project-info");
+    projectName.innerHTML += icons.arrow_outward(14);
     projectInfo.innerHTML = `
-    <img src="${project.image}" alt="${project.name}" class="project-image" />
+    <div class="${project.id} project-image">
+      <img src="${project.image}" alt="${project.name}" />
+    </div>
   `;
   });
 
   projectRow.addEventListener("mouseout", () => {
-    const projectInfo = projectRow.querySelector(".project-info");
+    projectName.innerHTML = project.name;
     projectInfo.innerHTML = "";
   });
-
-  projectList.appendChild(projectRow);
 });
 
 const infoTrack = document.querySelector(".info-track");
@@ -79,7 +82,7 @@ const infoItems = [
 const duplicatedItems = [...infoItems, ...infoItems];
 infoTrack.innerHTML = duplicatedItems
   .map((item) => `<div class="info-item"><h3>${item}</h3></div>`)
-  .join("");
+  .join(icons.dot(7));
 
 let position = 0;
 const animationSpeed = 0.5;

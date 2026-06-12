@@ -19,7 +19,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  color: #d9d9d9;
+  color: #ffffff;
 }
 
 body {
@@ -75,7 +75,6 @@ a {
 
 a:hover {
   cursor: pointer;
-  font-weight: bold;
 }
 
 ul {
@@ -131,6 +130,7 @@ button:hover {
 
 .navbar {
   font-family: "Fira Code";
+  font-size: 20px;
   background-color: transparent;
   position: absolute;
   max-width: 1920px;
@@ -145,9 +145,13 @@ button:hover {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  max-width: 409px;
+  max-width: 500px;
   text-decoration: none;
   list-style: none;
+}
+
+.nav-links a:hover {
+  color: #3dcfb6;
 }
 
 .navbar-name {
@@ -174,8 +178,13 @@ button:hover {
 
 .info-track {
   display: flex;
+  align-items: center;
   gap: 2rem;
-  width: fit-content;
+}
+
+.info-track svg {
+  flex-shrink: 0;
+  display: block;
 }
 
 .info-item {
@@ -268,27 +277,14 @@ button:hover {
 }
 
 .projects-list-container {
-  flex: 2;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  max-width: 1440px;
   gap: 41px;
+  padding-top: 32px;
 }
 
 .project-info-container {
   flex: 1;
-  border: 1px solid black;
-  display: flex;
-  height: 100px;
-}
-
-.project-info {
-  background-color: black;
-  display: none;
-}
-
-.visible {
   display: flex;
 }
 
@@ -298,18 +294,12 @@ button:hover {
 }
 
 .project-list {
+  flex: 2;
   list-style: none;
-  padding: 0;
-  padding-top: 24px;
+  padding: 12px 0;
 }
 
-.project-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.project-name-tech {
+.project-item {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -318,13 +308,54 @@ button:hover {
   border-top: 1px solid #d9d9d9;
 }
 
-.project-row:last-child .project-name-tech {
+.project-list .project-item:last-child {
   border-bottom: 1px solid #d9d9d9;
 }
 
-.project-row:hover {
+.project-item:hover {
   background-color: rgba(255, 255, 255, 0.12);
   cursor: pointer;
+}
+
+.project-info-container {
+  display: flex;
+  justify-content: center;
+}
+
+.project-image {
+  position: relative;
+  display: inline-block;
+}
+
+.project-image img {
+  width: 295px;
+  border-radius: 16px;
+}
+
+.project-image::after {
+  border-radius: 16px;
+
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+
+  background: repeating-linear-gradient(135deg, white 0 1px, transparent 0px 10px);
+}
+
+.project-1 {
+  align-self: flex-start;
+}
+
+.project-2 {
+  align-self: center;
+}
+
+.project-3 {
+  align-self: flex-end;
 }
 
 .project-name {
