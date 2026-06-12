@@ -446,7 +446,7 @@ footer {
   max-width: var(--section-width);
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
