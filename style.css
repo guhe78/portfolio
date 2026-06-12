@@ -13,7 +13,7 @@
 }
 
 :root {
-  --section-width: 1920px;
+  --section-width: 1440px;
 }
 
 * {
@@ -131,11 +131,12 @@ button:hover {
 .navbar {
   font-family: "Fira Code";
   font-size: 20px;
-  background-color: transparent;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
   position: absolute;
-  max-width: 1920px;
+  max-width: var(--section-width);
   width: 100%;
-  padding: 0 112px;
+  height: 96px;
+  padding: 0 96px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -159,6 +160,14 @@ button:hover {
   flex-direction: column;
   align-items: center;
   font-size: 32px;
+}
+
+.navbar-firstname {
+  margin-bottom: -8px;
+}
+
+.navbar-lastname {
+  margin-top: -8px;
 }
 
 .info-strip {
