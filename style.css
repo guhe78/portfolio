@@ -151,7 +151,8 @@ button:hover {
   list-style: none;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+footer a:hover {
   color: #3dcfb6;
 }
 
@@ -417,6 +418,9 @@ textarea {
   border-radius: 8px;
 }
 
+.contact-form textarea {
+}
+
 .contact-form input:hover,
 textarea:hover {
   cursor: text;
@@ -448,8 +452,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  padding: 32px 96px;
 }
 
 footer ul {
