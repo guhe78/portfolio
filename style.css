@@ -34,7 +34,7 @@ section {
   max-width: var(--section-width);
   width: 100%;
 
-  padding: clamp(48px, 6vw, 112px);
+  padding: 96px;
 }
 
 h1 {
@@ -430,6 +430,16 @@ textarea:hover {
 
 .contact-form input[type="checkbox"]:hover {
   cursor: pointer;
+}
+
+.form-group {
+  position: relative;
+}
+
+.validation-message {
+  position: absolute;
+  color: red;
+  bottom: 10px;
 }
 
 .send-button {

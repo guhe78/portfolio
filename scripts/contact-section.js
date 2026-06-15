@@ -1,4 +1,12 @@
 const form = document.querySelector(".contact-form");
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+const privacyCheckbox = document.getElementById("privacy");
+const nameError = document.getElementById("name-validation");
+const emailError = document.getElementById("email-validation");
+const messageError = document.getElementById("message-validation");
+const privacyError = document.getElementById("privacy-validation");
 
 form.addEventListener("submit", async (event) => {
   event.preventDefault();
@@ -33,15 +41,19 @@ form.addEventListener("submit", async (event) => {
 });
 
 function checkInputFields() {
-  document.getElementById("email").addEventListener("input", checkEmail);
-  document.getElementById("name").addEventListener("input", checkName);
-  document.getElementById("message").addEventListener("input", checkMessage);
+  emailInput.addEventListener("blur", checkEmail);
+  emailInput.addEventListener("input", checkEmail);
+
+  nameInput.addEventListener("blur", checkName);
+  nameInput.addEventListener("input", checkName);
+
+  messageInput.addEventListener("blur", checkMessage);
+  messageInput.addEventListener("input", checkMessage);
+
+  privacyCheckbox.addEventListener("change", checkPrivacy);
 }
 
 function getFormData() {
-  const nameInput = document.getElementById("name");
-  const emailInput = document.getElementById("email");
-  const messageInput = document.getElementById("message");
   return {
     name: nameInput.value,
     email: emailInput.value,
@@ -50,30 +62,37 @@ function getFormData() {
 }
 
 function checkEmail() {
-  const emailInput = document.getElementById("email");
   const email = emailInput.value;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailPattern.test(email);
 
-  emailInput.setCustomValidity(isValid ? "" : "Bitte geben Sie eine gültige E-Mail-Adresse ein.");
+  emailError.textContent = isValid ? "" : "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
 
   return isValid;
 }
 
 function checkName() {
-  const nameInput = document.getElementById("name");
-  const isValid = nameInput.value.trim() !== "";
+  const name = nameInput.value;
+  const isValid = name.trim() !== "";
 
-  nameInput.setCustomValidity(isValid ? "" : "Bitte geben Sie Ihren Namen ein.");
+  nameError.textContent = isValid ? "" : "Bitte geben Sie Ihren Namen ein.";
 
   return isValid;
 }
 
 function checkMessage() {
-  const messageInput = document.getElementById("message");
-  const isValid = messageInput.value.trim() !== "";
+  const message = messageInput.value;
+  const isValid = message.trim() !== "";
 
-  messageInput.setCustomValidity(isValid ? "" : "Bitte geben Sie eine Nachricht ein.");
+  messageError.textContent = isValid ? "" : "Bitte geben Sie eine Nachricht ein.";
 
   return isValid;
+}
+
+function checkPrivacy() {
+  const isChecked = privacyCheckbox.checked;
+
+  privacyError.textContent = isChecked ? "" : "Bitte stimmen Sie der Datenschutzrichtlinie zu.";
+
+  return isChecked;
 }
