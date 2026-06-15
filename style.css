@@ -126,6 +126,34 @@ button:hover {
 
 .home-button {
   width: 172px;
+  overflow: hidden;
+}
+
+.home-button-text {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.home-button-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 700%;
+  top: 0;
+  white-space: nowrap;
+}
+
+.home-button:hover .home-button-text {
+  animation: homeButtonSwap 2s ease-in-out infinite;
+}
+
+@keyframes homeButtonSwap {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-700%);
+  }
 }
 
 .navbar {
