@@ -37,12 +37,19 @@
   <body onload="init()">
     <div class="navbar-background">
       <nav class="navbar">
-        <ul class="nav-links">
-          <li><a href="#aboutme">Über mich</a></li>
-          <li><a href="#skills">Fähigkeiten</a></li>
-          <li><a href="#projects">Projekte</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
+        <div class="navbar-left">
+          <input type="checkbox" id="toggle-language" class="input-language-toggle" />
+          <label class="switch" for="toggle-language">
+            <span class="en">EN</span>
+            <span class="de">DE</span>
+          </label>
+          <ul class="nav-links">
+            <li><a href="#aboutme" data-key="about-me">Über mich</a></li>
+            <li><a href="#skills" data-key="skills">Fähigkeiten</a></li>
+            <li><a href="#projects" data-key="projects">Projekte</a></li>
+            <li><a href="#contact" data-key="contact">Kontakt</a></li>
+          </ul>
+        </div>
         <div class="navbar-name">
           <span class="navbar-firstname">Günter</span> <span class="navbar-lastname">Heldt</span>
         </div>
@@ -50,14 +57,16 @@
     </div>
     <div class="home-section-background">
       <section id="home" class="home-section">
-        <p class="home-title">Frontend Entwickler</p>
-        <h1 class="home-name">Günter Heldt</h1>
+        <p class="home-title" data-key="home-title">Frontend Entwickler</p>
+        <h1 class="home-name" data-key="home-name">Günter Heldt</h1>
         <div class="title-buttons-container">
           <button class="home-button" onclick="scrollToSection('projects')">
-            <span class="home-button-text" data-text="Meine Arbeiten">Meine Arbeiten</span>
+            <span class="home-button-text" data-text="Meine Arbeiten" data-key="projects"
+              >Meine Arbeiten</span
+            >
           </button>
           <button class="home-button" onclick="scrollToSection('contact')">
-            <span class="home-button-text" data-text="Kontakt">Kontakt</span>
+            <span class="home-button-text" data-text="Kontakt" data-key="contact">Kontakt</span>
           </button>
         </div>
         <div class="info-strip">
@@ -70,9 +79,9 @@
         <img src="assets/profile.jpg" alt="Günter Heldt" class="aboutme-image" />
       </div>
       <div class="aboutme-text-container text-border-container">
-        <p class="textcontainer-intro">Über mich</p>
-        <h2>Wer bin ich</h2>
-        <p>
+        <p class="textcontainer-intro" data-key="about-me">Über mich</p>
+        <h2 data-key="about-me-title">Wer bin ich</h2>
+        <p data-key="about-me-description">
           Ich bin ein ambitionierter Frontend-Entwickler mit einer Leidenschaft für die Erstellung
           ansprechender und benutzerfreundlicher Webanwendungen. Mit Erfahrung in HTML, CSS,
           JavaScript und modernen Frameworks wie Angular strebe ich danach, innovative Lösungen zu
@@ -85,17 +94,17 @@
     <div class="skills-section-background">
       <section id="skills" class="skills-section">
         <div class="skillset-container text-border-container">
-          <p class="textcontainer-intro">Technologien</p>
-          <h2>Fähigkeiten</h2>
-          <p>
+          <p class="textcontainer-intro" data-key="technologies">Technologien</p>
+          <h2 data-key="skills">Fähigkeiten</h2>
+          <p data-key="skills-description">
             Dies ist ein Überblick über meine Fähigkeiten und Technologien, mit denen ich vertraut
             bin. Ich habe Erfahrung in der Entwicklung von Webanwendungen mit HTML, CSS und
             JavaScript. Momentan lerne ich den Umgang mit modernen Frameworks wie Angular. Darüber
             hinaus bin ich stets bestrebt, mein Wissen zu erweitern und neue Technologien zu
             erlernen, um innovative Lösungen zu schaffen.
           </p>
-          <h3>Benötigen Sie eine andere Fähigkeit?</h3>
-          <p>
+          <h3 data-key="skills-other">Benötigen Sie eine andere Fähigkeit?</h3>
+          <p data-key="skills-other-description">
             Kein Problem! Ich bin immer bestrebt, neue Technologien zu erlernen und mein
             Fähigkeitenportfolio zu erweitern. Wenn Sie eine bestimmte Technologie oder Fähigkeit
             benötigen, die nicht in meinem aktuellen Skillset aufgeführt ist, zögern Sie nicht, mich
@@ -111,9 +120,9 @@
     <section id="projects" class="projects-section">
       <div>
         <div class="projects-head">
-          <p>Portfolio</p>
-          <h2>Ausgewählte Projekte</h2>
-          <p class="project-description">
+          <p data-key="projects-intro">Portfolio</p>
+          <h2 data-key="projects-title">Ausgewählte Projekte</h2>
+          <p class="project-description" data-key="projects-description">
             Entdecken Sie hier eine Auswahl meiner Arbeiten die ich während meiner Fortbildung bei
             der Developer Akademie erstellt habe.
           </p>
@@ -130,9 +139,9 @@
     </section>
     <section id="contact" class="contact-section">
       <div class="contact-left-part">
-        <p>Kontaktieren Sie mich</p>
-        <h2>Schreiben Sie mir</h2>
-        <p>
+        <p data-key="contact-intro">Kontaktieren Sie mich</p>
+        <h2 data-key="contact-write-me">Schreiben Sie mir</h2>
+        <p data-key="contact-description">
           Wenn Sie Fragen haben oder an einer Zusammenarbeit interessiert sind, zögern Sie nicht,
           mich zu kontaktieren.
         </p>
@@ -140,43 +149,59 @@
       <div class="contact-right-part">
         <form class="contact-form" id="contact-form">
           <div class="form-group">
-            <label for="name">Ihr Name?</label>
+            <label for="name" data-key="contact-name">Ihr Name?</label>
             <input type="text" id="name" name="name" required />
             <small class="validation-message" id="name-validation"></small>
           </div>
           <div class="form-group">
-            <label for="email">Ihre E-Mail?</label>
+            <label for="email" data-key="contact-email">Ihre E-Mail?</label>
             <input type="email" id="email" name="email" required />
-            <small class="validation-message" id="email-validation"></small>
+            <small
+              class="validation-message"
+              id="email-validation"
+              data-key="contact-email-validation"
+            ></small>
           </div>
           <div class="form-group">
-            <label for="message">Wie kann ich Ihnen helfen?</label>
+            <label for="message" data-key="contact-message">Wie kann ich Ihnen helfen?</label>
             <textarea id="message" name="message" required></textarea>
-            <small class="validation-message" id="message-validation"></small>
+            <small
+              class="validation-message"
+              id="message-validation"
+              data-key="contact-message-validation"
+            ></small>
           </div>
           <div class="form-group">
-            <label for="privacy">
+            <label for="privacy" data-key="contact-privacy">
               <input type="checkbox" id="privacy" name="privacy" required />
               Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten
               wie beschrieben zu.
             </label>
-            <small class="validation-message" id="privacy-validation"></small>
+            <small
+              class="validation-message"
+              id="privacy-validation"
+              data-key="contact-privacy-validation"
+            ></small>
           </div>
-          <button class="send-button" type="submit">Sagen Sie Hallo ;)</button>
+          <button class="send-button" type="submit" data-key="contact-send">
+            Sagen Sie Hallo ;)
+          </button>
         </form>
       </div>
     </section>
     <footer class="footer">
       <div>
-        <p class="footer-name">Günter Heldt</p>
-        <p class="footer-title">Webentwickler</p>
-        <p class="footer-location">Füssen, Deutschland</p>
+        <p class="footer-name" data-key="footer-name">Günter Heldt</p>
+        <p class="footer-title" data-key="footer-title">Webentwickler</p>
+        <p class="footer-location" data-key="footer-location">Füssen, Deutschland</p>
       </div>
       <p>&copy; Günter Heldt 2026</p>
       <ul class="social-links">
-        <li><a href="https://github.com/guhe78" target="_blank">GitHub</a></li>
-        <li><a href="pages/impressum.html">Impressum</a></li>
-        <li><a href="mailto:mail@guenter-heldt.de">Email</a></li>
+        <li>
+          <a href="https://github.com/guhe78" target="_blank" data-key="footer-github">GitHub</a>
+        </li>
+        <li><a href="pages/impressum.html" data-key="footer-impressum">Impressum</a></li>
+        <li><a href="mailto:mail@guenter-heldt.de" data-key="footer-email">Email</a></li>
       </ul>
     </footer>
   </body>
