@@ -9,6 +9,7 @@
   font-family: "Fira Code";
   font-style: normal;
   src: url("assets/fonts/fira_code/FiraCode-VariableFont_wght.ttf");
+  font-weight: 100 200 300 400 500 600 700 800 900;
   font-display: swap;
 }
 
@@ -49,7 +50,6 @@ h1 {
 h2 {
   font-family: "Fira Code";
   font-size: clamp(1.8rem, 3.5vw, 3rem);
-  font-weight: bold;
   letter-spacing: -0.02em;
   line-height: 1.2;
 }
