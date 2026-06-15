@@ -185,11 +185,69 @@ button:hover {
   justify-content: space-between;
 }
 
+.navbar-left {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 100px;
+  width: 84px;
+  height: 28px;
+  cursor: pointer;
+  transition: 0.4s;
+  font-size: 16px;
+}
+
+.switch::after {
+  content: "";
+  width: 40px;
+  height: 24px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 80px;
+  transition: 0.4s;
+}
+
+.input-language-toggle {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+.input-language-toggle:checked + .switch {
+  background: transparent;
+}
+
+.input-language-toggle:checked + .switch .de {
+  font-weight: 700;
+}
+
+.en {
+  font-weight: 700;
+}
+
+.input-language-toggle:checked + .switch .en {
+  font-weight: 400;
+}
+
+.input-language-toggle:checked + .switch::after {
+  left: 1px;
+  transform: translateX(100%);
+}
+
 .nav-links {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  max-width: 500px;
+  gap: 24px;
   text-decoration: none;
   list-style: none;
 }
