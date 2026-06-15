@@ -133,24 +133,28 @@
       </div>
       <div class="contact-right-part">
         <form class="contact-form" id="contact-form">
-          <div>
+          <div class="form-group">
             <label for="name">Ihr Name?</label>
             <input type="text" id="name" name="name" required />
+            <small class="validation-message" id="name-validation"></small>
           </div>
-          <div>
+          <div class="form-group">
             <label for="email">Ihre E-Mail?</label>
             <input type="email" id="email" name="email" required />
+            <small class="validation-message" id="email-validation"></small>
           </div>
-          <div>
+          <div class="form-group">
             <label for="message">Wie kann ich Ihnen helfen?</label>
             <textarea id="message" name="message" required></textarea>
+            <small class="validation-message" id="message-validation"></small>
           </div>
-          <div>
+          <div class="form-group">
             <label for="privacy">
               <input type="checkbox" id="privacy" name="privacy" required />
               Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten
               wie beschrieben zu.
             </label>
+            <small class="validation-message" id="privacy-validation"></small>
           </div>
           <button class="send-button" type="submit">Sagen Sie Hallo ;)</button>
         </form>
