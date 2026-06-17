@@ -483,6 +483,28 @@ footer a:hover {
   height: 452px;
 }
 
+.recommendation-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recommendation-author {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: white;
+}
+
+.colleagues {
+  white-space: nowrap;
+}
+
 .recommendation-button-left,
 .recommendation-button-right {
   gap: 8px;
@@ -502,57 +524,66 @@ footer a:hover {
 }
 
 .recommendation-slider-container {
+  width: calc(600px + 48px + 300px + 300px);
   max-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-  transition: transform 0.5s ease;
-  will-change: transform;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto;
 }
 
-@media (max-width: 1440px) {
-  .recommendation-slider-container {
-    padding: 0 0;
-  }
+.recommendation-slider-container::before,
+.recommendation-slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.recommendation-slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, #1c1c1c 0%, rgba(28, 28, 28, 0.35) 70%, transparent 100%);
+}
+
+.recommendation-slider-container::after {
+  right: 0;
+  background: linear-gradient(to left, #1c1c1c 0%, rgba(28, 28, 28, 0.35) 70%, transparent 100%);
+}
+
+.card-slider-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 48px;
+
+  transition: transform 0.5s ease;
 }
 
 .recommendation-card {
   flex: 0 0 600px;
-  width: 632px;
+
+  width: 600px;
   height: 274px;
 
   padding: 48px 40px;
+
   border-radius: 32px;
   border: 1px solid rgba(61, 207, 182, 1);
 
   transition:
     background-color 0.3s ease,
-    opacity 0.3s ease,
     transform 0.3s ease;
-
-  gap: 44px;
 }
 
 .main-card {
   background-color: rgba(61, 207, 182, 0.3);
-  opacity: 1;
   transform: scale(1);
 }
 
-.side-card-left,
-.side-card-right {
+.side-card {
   background-color: rgba(61, 207, 182, 0.1);
-  opacity: 0.6;
   transform: scale(0.9);
-}
-
-.side-card-left {
-  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
-}
-
-.side-card-right {
-  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .contact-section {
@@ -598,9 +629,6 @@ textarea {
   background-color: transparent;
   border: none;
   border-radius: 8px;
-}
-
-.contact-form textarea {
 }
 
 .contact-form input:hover,
