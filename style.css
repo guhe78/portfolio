@@ -473,6 +473,12 @@ footer a:hover {
   font-size: 1.25rem;
 }
 
+.recommendation-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .contact-section {
   display: flex;
   gap: 96px;
