@@ -31,13 +31,15 @@ body {
   font-family: "Fira Code";
 
   overflow-x: hidden;
+
+  gap: 96px;
 }
 
 section {
   max-width: var(--section-width);
   width: 100%;
 
-  padding: 96px;
+  padding: 0 96px;
 }
 
 h1 {
@@ -477,6 +479,66 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 452px;
+}
+
+.recommendation-button-left,
+.recommendation-button-right {
+  gap: 8px;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.recommendation-button-left:hover,
+.recommendation-button-right:hover {
+  background-color: transparent;
+  transform: translateX(5px);
+}
+
+.recommendation-button-left:hover {
+  transform: translateX(-5px);
+}
+
+.recommendation-slider-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.recommendation-card {
+  flex: 0 0 600px;
+  width: 632px;
+  height: 274px;
+
+  padding: 48px 40px;
+  border-radius: 32px;
+  border: 1px solid rgba(61, 207, 182, 1);
+
+  transition:
+    background-color 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+
+  gap: 44px;
+}
+
+.main-card {
+  background-color: rgba(61, 207, 182, 0.3);
+  opacity: 1;
+  transform: scale(1);
+}
+
+.side-card {
+  background-color: rgba(61, 207, 182, 0.1);
+  opacity: 0.6;
+  transform: scale(0.9);
 }
 
 .contact-section {

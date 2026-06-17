@@ -31,6 +31,7 @@
     <script src="scripts/home-section.js" defer></script>
     <script src="scripts/skill-section.js" defer></script>
     <script src="scripts/projects-section.js" defer></script>
+    <script src="scripts/recommendation-section.js" defer></script>
     <script src="scripts/contact-section.js" defer></script>
     <script src="script.js" defer></script>
   </head>
@@ -138,30 +139,33 @@
       </div>
     </section>
     <section class="recommendation-section">
-      <h3 data-key="recommendation-title">Was andere über mich sagen</h3>
-      <div class="recommendation-cards-container">
-        <div class="recommendation-container text-border-container">
+      <h3 data-key="recommendation-title">Was meine Kollegen über mich sagen</h3>
+      <div class="recommendation-slider-container" id="recommendation-slider-container">
+        <div class="recommendation-card">
           <p data-key="recommendation-description">
-            Hier finden Sie eine Auswahl von Empfehlungen von Kollegen, Mentoren und Kunden, die
-            meine Arbeit und meine Fähigkeiten als Frontend-Entwickler schätzen. Diese Empfehlungen
-            geben Einblicke in meine Arbeitsweise, meine Professionalität und die Qualität meiner
-            Projekte. Ich bin dankbar für das positive Feedback und die Unterstützung, die ich von
-            anderen in der Branche erhalten habe, und freue mich darauf, weiterhin großartige
-            Projekte zu realisieren.
+            „Die Zusammenarbeit mit ihm war immer sehr angenehm. Er bringt sich aktiv ins Team ein,
+            hört anderen zu und findet gemeinsam mit den Kollegen gute Lösungen. Auch bei
+            Herausforderungen bleibt er ruhig und lösungsorientiert.“
+          </p>
+        </div>
+        <div class="recommendation-card">
+          <p data-key="recommendation-description">
+            „Besonders beeindruckt hat mich seine sorgfältige Arbeitsweise. Er arbeitet
+            strukturiert, achtet auf Details und liefert Ergebnisse, bei denen Qualität und saubere
+            Umsetzung im Vordergrund stehen.“
+          </p>
+        </div>
+        <div class="recommendation-card">
+          <p data-key="recommendation-description">
+            „Er zeichnet sich durch seine hohe Motivation und Lernbereitschaft aus. Neue
+            Technologien und Aufgaben geht er mit Neugier an und arbeitet sich zuverlässig in neue
+            Themen ein.“
           </p>
         </div>
       </div>
       <div class="recommendation-controls">
-        <button class="recommendation-button" id="prev-recommendation">
-          <span class="recommendation-button-text" data-key="recommendation-prev"
-            >${svgLibrary.arrow_back(20)}</span
-          >
-        </button>
-        <button class="recommendation-button" id="next-recommendation">
-          <span class="recommendation-button-text" data-key="recommendation-next"
-            >${svgLibrary.arrow_forward(20)}</span
-          >
-        </button>
+        <button class="recommendation-button-left" id="prev-recommendation"></button>
+        <button class="recommendation-button-right" id="next-recommendation"></button>
       </div>
     </section>
     <section id="contact" class="contact-section">
