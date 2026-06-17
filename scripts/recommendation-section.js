@@ -1,93 +1,40 @@
-const cards = Array.from(document.querySelectorAll(".recommendation-card"));
-const sliderContainer = document.getElementById("recommendation-slider-container");
+const sliderViewport = document.getElementById("recommendation-slider-container");
+const sliderContainer = document.querySelector(".card-slider-container");
+
+const originalCards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"));
+const totalOriginalCards = originalCards.length;
+
+const prependClones = [
+  originalCards[totalOriginalCards - 2].cloneNode(true),
+  originalCards[totalOriginalCards - 1].cloneNode(true),
+];
+
+const appendClones = [originalCards[0].cloneNode(true), originalCards[1].cloneNode(true)];
+
+prependClones.forEach((clone) => {
+  sliderContainer.insertBefore(clone, sliderContainer.firstElementChild);
+});
+
+appendClones.forEach((clone) => {
+  sliderContainer.appendChild(clone);
+});
+
+const cards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"));
+
 const leftArrowButton = document.getElementById("prev-recommendation");
 const rightArrowButton = document.getElementById("next-recommendation");
 
-leftArrowButton.innerHTML = `<span class="recommendation-button-text" data-key="recommendation-prev"
-            >${icons.arrow_back(20)}</span
-          >`;
+leftArrowButton.innerHTML = `
+  <span class="recommendation-button-text">
+    ${icons.arrow_back(20)}
+  </span>
+`;
 
-rightArrowButton.innerHTML = `<span class="recommendation-button-text" data-key="recommendation-next"
-            >${icons.arrow_forward(20)}</span
-          >`;
-
-let activeIndex = 1;
-let isAnimating = false;
-
-function updateClasses() {
-  cards.forEach((card) => {
-    card.classList.remove("main-card", "side-card-left", "side-card-right");
-  });
-
-  cards[activeIndex].classList.add("main-card");
-
-  cards.forEach((card, index) => {
-    if (index === activeIndex) {
-      card.classList.add("main-card");
-    } else if (index < activeIndex) {
-      card.classList.add("side-card-left");
-    } else {
-      card.classList.add("side-card-right");
-    }
-  });
-}
-
-function slide(direction) {
-  if (isAnimating) return;
-
-  isAnimating = true;
-
-  const cardWidth = cards[0].offsetWidth + 48;
-
-  if (direction === "next") {
-    sliderContainer.style.transform = `translateX(-${cardWidth}px)`;
-  }
-
-  if (direction === "prev") {
-    sliderContainer.style.transform = `translateX(${cardWidth}px)`;
-  }
-
-  sliderContainer.addEventListener(
-    "transitionend",
-    () => {
-      sliderContainer.style.transition = "none";
-      sliderContainer.style.transform = "translateX(0)";
-
-      if (direction === "next") {
-        const first = cards.shift();
-        cards.push(first);
-
-        if (activeIndex < 0) {
-          activeIndex = cards.length - 1;
-        }
-      }
-
-      if (direction === "prev") {
-        const last = cards.pop();
-        cards.unshift(last);
-
-        if (activeIndex >= cards.length) {
-          activeIndex = 0;
-        }
-      }
-
-      sliderContainer.innerHTML = "";
-
-      cards.forEach((card) => {
-        sliderContainer.appendChild(card);
-      });
-
-      updateClasses();
-
-      requestAnimationFrame(() => {
-        sliderContainer.style.transition = "transform 0.5s ease";
-      });
-
-      isAnimating = false;
-    },
-    { once: true },
-  );
-}
+rightArrowButton.innerHTML = `
+  <span class="recommendation-button-text">
+    ${icons.arrow_forward(20)}
+  </span>
+`;
 
 rightArrowButton.addEventListener("click", () => {
   slide("next");
@@ -97,4 +44,94 @@ leftArrowButton.addEventListener("click", () => {
   slide("prev");
 });
 
+let currentIndex = 3;
+let isAnimating = false;
+
+function getSliderMetrics() {
+  const cardWidth = cards[0].offsetWidth;
+  const gap = 48;
+  const cardStep = cardWidth + gap;
+  const centerOffset = (sliderViewport.offsetWidth - cardWidth) / 2;
+
+  return { cardStep, centerOffset };
+}
+
+function centerMainCard() {
+  const { cardStep, centerOffset } = getSliderMetrics();
+  sliderContainer.style.transform = `translateX(${centerOffset - cardStep * currentIndex}px)`;
+}
+
+function updateClasses() {
+  cards.forEach((card, index) => {
+    card.classList.remove("main-card", "side-card");
+
+    if (index === currentIndex) {
+      card.classList.add("main-card");
+    } else {
+      card.classList.add("side-card");
+    }
+  });
+}
+
+function slide(direction) {
+  if (isAnimating) return;
+  if (direction !== "next" && direction !== "prev") return;
+
+  isAnimating = true;
+
+  const { cardStep, centerOffset } = getSliderMetrics();
+  const targetIndex = direction === "next" ? currentIndex + 1 : currentIndex - 1;
+  sliderContainer.style.transform = `translateX(${centerOffset - cardStep * targetIndex}px)`;
+
+  const onTransitionEnd = (event) => {
+    if (event.target !== sliderContainer || event.propertyName !== "transform") {
+      return;
+    }
+
+    sliderContainer.removeEventListener("transitionend", onTransitionEnd);
+
+    sliderContainer.style.transition = "none";
+
+    currentIndex = targetIndex;
+
+    if (currentIndex <= 1) {
+      currentIndex += totalOriginalCards;
+    }
+
+    if (currentIndex >= totalOriginalCards + 2) {
+      currentIndex -= totalOriginalCards;
+    }
+
+    centerMainCard();
+
+    requestAnimationFrame(() => {
+      sliderContainer.style.transition = "transform .5s ease";
+    });
+
+    updateClasses();
+
+    isAnimating = false;
+  };
+
+  sliderContainer.addEventListener("transitionend", onTransitionEnd);
+}
+
 updateClasses();
+
+sliderContainer.style.transition = "none";
+centerMainCard();
+
+requestAnimationFrame(() => {
+  sliderContainer.style.transition = "transform .5s ease";
+});
+
+window.addEventListener("resize", () => {
+  if (isAnimating) return;
+
+  sliderContainer.style.transition = "none";
+  centerMainCard();
+
+  requestAnimationFrame(() => {
+    sliderContainer.style.transition = "transform .5s ease";
+  });
+});
