@@ -16,14 +16,18 @@ let isAnimating = false;
 
 function updateClasses() {
   cards.forEach((card) => {
-    card.classList.remove("main-card", "side-card");
+    card.classList.remove("main-card", "side-card-left", "side-card-right");
   });
 
   cards[activeIndex].classList.add("main-card");
 
-  cards.forEach((card) => {
-    if (!card.classList.contains("main-card")) {
-      card.classList.add("side-card");
+  cards.forEach((card, index) => {
+    if (index === activeIndex) {
+      card.classList.add("main-card");
+    } else if (index < activeIndex) {
+      card.classList.add("side-card-left");
+    } else {
+      card.classList.add("side-card-right");
     }
   });
 }
@@ -35,12 +39,10 @@ function slide(direction) {
 
   const cardWidth = cards[0].offsetWidth + 48;
 
-  // nach rechts
   if (direction === "next") {
     sliderContainer.style.transform = `translateX(-${cardWidth}px)`;
   }
 
-  // nach links
   if (direction === "prev") {
     sliderContainer.style.transform = `translateX(${cardWidth}px)`;
   }

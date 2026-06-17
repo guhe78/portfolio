@@ -502,14 +502,19 @@ footer a:hover {
 }
 
 .recommendation-slider-container {
-  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 48px;
-  overflow: hidden;
   transition: transform 0.5s ease;
   will-change: transform;
+}
+
+@media (max-width: 1440px) {
+  .recommendation-slider-container {
+    padding: 0 0;
+  }
 }
 
 .recommendation-card {
@@ -535,10 +540,19 @@ footer a:hover {
   transform: scale(1);
 }
 
-.side-card {
+.side-card-left,
+.side-card-right {
   background-color: rgba(61, 207, 182, 0.1);
   opacity: 0.6;
   transform: scale(0.9);
+}
+
+.side-card-left {
+  mask-image: linear-gradient(to left, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.side-card-right {
+  mask-image: linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 .contact-section {
