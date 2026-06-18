@@ -23,6 +23,20 @@ const cards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"
 
 const leftArrowButton = document.getElementById("prev-recommendation");
 const rightArrowButton = document.getElementById("next-recommendation");
+const dotsContainer = document.getElementById("recommendation-dots-container");
+const dots = [];
+const dotIcon = icons.ellipse(8);
+
+for (let i = 0; i < totalOriginalCards; i++) {
+  const dot = document.createElement("div");
+  dot.classList.add("recommendation-dot");
+  if (i === 0) {
+    dot.classList.add("active");
+  }
+  dot.innerHTML = dotIcon;
+  dotsContainer.appendChild(dot);
+  dots.push(dot);
+}
 const quoteMarks = document.querySelectorAll(".quote-icon");
 
 quoteMarks.forEach((quoteMark) => {
@@ -78,6 +92,18 @@ function updateClasses() {
   });
 }
 
+function updateDots() {
+  const activeDotIndex = (currentIndex - 2 + totalOriginalCards) % totalOriginalCards;
+
+  dots.forEach((dot, index) => {
+    if (index === activeDotIndex) {
+      dot.classList.add("active");
+    } else {
+      dot.classList.remove("active");
+    }
+  });
+}
+
 function slide(direction) {
   if (isAnimating) return;
   if (direction !== "next" && direction !== "prev") return;
@@ -114,6 +140,7 @@ function slide(direction) {
     });
 
     updateClasses();
+    updateDots();
 
     isAnimating = false;
   };
@@ -122,7 +149,7 @@ function slide(direction) {
 }
 
 updateClasses();
-
+updateDots();
 sliderContainer.style.transition = "none";
 centerMainCard();
 
