@@ -75,6 +75,7 @@ p {
 
 a {
   text-decoration: none;
+  color: #ffffff;
 }
 
 a:hover {
@@ -176,7 +177,7 @@ button:hover {
 }
 
 .navbar {
-  font-family: "Fira Code";
+  color: #ffffff;
   font-size: 20px;
   max-width: var(--section-width);
   width: 100%;
