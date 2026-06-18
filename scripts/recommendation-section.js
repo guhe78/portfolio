@@ -23,6 +23,11 @@ const cards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"
 
 const leftArrowButton = document.getElementById("prev-recommendation");
 const rightArrowButton = document.getElementById("next-recommendation");
+const quoteMarks = document.querySelectorAll(".quote-icon");
+
+quoteMarks.forEach((quoteMark) => {
+  quoteMark.innerHTML = icons.quote();
+});
 
 leftArrowButton.innerHTML = `
   <span class="recommendation-button-text">
