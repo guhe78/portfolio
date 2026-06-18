@@ -487,6 +487,7 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
 }
 
 .recommendation-author {
@@ -503,6 +504,26 @@ footer a:hover {
 
 .colleagues {
   white-space: nowrap;
+}
+
+.quote-icon {
+  display: none;
+  position: absolute;
+  width: 89px;
+  height: 64px;
+  top: -10px;
+  left: -45px;
+  z-index: 9999;
+}
+
+.quote-icon svg {
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.main-card .quote-icon {
+  display: block;
 }
 
 .recommendation-button-left,
@@ -526,9 +547,10 @@ footer a:hover {
 .recommendation-slider-container {
   width: calc(600px + 48px + 300px + 300px);
   max-width: 100%;
-  overflow: hidden;
+  overflow-y: visible;
+  overflow-x: hidden;
   position: relative;
-  margin: 0 auto;
+  padding: 10px 0;
 }
 
 .recommendation-slider-container::before,
