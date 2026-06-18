@@ -20,11 +20,11 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  color: #ffffff;
 }
 
 body {
   background-color: #1c1c1c;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -528,6 +528,13 @@ footer a:hover {
   display: block;
 }
 
+.recommendation-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
 .recommendation-button-left,
 .recommendation-button-right {
   gap: 8px;
@@ -544,6 +551,17 @@ footer a:hover {
 
 .recommendation-button-left:hover {
   transform: translateX(-5px);
+}
+
+.recommendation-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.recommendation-dot.active {
+  color: rgba(61, 207, 182, 1);
 }
 
 .recommendation-slider-container {
