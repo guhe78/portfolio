@@ -345,7 +345,11 @@ footer a:hover {
   height: 695px;
   display: flex;
   justify-content: center;
-  background-image: radial-gradient(circle at 0%, rgba(8, 70, 59, 0.3), rgba(28, 28, 28, 1));
+  background-image: radial-gradient(
+    22.43% 43.85% at 1.22% 52.45%,
+    rgba(8, 70, 59, 0.3) 0%,
+    #1c1c1c 100%
+  );
 }
 
 .skills-section {
@@ -356,26 +360,38 @@ footer a:hover {
 }
 
 .skillset-container {
-  flex: 2;
   max-width: 520px;
+  width: 100%;
 }
 
 .skill-badges-container {
-  flex: 1;
-
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 72px;
 }
 
 .skill-item {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 18px;
+  gap: 8px;
+  max-width: 50%;
+  width: 104px;
+  height: 116px;
 
   padding: 10px 14px;
+}
+
+.skill-item svg {
+  width: 64px;
+  height: 64px;
+}
+
+.skill-item p {
+  text-align: center;
 }
 
 .text-border-container {
@@ -409,8 +425,10 @@ footer a:hover {
 }
 
 .project-info-container {
-  flex: 1;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
 }
 
 .project-description {
@@ -419,9 +437,10 @@ footer a:hover {
 }
 
 .project-list {
-  flex: 2;
   list-style: none;
   padding: 12px 0;
+  width: 100%;
+  max-width: 880px;
 }
 
 .project-item {
@@ -453,7 +472,7 @@ footer a:hover {
 }
 
 .project-image img {
-  width: 295px;
+  max-width: 295px;
   border-radius: 16px;
 }
 
@@ -468,7 +487,7 @@ footer a:hover {
   height: 100%;
   z-index: -1;
 
-  background: repeating-linear-gradient(135deg, white 0 1px, transparent 0px 10px);
+  background: repeating-linear-gradient(135deg, white 0 1.5px, transparent 0px 15px);
 }
 
 .project-1 {
