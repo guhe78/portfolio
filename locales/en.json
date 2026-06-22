@@ -1,0 +1,53 @@
+{
+  "about-me": "About Me",
+  "skills": "Skills",
+  "projects": "Projects",
+  "contact": "Contact",
+
+  "home-title": "Frontend Developer",
+  "home-name": "Günter Heldt",
+
+  "about-me-title": "Who Am I",
+
+  "about-me-description": "I am an ambitious frontend developer with a passion for creating attractive and user-friendly web applications. With experience in HTML, CSS, JavaScript, and modern frameworks such as Angular, I strive to build innovative solutions that are both functional and visually appealing. My goal is to make a positive impact on the digital world through my work while continuously learning new technologies and expanding my skill set.",
+
+  "technologies": "Technologies",
+
+  "skills-description": "This is an overview of my skills and the technologies I am familiar with. I have experience developing web applications using HTML, CSS, and JavaScript. Currently, I am learning modern frameworks such as Angular. In addition, I am always eager to expand my knowledge and learn new technologies.",
+
+  "skills-other": "Need Another Skill?",
+
+  "skills-other-description": "Just ask me! I am always eager to learn new technologies and expand my portfolio of skills. If you require a specific technology or skill, feel free to contact me and I will do my best to learn it and integrate it into your projects.",
+
+  "projects-intro": "Portfolio",
+  "projects-title": "Featured Projects",
+
+  "projects-description": "Discover a selection of projects I created during my training at Developer Akademie.",
+
+  "recommendation-title": "What My Colleagues Say About Me",
+
+  "recommendation-author-1": "M. M.",
+  "recommendation-author-2": "E. M.",
+  "recommendation-author-3": "P. H.",
+
+  "contact-intro": "Get In Touch",
+  "contact-write-me": "Write Me",
+
+  "contact-description": "If you have any questions or are interested in working together, feel free to contact me.",
+
+  "contact-name": "Your Name?",
+  "contact-email": "Your Email?",
+  "contact-message": "How Can I Help You?",
+
+  "contact-privacy": "I have read the privacy policy and agree to the processing of my data as described.",
+
+  "contact-send": "Say Hello ;)",
+
+  "footer-name": "Günter Heldt",
+  "footer-title": "Web Developer",
+  "footer-location": "Füssen, Germany",
+
+  "footer-github": "GitHub",
+  "footer-impressum": "Legal Notice",
+  "footer-email": "Email"
+}
