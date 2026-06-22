@@ -1,0 +1,52 @@
+{
+  "about-me": "Über mich",
+  "skills": "Fähigkeiten",
+  "projects": "Projekte",
+  "contact": "Kontakt",
+
+  "home-title": "Frontend Entwickler",
+  "home-name": "Günter Heldt",
+
+  "about-me-title": "Wer bin ich",
+  "about-me-description": "Ich bin ein ambitionierter Frontend-Entwickler mit einer Leidenschaft für die Erstellung ansprechender und benutzerfreundlicher Webanwendungen. Mit Erfahrung in HTML, CSS, JavaScript und modernen Frameworks wie Angular strebe ich danach, innovative Lösungen zu entwickeln, die nicht nur funktional, sondern auch ästhetisch ansprechend sind. Mein Ziel ist es, durch meine Arbeit einen positiven Einfluss auf die digitale Welt zu haben und ständig neue Technologien zu erlernen, um meine Fähigkeiten zu erweitern.",
+
+  "technologies": "Technologien",
+
+  "skills-description": "Dies ist ein Überblick über meine Fähigkeiten und Technologien, mit denen ich vertraut bin. Ich habe Erfahrung in der Entwicklung von Webanwendungen mit HTML, CSS und JavaScript. Momentan lerne ich den Umgang mit modernen Frameworks wie Angular. Darüber hinaus bin ich stets bestrebt, mein Wissen zu erweitern und neue Technologien zu erlernen.",
+
+  "skills-other": "Benötigen Sie eine andere Fähigkeit?",
+
+  "skills-other-description": "Fragen Sie mich! Ich bemühe mich stets, neue Technologien zu erlernen und mein Portfolio an Fähigkeiten zu erweitern. Sollten Sie eine bestimmte Technologie oder Fähigkeit benötigen, kontaktieren Sie mich, und ich werde mich bemühen, sie zu erlernen und in Ihre Projekte zu integrieren.",
+
+  "projects-intro": "Portfolio",
+  "projects-title": "Ausgewählte Projekte",
+
+  "projects-description": "Entdecken Sie hier eine Auswahl meiner Arbeiten die ich während meiner Fortbildung bei der Developer Akademie erstellt habe.",
+
+  "recommendation-title": "Was meine Kollegen über mich sagen",
+
+  "recommendation-author-1": "M. M.",
+  "recommendation-author-2": "E. M.",
+  "recommendation-author-3": "P. H.",
+
+  "contact-intro": "Kontaktieren Sie mich",
+  "contact-write-me": "Schreiben Sie mir",
+
+  "contact-description": "Wenn Sie Fragen haben oder an einer Zusammenarbeit interessiert sind, zögern Sie nicht, mich zu kontaktieren.",
+
+  "contact-name": "Ihr Name?",
+  "contact-email": "Ihre E-Mail?",
+  "contact-message": "Wie kann ich Ihnen helfen?",
+
+  "contact-privacy": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+
+  "contact-send": "Sagen Sie Hallo ;)",
+
+  "footer-name": "Günter Heldt",
+  "footer-title": "Webentwickler",
+  "footer-location": "Füssen, Deutschland",
+
+  "footer-github": "GitHub",
+  "footer-impressum": "Impressum",
+  "footer-email": "Email"
+}
