@@ -38,8 +38,8 @@ projects.forEach((project) => {
   `;
   const projectName = document.getElementById(`project-name-${project.id}`);
 
-  projectRow.addEventListener("mouseover", () => {
-    projectName.innerHTML += icons.arrow_outward(14);
+  projectRow.addEventListener("mouseenter", () => {
+    projectName.innerHTML = project.name + icons.arrow_outward(14);
     projectInfo.innerHTML = `
     <div class="${project.id} project-image">
       <img src="${project.image}" alt="${project.name}" />
@@ -47,7 +47,7 @@ projects.forEach((project) => {
   `;
   });
 
-  projectRow.addEventListener("mouseout", () => {
+  projectRow.addEventListener("mouseleave", () => {
     projectName.innerHTML = project.name;
     projectInfo.innerHTML = "";
   });
