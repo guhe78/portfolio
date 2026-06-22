@@ -41,6 +41,8 @@ section {
   width: 100%;
 
   padding: 0 96px;
+
+  border: 1px solid blue;
 }
 
 h1 {
@@ -309,8 +311,6 @@ footer a:hover {
 .aboutme-section {
   display: flex;
   justify-content: space-between;
-
-  border: 1px solid blue;
 }
 
 .aboutme-part {
@@ -415,6 +415,10 @@ footer a:hover {
   align-items: center;
   min-height: 565px;
   gap: 32px;
+}
+
+.projects-section > div {
+  width: 100%;
 }
 
 .projects-list-container {

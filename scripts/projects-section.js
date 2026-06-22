@@ -28,27 +28,29 @@ const projects = [
   },
 ];
 
-projects.forEach((project) => {
-  const projectRow = document.getElementById(project.id);
-  const projectInfo = document.getElementById(`project-info-container`);
+function initProjectsSection() {
+  projects.forEach((project) => {
+    const projectRow = document.getElementById(project.id);
+    const projectInfo = document.getElementById(`project-info-container`);
 
-  projectRow.innerHTML = `
+    projectRow.innerHTML = `
   <span id="project-name-${project.id}" class="project-name">${project.name}</span>
   <span class="project-tech">${project.tech}</span>
   `;
-  const projectName = document.getElementById(`project-name-${project.id}`);
+    const projectName = document.getElementById(`project-name-${project.id}`);
 
-  projectRow.addEventListener("mouseenter", () => {
-    projectName.innerHTML = project.name + icons.arrow_outward(14);
-    projectInfo.innerHTML = `
+    projectRow.addEventListener("mouseenter", () => {
+      projectName.innerHTML = project.name + icons.arrow_outward(14);
+      projectInfo.innerHTML = `
     <div class="${project.id} project-image">
       <img src="${project.image}" alt="${project.name}" />
     </div>
   `;
-  });
+    });
 
-  projectRow.addEventListener("mouseleave", () => {
-    projectName.innerHTML = project.name;
-    projectInfo.innerHTML = "";
+    projectRow.addEventListener("mouseleave", () => {
+      projectName.innerHTML = project.name;
+      projectInfo.innerHTML = "";
+    });
   });
-});
+}
