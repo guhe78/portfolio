@@ -26,9 +26,11 @@
 
   "recommendation-title": "What My Colleagues Say About Me",
 
-  "recommendation-author-1": "M. M.",
-  "recommendation-author-2": "E. M.",
-  "recommendation-author-3": "P. H.",
+  "recommendation-description-1": "Working with him has always been a very pleasant experience. He actively contributes to the team, listens to others, and finds good solutions together with his colleagues. Even when facing challenges, he remains calm and focused on finding solutions.",
+
+  "recommendation-description-2": "What impressed me most was his careful way of working. He works in a structured manner, pays attention to details, and delivers results where quality and clean implementation are the top priorities.",
+
+  "recommendation-description-3": "He stands out through his high motivation and willingness to learn. He approaches new technologies and tasks with curiosity and adapts reliably to new topics.",
 
   "contact-intro": "Get In Touch",
   "contact-write-me": "Write Me",
@@ -42,6 +44,11 @@
   "contact-privacy": "I have read the privacy policy and agree to the processing of my data as described.",
 
   "contact-send": "Say Hello ;)",
+
+  "error-email": "Please enter a valid email address.",
+  "error-name": "Please enter your name.",
+  "error-message": "Please enter a message.",
+  "error-privacy": "Please accept the privacy policy.",
 
   "footer-name": "Günter Heldt",
   "footer-title": "Web Developer",

@@ -13,9 +13,7 @@ form.addEventListener("submit", async (event) => {
 
   checkInputFields();
 
-  if (!form.reportValidity()) {
-    return;
-  }
+  if (!(checkName() & checkEmail() & checkMessage() & checkPrivacy())) return;
 
   const data = getFormData();
 
@@ -53,6 +51,10 @@ function checkInputFields() {
   privacyCheckbox.addEventListener("change", checkPrivacy);
 }
 
+function t(key) {
+  return window.translations?.[key] || "";
+}
+
 function getFormData() {
   return {
     name: nameInput.value,
@@ -66,7 +68,7 @@ function checkEmail() {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const isValid = emailPattern.test(email);
 
-  emailError.textContent = isValid ? "" : "Bitte geben Sie eine gültige E-Mail-Adresse ein.";
+  emailError.textContent = isValid ? "" : t("error-email");
 
   return isValid;
 }
@@ -75,7 +77,7 @@ function checkName() {
   const name = nameInput.value;
   const isValid = name.trim() !== "";
 
-  nameError.textContent = isValid ? "" : "Bitte geben Sie Ihren Namen ein.";
+  nameError.textContent = isValid ? "" : t("error-name");
 
   return isValid;
 }
@@ -84,7 +86,7 @@ function checkMessage() {
   const message = messageInput.value;
   const isValid = message.trim() !== "";
 
-  messageError.textContent = isValid ? "" : "Bitte geben Sie eine Nachricht ein.";
+  messageError.textContent = isValid ? "" : t("error-message");
 
   return isValid;
 }
@@ -92,7 +94,7 @@ function checkMessage() {
 function checkPrivacy() {
   const isChecked = privacyCheckbox.checked;
 
-  privacyError.textContent = isChecked ? "" : "Bitte stimmen Sie der Datenschutzrichtlinie zu.";
+  privacyError.textContent = isChecked ? "" : t("error-privacy");
 
   return isChecked;
 }

@@ -25,9 +25,9 @@
 
   "recommendation-title": "Was meine Kollegen über mich sagen",
 
-  "recommendation-author-1": "M. M.",
-  "recommendation-author-2": "E. M.",
-  "recommendation-author-3": "P. H.",
+  "recommendation-description-1": "Die Zusammenarbeit mit ihm war immer sehr angenehm. Er bringt sich aktiv ins Team ein, hört anderen zu und findet gemeinsam mit den Kollegen gute Lösungen. Auch bei Herausforderungen bleibt er ruhig und lösungsorientiert.",
+  "recommendation-description-2":"Besonders beeindruckt hat mich seine sorgfältige Arbeitsweise. Er  arbeitet strukturiert, achtet auf Details und liefert Ergebnisse, bei denen Qualität und saubere Umsetzung im Vordergrund stehen.",
+  "recommendation-description-3":"Er zeichnet sich durch seine hohe Motivation und Lernbereitschaft aus. Neue Technologien und Aufgaben geht er mit Neugier an und arbeitet sich zuverlässig in neue Themen ein.",
 
   "contact-intro": "Kontaktieren Sie mich",
   "contact-write-me": "Schreiben Sie mir",
@@ -41,6 +41,11 @@
   "contact-privacy": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
 
   "contact-send": "Sagen Sie Hallo ;)",
+
+  "error-email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+  "error-name": "Bitte geben Sie Ihren Namen ein.",
+  "error-message": "Bitte geben Sie eine Nachricht ein.",
+  "error-privacy": "Bitte stimmen Sie der Datenschutzrichtlinie zu.",
 
   "footer-name": "Günter Heldt",
   "footer-title": "Webentwickler",
