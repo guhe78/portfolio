@@ -52,7 +52,7 @@ function checkInputFields() {
 }
 
 function t(key) {
-  return window.translations?.[key] || "";
+  return translations[key] || key;
 }
 
 function getFormData() {
