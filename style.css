@@ -103,6 +103,23 @@ button:hover {
   background-color: rgb(255, 255, 255, 0.2);
 }
 
+dialog {
+  margin: auto;
+
+  border-radius: 30px;
+  border: none;
+
+  background-color: transparent;
+  color: white;
+}
+
+.dialog-content {
+  background: linear-gradient(55.22deg, #1c1c1c 36.26%, #08463b 93.28%);
+  max-width: 1248px;
+  width: 100%;
+  border: 1px solid rgba(61, 207, 182, 1);
+}
+
 .home-section-background {
   width: 100%;
   display: flex;
@@ -311,20 +328,18 @@ footer a:hover {
 .aboutme-section {
   display: flex;
   justify-content: space-between;
-}
-
-.aboutme-part {
-  height: auto;
-  max-height: 568px;
-  border-radius: 30px;
-  padding: 30px;
   gap: 96px;
 }
 
 .aboutme-image-container {
+  flex: 1;
   align-self: flex-start;
   justify-self: flex-start;
   border: 1px solid #d9d9d9;
+  height: auto;
+  max-height: 708px;
+  border-radius: 30px;
+  padding: 30px;
 }
 
 .aboutme-image-container img {
@@ -336,7 +351,9 @@ footer a:hover {
 }
 
 .aboutme-text-container {
-  width: 568px;
+  flex: 1;
+  width: 100%;
+  max-width: 568px;
   margin-top: 112px;
 }
 
@@ -443,7 +460,7 @@ footer a:hover {
 .project-list {
   list-style: none;
   padding: 12px 0;
-  width: 100%;
+  width: 80%;
   max-width: 880px;
 }
 
@@ -476,6 +493,7 @@ footer a:hover {
 }
 
 .project-image img {
+  width: 100%;
   max-width: 295px;
   border-radius: 16px;
 }
