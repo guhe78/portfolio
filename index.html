@@ -63,9 +63,7 @@
         <h1 class="home-name" data-key="home-name">Günter Heldt</h1>
         <div class="title-buttons-container">
           <button class="home-button" onclick="scrollToSection('projects')">
-            <span class="home-button-text" data-text="Meine Arbeiten" data-key="projects"
-              >Meine Arbeiten</span
-            >
+            <span class="home-button-text" data-text="Projekte" data-key="projects">Projekte</span>
           </button>
           <button class="home-button" onclick="scrollToSection('contact')">
             <span class="home-button-text" data-text="Kontakt" data-key="contact">Kontakt</span>
@@ -77,7 +75,7 @@
       </section>
     </div>
     <section id="aboutme" class="aboutme-section">
-      <div class="aboutme-image-container aboutme-part aboutme-left-part">
+      <div class="aboutme-image-container">
         <img src="assets/images/dummy.png" alt="Günter Heldt" class="aboutme-image" />
       </div>
       <div class="aboutme-text-container text-border-container">
@@ -251,5 +249,11 @@
         <li><a href="mailto:mail@guenter-heldt.de" data-key="footer-email">Email</a></li>
       </ul>
     </footer>
+    <dialog id="dialog">
+      <div class="dialog-content">
+        <p id="dialog-message"></p>
+        <button id="dialog-close-button" data-key="dialog-close">Schließen</button>
+      </div>
+    </dialog>
   </body>
 </html>

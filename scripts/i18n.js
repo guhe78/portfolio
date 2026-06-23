@@ -24,6 +24,10 @@ async function loadLanguage(lang) {
 
     if (translations[key]) {
       element.textContent = translations[key];
+
+      if (element.hasAttribute("data-text")) {
+        element.setAttribute("data-text", translations[key]);
+      }
     }
   });
 }

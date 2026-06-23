@@ -18,3 +18,5 @@ coverage/
 *.php~
 
 .vscode/
+
+assets/images/profile/
