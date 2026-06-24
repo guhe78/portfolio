@@ -1,12 +1,13 @@
 const DIALOG = document.getElementById("dialog");
 
 function closeDialog() {
+  document.body.classList.remove("no_scroll");
   DIALOG.close();
-  toggleDialog();
 }
 
-function toggleDialog() {
-  document.body.classList.toggle("no_scroll");
+function openDialog() {
+  document.body.classList.add("no_scroll");
+  DIALOG.showModal();
 }
 
 DIALOG.onclick = (event) => {

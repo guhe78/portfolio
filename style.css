@@ -21,6 +21,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -50,6 +51,7 @@ h1 {
   font-size: clamp(2.5rem, 7vw, 8rem);
   font-weight: 700;
   line-height: 1.1;
+  margin: 0;
 }
 
 h2 {
@@ -57,23 +59,27 @@ h2 {
   font-size: clamp(1.8rem, 3.5vw, 3rem);
   letter-spacing: -0.02em;
   line-height: 1.2;
+  margin: 0;
 }
 
 h3 {
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   font-weight: 600;
   line-height: 1.3;
+  margin: 0;
 }
 
 h4 {
   font-size: clamp(1.1rem, 1.5vw, 1.25rem);
   font-weight: 600;
   line-height: 1.4;
+  margin: 0;
 }
 
 p {
   font-size: clamp(1rem, 1.1vw, 1.125rem);
   line-height: 1.2;
+  margin: 0;
 }
 
 a {
@@ -87,6 +93,14 @@ a:hover {
 
 ul {
   padding: 0;
+}
+
+.karla-font {
+  font-family: "Karla";
+}
+
+.fira-font {
+  font-family: "Fira Code";
 }
 
 .button {
@@ -256,15 +270,15 @@ dialog::backdrop {
 }
 
 .input-language-toggle:checked + .switch .de {
-  font-weight: 700;
+  font-weight: 400;
 }
 
-.en {
+.de {
   font-weight: 700;
 }
 
 .input-language-toggle:checked + .switch .en {
-  font-weight: 400;
+  font-weight: 700;
 }
 
 .input-language-toggle:checked + .switch::after {
@@ -562,6 +576,24 @@ footer a:hover {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+
+.project-info-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.project-info-dialog p {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.project-info-tech {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .project-links-container {
