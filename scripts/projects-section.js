@@ -1,8 +1,10 @@
 const projects = [
   {
     name: "Join",
-    description: "Beschreibung von Projekt 1",
+    description:
+      "Dies ist ein Projekt-Management-Tool. Man kann Kontakte anlegen, Aufgaben erstellen und diesen dann Mitglieder zuweisen. Es gibt eine Kanban-Ansicht, in der man die Aufgaben per Drag & Drop verschieben kann. Ich habe es mit drei weiteren Teilnehmern in einem Team entwickelt.",
     tech: ["HTML", "CSS", "JavaScript", "Firebase"],
+    techIcons: ["html", "css", "javascript", "firebase"],
     image: "assets/images/dummy.png",
     link: "https://example.com/projekt1",
     github: "https://github.com/guhe78/join",
@@ -10,19 +12,23 @@ const projects = [
   },
   {
     name: "Sharkie",
-    description: "Beschreibung von Projekt 2",
+    description:
+      "Dies ist ein kleines 2D-Scrolling Game. Man steuert einen kleinen Hai durch zwei Level und muss Gegner besiegen. Am Ende wartet ein Endgegner der ebenfalls besiegt werden muss.",
     tech: ["HTML", "CSS", "JavaScript"],
+    techIcons: ["html", "css", "javascript"],
     image: "assets/images/sharkie.png",
-    link: "https://example.com/projekt2",
+    link: "https://sharkie.guenter-heldt.de/",
     github: "https://github.com/guhe78/sharkie",
     id: "project-2",
   },
   {
     name: "Pokedex",
-    description: "Beschreibung von Projekt 3",
+    description:
+      "Dies ist eine Web-App. Sie zeigt Informationen zu allen Pokemons. Dabei greift sie auf Daten von 'The RESTful Pokémon API' zu.",
     tech: ["HTML", "CSS", "JavaScript"],
+    techIcons: ["html", "css", "javascript"],
     image: "assets/images/pokedex.png",
-    link: "https://example.com/projekt3",
+    link: "https://pokedex.guenter-heldt.de/",
     github: "https://github.com/guhe78/pokedex",
     id: "project-3",
   },
@@ -44,10 +50,15 @@ function initProjectsSection() {
       const dialogContent = document.getElementById("dialog-content");
       dialogContent.innerHTML = `
       <div class="project-info-dialog">
-        <p class="project-number">0${number}</p>
-        <h2>${project.name}</h2>
-        <p>${project.description}</p>
-        <p>${project.tech.join(" | ")}</p>
+        <div class="project-info-header">
+          <p class="project-number">0${number}</p>
+          <h2>${project.name}</h2>
+        </div>
+        <div class="project-info-tech">
+          <h3>Was ist das?</h3>
+            <p class="karla-font">${project.description}</p>
+            <p>${projectIconsName(project.techIcons, project.tech)}</p>
+        </div>
         <div class="project-links-container">
           <a href="${project.github}" target="_blank" class="button">GitHub ${icons.arrow_outward(14)}</a>
           <a href="${project.link}" target="_blank" class="button">Live ${icons.arrow_outward(14)}</a>
@@ -56,7 +67,7 @@ function initProjectsSection() {
       <img src="${project.image}" alt="${project.name}" />
       `;
       const dialog = document.getElementById("dialog");
-      dialog.showModal();
+      openDialog();
     });
 
     projectRow.addEventListener("mouseenter", () => {
@@ -73,4 +84,12 @@ function initProjectsSection() {
       projectInfo.innerHTML = "";
     });
   });
+
+  function projectIconsName(iconsArray, names) {
+    let result = "";
+    for (let i = 0; i < iconsArray.length; i++) {
+      result += `${icons[iconsArray[i]](24)} ${names[i]} `;
+    }
+    return result;
+  }
 }
