@@ -40,43 +40,21 @@ function initProjectsSection() {
     const projectInfo = document.getElementById(`project-info-container`);
     let number = index + 1;
 
-    projectRow.innerHTML = `
-  <span id="project-name-${project.id}" class="project-name">${project.name}</span>
-  <span class="project-tech">${project.tech.join(" | ")}</span>
-  `;
+    projectRow.innerHTML = projectInfoShort(project);
     const projectName = document.getElementById(`project-name-${project.id}`);
 
     projectRow.addEventListener("click", () => {
       const dialogContent = document.getElementById("dialog-content");
-      dialogContent.innerHTML = `
-      <div class="project-info-dialog">
-        <div class="project-info-header">
-          <p class="project-number">0${number}</p>
-          <h2>${project.name}</h2>
-        </div>
-        <div class="project-info-tech">
-          <h3>Was ist das?</h3>
-            <p class="karla-font">${project.description}</p>
-            <p>${projectIconsName(project.techIcons, project.tech)}</p>
-        </div>
-        <div class="project-links-container">
-          <a href="${project.github}" target="_blank" class="button">GitHub ${icons.arrow_outward(14)}</a>
-          <a href="${project.link}" target="_blank" class="button">Live ${icons.arrow_outward(14)}</a>
-        </div>
-      </div>
-      <img src="${project.image}" alt="${project.name}" />
-      `;
+      dialogContent.innerHTML = projectInfoDialog(project, number);
       const dialog = document.getElementById("dialog");
+      const closeDialogButton = document.getElementById("close-dialog-button");
+      closeDialogButton.addEventListener("click", closeDialog);
       openDialog();
     });
 
     projectRow.addEventListener("mouseenter", () => {
       projectName.innerHTML = project.name + icons.arrow_outward(14);
-      projectInfo.innerHTML = `
-    <div class="${project.id} project-image">
-      <img src="${project.image}" alt="${project.name}" />
-    </div>
-  `;
+      projectInfo.innerHTML = projectInfoHover(project);
     });
 
     projectRow.addEventListener("mouseleave", () => {
@@ -84,12 +62,12 @@ function initProjectsSection() {
       projectInfo.innerHTML = "";
     });
   });
+}
 
-  function projectIconsName(iconsArray, names) {
-    let result = "";
-    for (let i = 0; i < iconsArray.length; i++) {
-      result += `${icons[iconsArray[i]](24)} ${names[i]} `;
-    }
-    return result;
+function projectIconsName(iconsArray, names) {
+  let result = "";
+  for (let i = 0; i < iconsArray.length; i++) {
+    result += `${icons[iconsArray[i]](24)} ${names[i]} `;
   }
+  return result;
 }

@@ -557,8 +557,11 @@ footer a:hover {
   border: 1px solid rgba(61, 207, 182, 1);
   border-radius: 30px;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+
+  font-family: "Karla";
 }
 
 .dialog-content img {
@@ -569,7 +572,7 @@ footer a:hover {
 
 .project-info-dialog {
   width: 100%;
-  max-width: 480px;
+  max-width: 474px;
   max-height: 496px;
   gap: 40px;
   display: flex;
@@ -588,6 +591,8 @@ footer a:hover {
   display: flex;
   align-items: center;
   gap: 16px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .project-info-tech {
@@ -601,9 +606,83 @@ footer a:hover {
   gap: 40px;
 }
 
+.project-link-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 1);
+  border-radius: 100px;
+
+  padding: 12px 24px;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+.project-link-button svg {
+  width: 11px;
+  height: 11px;
+  transition: transform 0.1s ease-in;
+}
+
+.project-link-button:hover {
+  color: rgba(61, 207, 182, 1);
+  border: 1px solid rgba(61, 207, 182, 1);
+}
+
+.project-link-button:hover svg {
+  transform: translateX(3px) translateY(-3px);
+}
+
 .project-number {
   font-family: "Karla";
   font-size: 128px;
+}
+
+.close-dialog-button,
+.next-project-button {
+  cursor: pointer;
+
+  position: absolute;
+  right: 80px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: transparent;
+  color: rgba(61, 207, 182, 1);
+  border: none;
+}
+
+.close-dialog-button {
+  color: rgba(255, 255, 255, 1);
+  top: 48px;
+}
+
+.next-project-button {
+  font-size: 18px;
+  bottom: 48px;
+  gap: 8px;
+}
+
+.next-project-button span {
+  font-family: "Karla";
+}
+
+.close-dialog-button svg:hover {
+  transform: scale(1.3);
+}
+
+.next-project-button:hover {
+  color: white;
+}
+
+.next-project-button svg {
+  transition: transform 0.1s ease-in;
+}
+
+.next-project-button:hover svg {
+  transform: translateX(5px);
 }
 
 .recommendation-section {
