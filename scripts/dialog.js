@@ -1,12 +1,13 @@
 const DIALOG = document.getElementById("dialog");
+const BODY = document.body;
 
 function closeDialog() {
-  document.body.classList.remove("no_scroll");
+  BODY.classList.remove("no_scroll");
   DIALOG.close();
 }
 
 function openDialog() {
-  document.body.classList.add("no_scroll");
+  BODY.classList.add("no_scroll");
   DIALOG.showModal();
 }
 
