@@ -34,33 +34,49 @@ const projects = [
   },
 ];
 
+const dialogContent = document.getElementById("dialog-content");
+const dialog = document.getElementById("dialog");
+
 function initProjectsSection() {
   projects.forEach((project, index) => {
-    const projectRow = document.getElementById(project.id);
     const projectInfo = document.getElementById(`project-info-container`);
+    const projectRow = document.getElementById(project.id);
     let number = index + 1;
 
-    projectRow.innerHTML = projectInfoShort(project);
+    projectRow.innerHTML = projectInfoShortTemplate(project);
     const projectName = document.getElementById(`project-name-${project.id}`);
 
     projectRow.addEventListener("click", () => {
-      const dialogContent = document.getElementById("dialog-content");
-      dialogContent.innerHTML = projectInfoDialog(project, number);
-      const dialog = document.getElementById("dialog");
-      const closeDialogButton = document.getElementById("close-dialog-button");
-      closeDialogButton.addEventListener("click", closeDialog);
+      renderDialogContent(project, number);
       openDialog();
+      nextProject(index + 1);
     });
 
     projectRow.addEventListener("mouseenter", () => {
       projectName.innerHTML = project.name + icons.arrow_outward(14);
-      projectInfo.innerHTML = projectInfoHover(project);
+      projectInfo.innerHTML = projectInfoHoverTemplate(project);
     });
 
     projectRow.addEventListener("mouseleave", () => {
       projectName.innerHTML = project.name;
       projectInfo.innerHTML = "";
     });
+  });
+}
+
+function renderDialogContent(project, number) {
+  dialogContent.innerHTML = projectInfoDialogTemplate(project, number);
+  const closeDialogButton = document.getElementById("close-dialog-button");
+  closeDialogButton.addEventListener("click", closeDialog);
+}
+
+function nextProject(index) {
+  const nextIndex = (index + 1) % projects.length;
+  const nextProjectButton = document.getElementById("next-project-button");
+
+  nextProjectButton.addEventListener("click", () => {
+    renderDialogContent(projects[nextIndex], nextIndex + 1);
+    nextProject(nextIndex);
   });
 }
 

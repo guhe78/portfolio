@@ -1,11 +1,11 @@
-function projectInfoShort(project) {
+function projectInfoShortTemplate(project) {
   return `
   <span id="project-name-${project.id}" class="project-name">${project.name}</span>
   <span class="project-tech">${project.tech.join(" | ")}</span>
   `;
 }
 
-function projectInfoHover(project) {
+function projectInfoHoverTemplate(project) {
   return `
   <div class="${project.id} project-image">
     <img src="${project.image}" alt="${project.name}" />
@@ -13,7 +13,7 @@ function projectInfoHover(project) {
   `;
 }
 
-function projectInfoDialog(project, number) {
+function projectInfoDialogTemplate(project, number) {
   return `
       <button id="close-dialog-button" class="close-dialog-button">${icons.close(18)}</button>
       <div class="project-info-dialog">
