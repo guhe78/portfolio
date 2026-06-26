@@ -7,7 +7,7 @@ const programmingLanguages = [
   { name: "Growth mindset", icon: "growth_mindset" },
 ];
 
-function createSkillBadgeContainer() {
+function initSkillBadgeContainer() {
   const container = document.getElementById("skill-badges-container");
 
   programmingLanguages.forEach((lang) => {

@@ -8,37 +8,46 @@ const emailError = document.getElementById("email-validation");
 const messageError = document.getElementById("message-validation");
 const privacyError = document.getElementById("privacy-validation");
 
-form.addEventListener("submit", async (event) => {
-  event.preventDefault();
+function initContactSection() {
+  handleFormSubmit();
+}
 
-  checkInputFields();
+function handleFormSubmit(event) {
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    initEventListenerInputFields();
+    const isValid = checkName() & checkEmail() & checkMessage() & checkPrivacy();
 
-  if (!(checkName() & checkEmail() & checkMessage() & checkPrivacy())) return;
+    if (!isValid) return;
 
-  const data = getFormData();
+    const data = getFormData();
 
-  console.log("Formulardaten:", data);
+    console.log("Formulardaten:", data);
+    //await sendFormData(data);
+  });
+}
 
-  // try {
-  //   const res = await fetch("scripts/php/contact_form_mail.php", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(data),
-  //   });
+async function sendFormData(data) {
+  try {
+    const res = await fetch("scripts/php/contact_form_mail.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
 
-  //   const result = await res.json();
+    const result = await res.json();
 
-  //   if (result.success) {
-  //     console.log("Formular erfolgreich gesendet");
-  //   } else {
-  //     console.error("Fehler beim Senden des Formulars");
-  //   }
-  // } catch (error) {
-  //   console.error("Fehler beim Senden des Formulars:", error);
-  // }
-});
+    if (result.success) {
+      console.log("Formular erfolgreich gesendet");
+    } else {
+      console.error("Fehler beim Senden des Formulars");
+    }
+  } catch (error) {
+    console.error("Fehler beim Senden des Formulars:", error);
+  }
+}
 
-function checkInputFields() {
+function initEventListenerInputFields() {
   emailInput.addEventListener("blur", checkEmail);
   emailInput.addEventListener("input", checkEmail);
 

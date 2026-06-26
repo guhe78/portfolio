@@ -46,21 +46,25 @@ function initProjectsSection() {
     projectRow.innerHTML = projectInfoShortTemplate(project);
     const projectName = document.getElementById(`project-name-${project.id}`);
 
-    projectRow.addEventListener("click", () => {
-      renderDialogContent(project, number);
-      openDialog();
-      nextProject(index + 1);
-    });
+    initEventListeners(projectRow, projectName, projectInfo, project, number);
+  });
+}
 
-    projectRow.addEventListener("mouseenter", () => {
-      projectName.innerHTML = project.name + icons.arrow_outward(14);
-      projectInfo.innerHTML = projectInfoHoverTemplate(project);
-    });
+function initEventListeners(projectRow, projectName, projectInfo, project, number) {
+  projectRow.addEventListener("click", () => {
+    renderDialogContent(project, number);
+    openDialog();
+    nextProject(number - 1);
+  });
 
-    projectRow.addEventListener("mouseleave", () => {
-      projectName.innerHTML = project.name;
-      projectInfo.innerHTML = "";
-    });
+  projectRow.addEventListener("mouseenter", () => {
+    projectName.innerHTML = project.name + icons.arrow_outward(14);
+    projectInfo.innerHTML = projectInfoHoverTemplate(project);
+  });
+
+  projectRow.addEventListener("mouseleave", () => {
+    projectName.innerHTML = project.name;
+    projectInfo.innerHTML = "";
   });
 }
 
