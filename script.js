@@ -1,6 +1,7 @@
 function init() {
+  initLanguage();
   animateInfoStrip();
-  createSkillBadgeContainer();
+  initSkillBadgeContainer();
   initProjectsSection();
-  checkInputFields();
+  initContactSection();
 }

@@ -3,17 +3,21 @@ const switchButton = document.getElementById("toggle-language");
 let currentLanguage = localStorage.getItem("language") || "de";
 let translations = {};
 
-switchButton.checked = currentLanguage === "en";
+function initLanguage() {
+  switchButton.checked = currentLanguage === "en";
+  loadLanguage(currentLanguage);
+  toggleLanguage();
+}
 
-loadLanguage(currentLanguage);
+function toggleLanguage() {
+  switchButton.addEventListener("change", async () => {
+    currentLanguage = switchButton.checked ? "en" : "de";
 
-switchButton.addEventListener("change", async () => {
-  currentLanguage = switchButton.checked ? "en" : "de";
+    localStorage.setItem("language", currentLanguage);
 
-  localStorage.setItem("language", currentLanguage);
-
-  await loadLanguage(currentLanguage);
-});
+    await loadLanguage(currentLanguage);
+  });
+}
 
 async function loadLanguage(lang) {
   const response = await fetch(`./locales/${lang}.json`);
