@@ -1,0 +1,69 @@
+.contact-section {
+  display: flex;
+  gap: 96px;
+}
+
+.contact-left-part {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.contact-right-part {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-left-part,
+.contact-right-part {
+  flex: 1;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form > div {
+  border-top: 1px solid #d9d9d9;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form input:not([type="checkbox"]),
+.contact-form textarea {
+  font-size: 18px;
+  background-color: transparent;
+  border: none;
+  border-radius: 8px;
+}
+
+.contact-form input:not([type="checkbox"]):hover,
+.contact-form textarea:hover {
+  cursor: text;
+  background-color: rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+
+.contact-form input[type="checkbox"]:hover {
+  cursor: pointer;
+}
+
+.form-group {
+  position: relative;
+}
+
+.validation-message {
+  position: absolute;
+  color: red;
+  bottom: 10px;
+}
+
+.send-button {
+  align-self: center;
+}
