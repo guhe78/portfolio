@@ -1,70 +1,72 @@
 const sliderViewport = document.getElementById("recommendation-slider-container");
 const sliderContainer = document.querySelector(".card-slider-container");
-
-const originalCards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"));
-const totalOriginalCards = originalCards.length;
-
-const prependClones = [
-  originalCards[totalOriginalCards - 2].cloneNode(true),
-  originalCards[totalOriginalCards - 1].cloneNode(true),
-];
-
-const appendClones = [originalCards[0].cloneNode(true), originalCards[1].cloneNode(true)];
-
-prependClones.forEach((clone) => {
-  sliderContainer.insertBefore(clone, sliderContainer.firstElementChild);
-});
-
-appendClones.forEach((clone) => {
-  sliderContainer.appendChild(clone);
-});
-
-const cards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"));
-
 const leftArrowButton = document.getElementById("prev-recommendation");
 const rightArrowButton = document.getElementById("next-recommendation");
 const dotsContainer = document.getElementById("recommendation-dots-container");
+
 const dots = [];
-const dotIcon = icons.ellipse(8);
-
-for (let i = 0; i < totalOriginalCards; i++) {
-  const dot = document.createElement("div");
-  dot.classList.add("recommendation-dot");
-  if (i === 0) {
-    dot.classList.add("active");
-  }
-  dot.innerHTML = dotIcon;
-  dotsContainer.appendChild(dot);
-  dots.push(dot);
-}
-const quoteMarks = document.querySelectorAll(".quote-icon");
-
-quoteMarks.forEach((quoteMark) => {
-  quoteMark.innerHTML = icons.quote();
-});
-
-leftArrowButton.innerHTML = `
-  <span class="recommendation-button-text">
-    ${icons.arrow_back(20)}
-  </span>
-`;
-
-rightArrowButton.innerHTML = `
-  <span class="recommendation-button-text">
-    ${icons.arrow_forward(20)}
-  </span>
-`;
-
-rightArrowButton.addEventListener("click", () => {
-  slide("next");
-});
-
-leftArrowButton.addEventListener("click", () => {
-  slide("prev");
-});
-
 let currentIndex = 3;
 let isAnimating = false;
+
+let cards = [];
+let totalOriginalCards = 0;
+
+function setupClones() {
+  const originalCards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"));
+  totalOriginalCards = originalCards.length;
+
+  const prependClones = [
+    originalCards[totalOriginalCards - 2].cloneNode(true),
+    originalCards[totalOriginalCards - 1].cloneNode(true),
+  ];
+
+  const appendClones = [originalCards[0].cloneNode(true), originalCards[1].cloneNode(true)];
+
+  prependClones.forEach((clone) => {
+    sliderContainer.insertBefore(clone, sliderContainer.firstElementChild);
+  });
+
+  appendClones.forEach((clone) => {
+    sliderContainer.appendChild(clone);
+  });
+
+  cards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"));
+}
+
+function setupDots() {
+  const dotIcon = icons.ellipse(8);
+
+  for (let i = 0; i < totalOriginalCards; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("recommendation-dot");
+    if (i === 0) {
+      dot.classList.add("active");
+    }
+    dot.innerHTML = dotIcon;
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+  }
+}
+
+function setupIcons() {
+  const quoteMarks = document.querySelectorAll(".quote-icon");
+
+  quoteMarks.forEach((quoteMark) => {
+    quoteMark.innerHTML = icons.quote();
+  });
+
+  leftArrowButton.innerHTML = `
+    <span class="recommendation-button-text">
+      ${icons.arrow_back(20)}
+    </span>
+  `;
+
+  rightArrowButton.innerHTML = `
+    <span class="recommendation-button-text">
+      ${icons.arrow_forward(20)}
+    </span>
+  `;
+}
 
 function getSliderMetrics() {
   const cardWidth = cards[0].offsetWidth;
@@ -104,6 +106,22 @@ function updateDots() {
   });
 }
 
+function wrapIndex(index) {
+  if (index <= 1) return index + totalOriginalCards;
+  if (index >= totalOriginalCards + 2) return index - totalOriginalCards;
+  return index;
+}
+
+function onSlideEnd(targetIndex) {
+  sliderContainer.classList.add("no-transition");
+  currentIndex = wrapIndex(targetIndex);
+  centerMainCard();
+  requestAnimationFrame(() => sliderContainer.classList.remove("no-transition"));
+  updateClasses();
+  updateDots();
+  isAnimating = false;
+}
+
 function slide(direction) {
   if (isAnimating) return;
   if (direction !== "next" && direction !== "prev") return;
@@ -115,55 +133,46 @@ function slide(direction) {
   sliderContainer.style.transform = `translateX(${centerOffset - cardStep * targetIndex}px)`;
 
   const onTransitionEnd = (event) => {
-    if (event.target !== sliderContainer || event.propertyName !== "transform") {
-      return;
-    }
-
+    if (event.target !== sliderContainer || event.propertyName !== "transform") return;
     sliderContainer.removeEventListener("transitionend", onTransitionEnd);
-
-    sliderContainer.style.transition = "none";
-
-    currentIndex = targetIndex;
-
-    if (currentIndex <= 1) {
-      currentIndex += totalOriginalCards;
-    }
-
-    if (currentIndex >= totalOriginalCards + 2) {
-      currentIndex -= totalOriginalCards;
-    }
-
-    centerMainCard();
-
-    requestAnimationFrame(() => {
-      sliderContainer.style.transition = "transform .5s ease";
-    });
-
-    updateClasses();
-    updateDots();
-
-    isAnimating = false;
+    onSlideEnd(targetIndex);
   };
 
   sliderContainer.addEventListener("transitionend", onTransitionEnd);
 }
 
-updateClasses();
-updateDots();
-sliderContainer.style.transition = "none";
-centerMainCard();
+function setupEventListeners() {
+  rightArrowButton.addEventListener("click", () => {
+    slide("next");
+  });
 
-requestAnimationFrame(() => {
-  sliderContainer.style.transition = "transform .5s ease";
-});
+  leftArrowButton.addEventListener("click", () => {
+    slide("prev");
+  });
 
-window.addEventListener("resize", () => {
-  if (isAnimating) return;
+  window.addEventListener("resize", () => {
+    if (isAnimating) return;
 
-  sliderContainer.style.transition = "none";
+    sliderContainer.classList.add("no-transition");
+    centerMainCard();
+
+    requestAnimationFrame(() => {
+      sliderContainer.classList.remove("no-transition");
+    });
+  });
+}
+
+function initRecommendationSection() {
+  setupClones();
+  setupDots();
+  setupIcons();
+  setupEventListeners();
+  updateClasses();
+  updateDots();
+  sliderContainer.classList.add("no-transition");
   centerMainCard();
 
   requestAnimationFrame(() => {
-    sliderContainer.style.transition = "transform .5s ease";
+    sliderContainer.classList.remove("no-transition");
   });
-});
+}
