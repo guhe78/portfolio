@@ -3,5 +3,6 @@ function init() {
   animateInfoStrip();
   initSkillBadgeContainer();
   initProjectsSection();
+  initRecommendationSection();
   initContactSection();
 }
