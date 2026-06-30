@@ -9,4 +9,28 @@
   .project-info-container {
     display: none;
   }
+
+  .aboutme-section,
+  .skills-section,
+  .contact-section {
+    flex-direction: column;
+    gap: 77px;
+  }
+
+  .aboutme-text-container {
+    margin-top: 0;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutme-section {
+    align-items: center;
+  }
+
+  .aboutme-image-container,
+  .aboutme-text-container {
+    justify-self: unset;
+    align-self: unset;
+  }
 }

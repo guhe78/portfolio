@@ -19,7 +19,12 @@
 
 .home-title {
   font-family: "Fira Code";
-  font-size: clamp(1.5rem, 3vw, 3rem);
+  font-size: clamp(1.5rem, 1.404vw + 1.237rem, 2.5rem);
+  text-align: center;
+}
+
+.home-name {
+  text-align: center;
 }
 
 .title-buttons-container {
