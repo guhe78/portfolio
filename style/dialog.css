@@ -1,0 +1,20 @@
+dialog {
+  margin: auto;
+
+  border-radius: 30px;
+  border: none;
+
+  width: 1248px;
+  height: auto;
+
+  background-color: transparent;
+  color: white;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.no_scroll {
+  overflow: hidden;
+}

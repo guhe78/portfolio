@@ -21,26 +21,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-grow: 1;
+  width: clamp(180px, 30vw, 300px);
 }
 
 .project-description {
-  width: 60%;
+  width: clamp(420px, 60vw, 800px);
   padding-top: 32px;
 }
 
 .project-list {
   list-style: none;
   padding: 12px 0;
-  width: 80%;
-  max-width: 880px;
+  width: clamp(600px, 60vw, 880px);
 }
 
 .project-item {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  max-width: 880px;
   padding: 40px 32px;
   border-top: 1px solid #d9d9d9;
 }
@@ -99,6 +96,11 @@
 .project-name {
   font-weight: bold;
   font-size: 1.25rem;
+}
+
+.project-tech {
+  display: flex;
+  align-items: center;
 }
 
 .dialog-content {

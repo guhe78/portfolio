@@ -116,27 +116,6 @@ ul {
   background-color: rgb(255, 255, 255, 0.2);
 }
 
-dialog {
-  margin: auto;
-
-  border-radius: 30px;
-  border: none;
-
-  width: 1248px;
-  height: auto;
-
-  background-color: transparent;
-  color: white;
-}
-
-dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.9);
-}
-
-.no_scroll {
-  overflow: hidden;
-}
-
 .text-border-container {
   display: flex;
   flex-direction: column;
@@ -160,49 +139,4 @@ p.font-bold {
   display: flex;
   justify-content: space-between;
   padding: 32px;
-}
-
-footer {
-  max-width: var(--section-width);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 32px 96px;
-}
-
-footer ul {
-  list-style: none;
-}
-
-nav li,
-footer li {
-  position: relative;
-}
-
-nav li::after,
-footer li::after {
-  font-size: 24px;
-  content: "•";
-  position: absolute;
-
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-nav li:hover::after,
-footer li:hover::after {
-  opacity: 1;
-}
-
-nav li::after {
-  left: 50%;
-  bottom: -24px;
-  transform: translateX(-50%);
-}
-
-footer li::after {
-  left: -16px;
-  top: 50%;
-  transform: translateY(-50%);
 }
