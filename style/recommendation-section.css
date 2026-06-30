@@ -3,14 +3,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 452px;
+  padding: auto 0;
 }
 
-.recommendation-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
+.recommendation-title {
+  text-align: center;
 }
 
 .recommendation-author {
@@ -86,8 +83,7 @@
 }
 
 .recommendation-slider-container {
-  width: calc(600px + 48px + 300px + 300px);
-  max-width: 100%;
+  width: 100%;
   overflow-y: visible;
   overflow-x: hidden;
   position: relative;
@@ -100,7 +96,7 @@
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 300px;
+  width: clamp(0px, calc(-111.429px + 28.571vw), 300px);
   z-index: 10;
   pointer-events: none;
 }
@@ -118,16 +114,15 @@
 .card-slider-container {
   display: flex;
   justify-content: flex-start;
-  gap: 48px;
+  gap: clamp(8px, calc(-6.857px + 3.81vw), 48px);
 
   transition: transform 0.5s ease;
 }
 
 .recommendation-card {
-  flex: 0 0 600px;
+  flex: 0 0 auto;
 
-  width: 600px;
-  height: 274px;
+  width: clamp(358px, calc(268.114px + 23.048vw), 600px);
 
   padding: 48px 40px;
 

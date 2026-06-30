@@ -40,13 +40,12 @@ body {
 section {
   max-width: var(--section-width);
   width: 100%;
-
-  padding: 0 96px;
+  padding: clamp(16px, calc(-13.714px + 7.619vw), 96px);
 }
 
 h1 {
   font-family: "Karla";
-  font-size: clamp(2.5rem, 7vw, 8rem);
+  font-size: clamp(3.875rem, 6.286vw + 2.343rem, 8rem);
   font-weight: 700;
   line-height: 1.1;
   margin: 0;
@@ -54,14 +53,14 @@ h1 {
 
 h2 {
   font-family: "Fira Code";
-  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-size: clamp(3.5rem, 0.762vw + 3.314rem, 4rem);
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1;
   margin: 0;
 }
 
 h3 {
-  font-size: clamp(1.25rem, 2vw, 1.75rem);
+  font-size: clamp(1.25rem, 0.381vw + 1.157rem, 1.5rem);
   font-weight: 600;
   line-height: 1.3;
   margin: 0;
@@ -75,7 +74,7 @@ h4 {
 }
 
 p {
-  font-size: clamp(1rem, 1.1vw, 1.125rem);
+  font-size: clamp(1rem, 0.9678rem + 0.1747vw, 1.125rem);
   line-height: 1.2;
   margin: 0;
 }
