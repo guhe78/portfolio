@@ -1,6 +1,5 @@
 .skills-section-background {
   width: 100%;
-  height: 695px;
   display: flex;
   justify-content: center;
   background-image: radial-gradient(
@@ -25,9 +24,9 @@
 .skill-badges-container {
   display: flex;
   justify-content: center;
-  width: 100%;
+
   flex-wrap: wrap;
-  gap: 72px;
+  gap: clamp(40px, calc(28.114px + 3.048vw), 72px);
 }
 
 .skill-item {

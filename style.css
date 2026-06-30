@@ -40,7 +40,7 @@ body {
 section {
   max-width: var(--section-width);
   width: 100%;
-  padding: clamp(16px, calc(-13.714px + 7.619vw), 96px);
+  padding: 0 clamp(16px, calc(-13.714px + 7.619vw), 96px);
 }
 
 h1 {

@@ -3,7 +3,7 @@
     width: clamp(280px, 90vw, 720px);
   }
   .project-item {
-    padding: 24px 0;
+    padding: 32px 0;
   }
 
   .project-info-container {
@@ -21,6 +21,19 @@
     margin-top: 0;
     align-self: flex-end;
   }
+
+  .quote-icon {
+    top: -12px;
+    left: 0;
+  }
+
+  .quote-icon svg {
+    width: 67px;
+    height: 48px;
+  }
+
+  .recommendation-card {
+  }
 }
 
 @media (max-width: 700px) {
@@ -32,5 +45,11 @@
   .aboutme-text-container {
     justify-self: unset;
     align-self: unset;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-item {
+    flex-direction: column;
   }
 }
