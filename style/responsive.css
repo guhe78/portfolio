@@ -1,0 +1,12 @@
+@media (max-width: 1024px) {
+  .project-list {
+    width: clamp(280px, 90vw, 720px);
+  }
+  .project-item {
+    padding: 24px 0;
+  }
+
+  .project-info-container {
+    display: none;
+  }
+}
