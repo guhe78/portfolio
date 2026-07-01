@@ -8,11 +8,8 @@
   flex: 1;
   align-self: flex-start;
   justify-self: flex-start;
-  border: 1px solid #d9d9d9;
   height: auto;
   max-height: 708px;
-  border-radius: 30px;
-  padding: 30px;
 }
 
 .aboutme-image-container img {
@@ -21,6 +18,8 @@
   max-height: 568px;
   height: 100%;
   object-fit: cover;
+  border: 1px solid #d9d9d9;
+  border-radius: 30px;
 }
 
 .aboutme-text-container {

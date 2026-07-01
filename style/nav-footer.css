@@ -17,7 +17,7 @@
   max-width: var(--section-width);
   width: 100%;
   height: 96px;
-  padding: 0 96px;
+  padding: 0 clamp(16px, calc(-13.714px + 7.619vw), 96px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -113,12 +113,25 @@ footer a:hover {
 footer {
   max-width: var(--section-width);
   width: 100%;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  justify-content: space-between;
   align-items: center;
   padding: 32px clamp(16px, calc(-13.714px + 7.619vw), 96px);
 }
 
-footer ul {
+.footer-info {
+  justify-self: start;
+}
+
+.footer-copy {
+  grid-column-end: 3;
+  justify-self: center;
+  text-align: center;
+}
+
+.social-links {
+  justify-self: end;
   list-style: none;
 }
 
