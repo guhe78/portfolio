@@ -35,6 +35,8 @@ body {
   overflow-x: hidden;
 
   gap: 96px;
+
+  hyphens: auto;
 }
 
 section {

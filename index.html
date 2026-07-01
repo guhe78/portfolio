@@ -193,12 +193,24 @@
         <form class="contact-form" id="contact-form">
           <div class="form-group">
             <label for="name" data-key="contact-name">Ihr Name?</label>
-            <input type="text" id="name" name="name" required />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              data-placeholder-key="contact-name-placeholder"
+              required
+            />
             <small class="validation-message" id="name-validation"></small>
           </div>
           <div class="form-group">
             <label for="email" data-key="contact-email">Ihre E-Mail?</label>
-            <input type="email" id="email" name="email" required />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              data-placeholder-key="contact-email-placeholder"
+              required
+            />
             <small
               class="validation-message"
               id="email-validation"
@@ -207,7 +219,12 @@
           </div>
           <div class="form-group">
             <label for="message" data-key="contact-message">Wie kann ich Ihnen helfen?</label>
-            <textarea id="message" name="message" required></textarea>
+            <textarea
+              id="message"
+              name="message"
+              data-placeholder-key="contact-message-placeholder"
+              required
+            ></textarea>
             <small
               class="validation-message"
               id="message-validation"

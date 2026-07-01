@@ -6,6 +6,7 @@ let translations = {};
 function initLanguage() {
   switchButton.checked = currentLanguage === "en";
   loadLanguage(currentLanguage);
+  setPageAttribute(currentLanguage);
   toggleLanguage();
 }
 
@@ -14,6 +15,7 @@ function toggleLanguage() {
     currentLanguage = switchButton.checked ? "en" : "de";
 
     localStorage.setItem("language", currentLanguage);
+    setPageAttribute(currentLanguage);
 
     await loadLanguage(currentLanguage);
   });
@@ -34,4 +36,16 @@ async function loadLanguage(lang) {
       }
     }
   });
+
+  document.querySelectorAll("[data-placeholder-key]").forEach((element) => {
+    const key = element.dataset.placeholderKey;
+
+    if (translations[key]) {
+      element.setAttribute("placeholder", translations[key]);
+    }
+  });
+}
+
+function setPageAttribute(currentLanguage) {
+  document.documentElement.setAttribute("lang", currentLanguage);
 }

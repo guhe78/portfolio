@@ -41,6 +41,10 @@
   "contact-email": "Your Email?",
   "contact-message": "How Can I Help You?",
 
+  "contact-name-placeholder": "Your name goes here..",
+  "contact-email-placeholder": "youremail@email.com",
+  "contact-message-placeholder": "Your message goes here..",
+
   "contact-privacy": "I have read the privacy policy and agree to the processing of my data as described.",
 
   "contact-send": "Say Hello ;)",
