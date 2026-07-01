@@ -1,3 +1,8 @@
+@media (min-width: 1440px) {
+  .info-strip {
+    bottom: clamp(40px, calc(-292.308px + 23.077vw), 400px);
+  }
+}
 @media (max-width: 1024px) {
   .project-list {
     width: clamp(280px, 90vw, 720px);
@@ -30,9 +35,6 @@
   .quote-icon svg {
     width: 67px;
     height: 48px;
-  }
-
-  .recommendation-card {
   }
 }
 

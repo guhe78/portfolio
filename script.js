@@ -1,6 +1,6 @@
 function init() {
   initLanguage();
-  animateInfoStrip();
+  initHomeSection();
   initSkillBadgeContainer();
   initProjectsSection();
   initRecommendationSection();

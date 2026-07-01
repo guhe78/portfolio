@@ -66,122 +66,10 @@
   }
 }
 
-.navbar-background {
-  position: absolute;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 100%;
-  height: 96px;
-
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
-}
-
-.navbar {
-  color: #ffffff;
-  font-size: 20px;
-  max-width: var(--section-width);
-  width: 100%;
-  height: 96px;
-  padding: 0 96px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar-left {
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-}
-
-.switch {
-  position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  border: 1px solid white;
-  border-radius: 100px;
-  width: 84px;
-  height: 28px;
-  cursor: pointer;
-  transition: 0.4s;
-  font-size: 16px;
-}
-
-.switch::after {
-  content: "";
-  width: 40px;
-  height: 24px;
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 80px;
-  transition: 0.4s;
-}
-
-.input-language-toggle {
-  width: 0;
-  height: 0;
-  visibility: hidden;
-}
-
-.input-language-toggle:checked + .switch {
-  background: transparent;
-}
-
-.input-language-toggle:checked + .switch .de {
-  font-weight: 400;
-}
-
-.de {
-  font-weight: 700;
-}
-
-.input-language-toggle:checked + .switch .en {
-  font-weight: 700;
-}
-
-.input-language-toggle:checked + .switch::after {
-  left: 1px;
-  transform: translateX(100%);
-}
-
-.nav-links {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  text-decoration: none;
-  list-style: none;
-}
-
-.nav-links a:hover,
-footer a:hover {
-  color: #3dcfb6;
-}
-
-.navbar-name {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: 32px;
-}
-
-.navbar-firstname {
-  margin-bottom: -8px;
-}
-
-.navbar-lastname {
-  margin-top: -8px;
-}
-
 .info-strip {
   transform: rotate(-3deg);
   position: absolute;
-  bottom: 32px;
+  bottom: 40px;
 
   padding: 12px 32px;
 
@@ -196,7 +84,7 @@ footer a:hover {
 .info-track {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 56px;
 }
 
 .info-track svg {

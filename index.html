@@ -50,13 +50,13 @@
   <body onload="init()">
     <div class="navbar-background">
       <nav class="navbar">
-        <div class="navbar-left">
+        <div class="navbar-left" id="navbar-left">
           <input type="checkbox" id="toggle-language" class="input-language-toggle" />
           <label class="switch" for="toggle-language">
             <span class="de">DE</span>
             <span class="en">EN</span>
           </label>
-          <ul class="nav-links">
+          <ul class="nav-links" id="nav-links">
             <li><a href="#aboutme" data-key="about-me">Über mich</a></li>
             <li><a href="#skills" data-key="skills">Fähigkeiten</a></li>
             <li><a href="#projects" data-key="projects">Projekte</a></li>
@@ -64,8 +64,14 @@
           </ul>
         </div>
         <div class="navbar-name">
-          <span class="navbar-firstname">Günter</span> <span class="navbar-lastname">Heldt</span>
+          <span class="navbar-firstname">Günter</span>
+          <span class="navbar-lastname">Heldt</span>
         </div>
+        <button class="menu-toggle-button" id="menu-toggle" aria-label="Toggle Menu">
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+        </button>
       </nav>
     </div>
     <div class="home-section-background">
