@@ -10,12 +10,12 @@ const privacyError = document.getElementById("privacy-validation");
 
 function initContactSection() {
   handleFormSubmit();
+  initEventListenerInputFields();
 }
 
 function handleFormSubmit(event) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    initEventListenerInputFields();
     const isValid = checkName() & checkEmail() & checkMessage() & checkPrivacy();
 
     if (!isValid) return;
@@ -55,7 +55,10 @@ function initEventListenerInputFields() {
   nameInput.addEventListener("input", checkName);
 
   messageInput.addEventListener("blur", checkMessage);
-  messageInput.addEventListener("input", checkMessage);
+  messageInput.addEventListener("input", () => {
+    checkMessage();
+    updateCharCount();
+  });
 
   privacyCheckbox.addEventListener("change", checkPrivacy);
 }
@@ -93,7 +96,8 @@ function checkName() {
 
 function checkMessage() {
   const message = messageInput.value;
-  const isValid = message.trim() !== "";
+  const messageLength = message.trim().length;
+  const isValid = messageLength >= 9 && messageLength <= 200;
 
   messageError.textContent = isValid ? "" : t("error-message");
 
@@ -106,4 +110,10 @@ function checkPrivacy() {
   privacyError.textContent = isChecked ? "" : t("error-privacy");
 
   return isChecked;
+}
+
+function updateCharCount() {
+  const messageLength = messageInput.value.trim().length;
+  const charCount = document.getElementById("char-count");
+  charCount.textContent = messageLength;
 }

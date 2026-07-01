@@ -51,7 +51,7 @@
 
   "error-email": "Please enter a valid email address.",
   "error-name": "Please enter your name.",
-  "error-message": "Please enter a message.",
+  "error-message": "Please enter a valid message.",
   "error-privacy": "Please accept the privacy policy.",
 
   "footer-name": "Günter Heldt",
