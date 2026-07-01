@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   padding: clamp(16px, calc(-13.714px + 7.619vw), 96px) 0;
+  gap: 48px;
 }
 
 .recommendation-title {
@@ -124,7 +125,8 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: clamp(358px, calc(268.114px + 23.048vw), 600px);
+  width: clamp(358px, calc(256.229px + 26.095vw), 632px);
+  height: 274px;
 
   padding: 48px 40px;
 

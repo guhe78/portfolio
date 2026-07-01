@@ -38,6 +38,10 @@
   "contact-email": "Ihre E-Mail?",
   "contact-message": "Wie kann ich Ihnen helfen?",
 
+  "contact-name-placeholder": "Hier kommt Ihr Name hin..",
+  "contact-email-placeholder": "ihremail@email.de",
+  "contact-message-placeholder": "Hier kommt Ihre Nachricht hin..",
+
   "contact-privacy": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
 
   "contact-send": "Sagen Sie Hallo ;)",
