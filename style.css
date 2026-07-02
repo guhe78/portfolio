@@ -24,6 +24,10 @@
   scroll-behavior: smooth;
 }
 
+html {
+  scroll-padding-top: 50px;
+}
+
 body {
   background-color: #1c1c1c;
   color: #ffffff;
@@ -130,6 +134,7 @@ ul {
 .textcontainer-intro {
   position: relative;
   top: -60px;
+  left: -30px;
 }
 
 p.font-bold {

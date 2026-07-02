@@ -87,7 +87,7 @@ function nextProject(index) {
 function projectIconsName(iconsArray, names) {
   let result = "";
   for (let i = 0; i < iconsArray.length; i++) {
-    result += `${icons[iconsArray[i]](24)} ${names[i]} `;
+    result += `<span class="project-icon">${icons[iconsArray[i]](24)} ${names[i]}</span>`;
   }
   return result;
 }
