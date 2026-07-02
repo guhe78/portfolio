@@ -24,7 +24,7 @@ function projectInfoDialogTemplate(project, number) {
         <div class="project-info-tech">
           <h3 data-key="project-what-is" class="fira-font">Was ist das?</h3>
             <p data-key="project-description">${project.description}</p>
-            <p>${projectIconsName(project.techIcons, project.tech)}</p>
+            <div class="project-icons">${projectIconsName(project.techIcons, project.tech)}</div>
         </div>
         <div class="project-links-container">
           <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link-button"><span>GitHub</span> ${icons.arrow_outward(18)}</a>
