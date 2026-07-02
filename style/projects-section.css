@@ -2,10 +2,6 @@
   gap: 32px;
 }
 
-.projects-head {
-  position: relative;
-}
-
 .project-head-intro {
   position: absolute;
   top: -40px;

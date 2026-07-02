@@ -33,9 +33,9 @@
     display: none;
   }
 
-  .aboutme-section,
-  .skills-section,
-  .contact-section {
+  .aboutme-section-content,
+  .skills-section-content,
+  .contact-section-content {
     flex-direction: column;
     gap: 77px;
   }
@@ -90,7 +90,7 @@
 }
 
 @media (max-width: 700px) {
-  .aboutme-section {
+  .aboutme-section-content {
     align-items: center;
   }
 
@@ -175,13 +175,5 @@
   .contact-form input:not([type="checkbox"]),
   .contact-form textarea {
     font-size: 14px;
-  }
-}
-
-@media (max-height: 1024px) {
-  .project-info-dialog p {
-    max-height: 3.6em;
-    overflow-y: auto;
-    scrollbar-gutter: stable;
   }
 }
