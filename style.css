@@ -47,6 +47,11 @@ section {
   max-width: var(--section-width);
   width: 100%;
   padding: 0 clamp(16px, calc(-13.714px + 7.619vw), 96px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
 }
 
 h1 {
@@ -121,6 +126,13 @@ ul {
   background-color: rgb(255, 255, 255, 0.2);
 }
 
+.section-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+
 .text-border-container {
   display: flex;
   flex-direction: column;
@@ -133,7 +145,7 @@ ul {
 
 .textcontainer-intro {
   position: relative;
-  top: -60px;
+  top: -80px;
   left: -30px;
 }
 
