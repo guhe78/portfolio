@@ -9,11 +9,10 @@
   );
 }
 
-.skills-section {
+.skills-section-content {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 64px;
+  justify-content: center;
 }
 
 .skillset-container {

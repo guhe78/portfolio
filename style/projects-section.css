@@ -2,6 +2,16 @@
   gap: 32px;
 }
 
+.projects-head {
+  position: relative;
+}
+
+.project-head-intro {
+  position: absolute;
+  top: -40px;
+  left: 0px;
+}
+
 .projects-section > div {
   width: 100%;
 }
