@@ -37,6 +37,9 @@ const projects = [
 const dialogContent = document.getElementById("dialog-content");
 const dialog = document.getElementById("dialog");
 
+/**
+ * Initializes the projects section by rendering each project in the DOM and setting up event listeners for user interactions. It handles click events to open a dialog with detailed project information, as well as mouse enter and leave events to show additional project info on hover.
+ */
 function initProjectsSection() {
   projects.forEach((project, index) => {
     const projectInfo = document.getElementById(`project-info-container`);
@@ -50,6 +53,14 @@ function initProjectsSection() {
   });
 }
 
+/**
+ * Initializes event listeners for a project row, including click, mouseenter, and mouseleave events.
+ * @param {HTMLElement} projectRow - The DOM element representing the project row.
+ * @param {HTMLElement} projectName - The DOM element representing the project name.
+ * @param {HTMLElement} projectInfo - The DOM element representing the project info container.
+ * @param {Object} project - The project data object.
+ * @param {number} number - The project number.
+ */
 function initEventListeners(projectRow, projectName, projectInfo, project, number) {
   projectRow.addEventListener("click", () => {
     renderDialogContent(project, number);
@@ -68,12 +79,21 @@ function initEventListeners(projectRow, projectName, projectInfo, project, numbe
   });
 }
 
+/**
+ * Renders the dialog content for a project and sets up the close button event listener.
+ * @param {Object} project - The project data object.
+ * @param {number} number - The project number.
+ */
 function renderDialogContent(project, number) {
   dialogContent.innerHTML = projectInfoDialogTemplate(project, number);
   const closeDialogButton = document.getElementById("close-dialog-button");
   closeDialogButton.addEventListener("click", closeDialog);
 }
 
+/**
+ * Sets up the event listener for the next project button in the dialog.
+ * @param {number} index - The current project index.
+ */
 function nextProject(index) {
   const nextIndex = (index + 1) % projects.length;
   const nextProjectButton = document.getElementById("next-project-button");
@@ -84,6 +104,12 @@ function nextProject(index) {
   });
 }
 
+/**
+ * Generates the HTML for project icons with their corresponding names.
+ * @param {Array} iconsArray - An array of icon names.
+ * @param {Array} names - An array of icon names.
+ * @returns {string} The HTML string for the project icons with names.
+ */
 function projectIconsName(iconsArray, names) {
   let result = "";
   for (let i = 0; i < iconsArray.length; i++) {

@@ -1,3 +1,8 @@
+/**
+ * Generates the HTML template for the project information section.
+ * @param {*} project
+ * @returns {string} The HTML template for the project information section.
+ */
 function projectInfoShortTemplate(project) {
   return `
   <span id="project-name-${project.id}" class="project-name">${project.name}</span>
@@ -5,6 +10,11 @@ function projectInfoShortTemplate(project) {
   `;
 }
 
+/**
+ * Generates the HTML template for the project hover information section.
+ * @param {*} project
+ * @returns {string} The HTML template for the project hover information section.
+ */
 function projectInfoHoverTemplate(project) {
   return `
   <div class="${project.id} project-image">
@@ -13,6 +23,12 @@ function projectInfoHoverTemplate(project) {
   `;
 }
 
+/**
+ * Generates the HTML template for the project dialog information section.
+ * @param {*} project
+ * @param {number} number
+ * @returns {string} The HTML template for the project dialog information section.
+ */
 function projectInfoDialogTemplate(project, number) {
   return `
       <button id="close-dialog-button" class="close-dialog-button">${icons.close(18)}</button>
