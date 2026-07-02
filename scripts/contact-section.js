@@ -8,11 +8,18 @@ const emailError = document.getElementById("email-validation");
 const messageError = document.getElementById("message-validation");
 const privacyError = document.getElementById("privacy-validation");
 
+/**
+ * Initializes the contact section by setting up event listeners for form submission and input field validation.
+ */
 function initContactSection() {
   handleFormSubmit();
   initEventListenerInputFields();
 }
 
+/**
+ * Handles the form submission event by validating the input fields and sending the form data if valid.
+ * @param {Event} event The form submission event.
+ */
 function handleFormSubmit(event) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -27,6 +34,10 @@ function handleFormSubmit(event) {
   });
 }
 
+/**
+ * Sends the form data to the server.
+ * @param {Object} data The form data to be sent.
+ */
 async function sendFormData(data) {
   try {
     const res = await fetch("scripts/php/contact_form_mail.php", {
@@ -47,6 +58,9 @@ async function sendFormData(data) {
   }
 }
 
+/**
+ * Initializes event listeners for the input fields to validate user input and update character count.
+ */
 function initEventListenerInputFields() {
   emailInput.addEventListener("blur", checkEmail);
   emailInput.addEventListener("input", checkEmail);
@@ -63,10 +77,19 @@ function initEventListenerInputFields() {
   privacyCheckbox.addEventListener("change", checkPrivacy);
 }
 
+/**
+ * Translates a given key using the translations object.
+ * @param {string} key The key to be translated.
+ * @returns {string} The translated string or the key if translation is not found.
+ */
 function t(key) {
   return translations[key] || key;
 }
 
+/**
+ * Retrieves the form data from the input fields.
+ * @returns {Object} The form data.
+ */
 function getFormData() {
   return {
     name: nameInput.value,
@@ -75,6 +98,10 @@ function getFormData() {
   };
 }
 
+/**
+ * Validates the email input field.
+ * @returns {boolean} True if the email is valid, false otherwise.
+ */
 function checkEmail() {
   const email = emailInput.value;
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -85,6 +112,10 @@ function checkEmail() {
   return isValid;
 }
 
+/**
+ * Validates the name input field.
+ * @returns {boolean} True if the name is valid, false otherwise.
+ */
 function checkName() {
   const name = nameInput.value;
   const isValid = name.trim() !== "";
@@ -94,6 +125,10 @@ function checkName() {
   return isValid;
 }
 
+/**
+ * Validates the message input field.
+ * @returns {boolean} True if the message is valid, false otherwise.
+ */
 function checkMessage() {
   const message = messageInput.value;
   const messageLength = message.trim().length;
@@ -104,6 +139,10 @@ function checkMessage() {
   return isValid;
 }
 
+/**
+ * Validates the privacy checkbox.
+ * @returns {boolean} True if the privacy checkbox is checked, false otherwise.
+ */
 function checkPrivacy() {
   const isChecked = privacyCheckbox.checked;
 
@@ -112,6 +151,9 @@ function checkPrivacy() {
   return isChecked;
 }
 
+/**
+ * Updates the character count display for the message input field.
+ */
 function updateCharCount() {
   const messageLength = messageInput.value.trim().length;
   const charCount = document.getElementById("char-count");

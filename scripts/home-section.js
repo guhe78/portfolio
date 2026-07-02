@@ -10,11 +10,17 @@ const animationSpeed = 0.5;
 
 let position = 0;
 
+/**
+ * Initializes the home section by starting the info strip animation and setting up the mobile menu toggle functionality.
+ */
 function initHomeSection() {
   animateInfoStrip();
   toggleMobileMenu();
 }
 
+/**
+ * Animates the info strip by continuously moving the items to the left, creating a scrolling effect. When the position reaches half of the track width, it resets to create a seamless loop.
+ */
 function animateInfoStrip() {
   const trackWidth = infoTrack.scrollWidth / 2;
 
@@ -32,10 +38,22 @@ function animateInfoStrip() {
   requestAnimationFrame(animateInfoStrip);
 }
 
+/**
+ * Toggles the mobile menu open and closed when the menu button is clicked.
+ */
 function toggleMobileMenu() {
   const menuToggleButton = document.getElementById("menu-toggle");
   const mobileMenu = document.getElementById("navbar-left");
 
+  eventListenerMobileMenu(menuToggleButton, mobileMenu);
+}
+
+/**
+ * Sets up event listeners for the mobile menu toggle button and document clicks to handle opening and closing the mobile menu. It also closes the menu when a navigation link is clicked.
+ * @param {HTMLElement} menuToggleButton - The button that toggles the mobile menu.
+ * @param {HTMLElement} mobileMenu - The mobile menu element.
+ */
+function eventListenerMobileMenu(menuToggleButton, mobileMenu) {
   menuToggleButton.addEventListener("click", (event) => {
     event.stopPropagation();
     mobileMenu.classList.toggle("open");

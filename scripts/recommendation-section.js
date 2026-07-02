@@ -9,6 +9,24 @@ let isAnimating = false;
 let cards = [];
 let dots = [];
 
+/**
+ * Initializes the recommendation section by setting up clones, dots, icons, event listeners, and centering the main card.
+ */
+function initRecommendationSection() {
+  setupClones();
+  setupDots();
+  setupIcons();
+  setupEventListeners();
+  updateClasses();
+  updateDots();
+  sliderContainer.classList.add("no-transition");
+  centerMainCard();
+  requestAnimationFrame(() => sliderContainer.classList.remove("no-transition"));
+}
+
+/**
+ * Sets up clones of the first and last two recommendation cards to create an infinite loop effect.
+ */
 function setupClones() {
   const originalCards = Array.from(
     sliderContainer.querySelectorAll(".recommendation-card:not(.clone)"),
@@ -35,6 +53,9 @@ function setupClones() {
   currentIndex = 2;
 }
 
+/**
+ * Sets up the dots for the recommendation slider based on the number of original cards.
+ */
 function setupDots() {
   const originalCardsCount = cards.length - 4;
   const dotIcon = icons.ellipse(8);
@@ -49,6 +70,9 @@ function setupDots() {
   }
 }
 
+/**
+ * Sets up the icons for the recommendation slider, including quote icons and arrow buttons.
+ */
 function setupIcons() {
   sliderContainer.querySelectorAll(".quote-icon").forEach((quoteMark) => {
     quoteMark.innerHTML = icons.quote();
@@ -58,6 +82,10 @@ function setupIcons() {
   rightArrowButton.innerHTML = `<span class="recommendation-button-text">${icons.arrow_forward(20)}</span>`;
 }
 
+/**
+ * Retrieves the metrics for the recommendation slider, including card width, gap, card step, and center offset.
+ * @returns {Object} An object containing the metrics for the recommendation slider.
+ */
 function getMetrics() {
   const cardWidth = cards[currentIndex].offsetWidth;
   const gapStyle = getComputedStyle(sliderContainer).gap;
@@ -68,11 +96,17 @@ function getMetrics() {
   return { cardWidth, gap, cardStep, centerOffset };
 }
 
+/**
+ * Centers the main recommendation card in the slider by adjusting the transform property of the slider container based on the current index and calculated metrics.
+ */
 function centerMainCard() {
   const { cardStep, centerOffset } = getMetrics();
   sliderContainer.style.transform = `translateX(${centerOffset - cardStep * currentIndex}px)`;
 }
 
+/**
+ * Updates the classes of the recommendation cards based on the current index, setting the main card and side cards.
+ */
 function updateClasses() {
   cards.forEach((card, index) => {
     card.classList.remove("main-card", "side-card");
@@ -80,6 +114,9 @@ function updateClasses() {
   });
 }
 
+/**
+ * Updates the active state of the dots based on the current index.
+ */
 function updateDots() {
   const activeDotIndex = currentIndex - 2;
   dots.forEach((dot, index) => {
@@ -87,6 +124,11 @@ function updateDots() {
   });
 }
 
+/**
+ * Wraps the index to create an infinite loop effect for the recommendation slider.
+ * @param {number} index - The current index.
+ * @returns {number} The wrapped index.
+ */
 function wrapIndex(index) {
   const cardsCount = cards.length;
   if (index < 2) return index + (cardsCount - 4);
@@ -94,6 +136,10 @@ function wrapIndex(index) {
   return index;
 }
 
+/**
+ * Slides the recommendation slider in the specified direction.
+ * @param {string} direction - The direction to slide ("next" or "prev").
+ */
 function slide(direction) {
   if (isAnimating) return;
 
@@ -122,6 +168,9 @@ function slide(direction) {
   sliderContainer.addEventListener("transitionend", onTransitionEnd);
 }
 
+/**
+ * Sets up event listeners for the recommendation slider, including arrow buttons and window resize.
+ */
 function setupEventListeners() {
   leftArrowButton.addEventListener("click", () => slide("prev"));
   rightArrowButton.addEventListener("click", () => slide("next"));
@@ -132,17 +181,4 @@ function setupEventListeners() {
     centerMainCard();
     requestAnimationFrame(() => sliderContainer.classList.remove("no-transition"));
   });
-}
-
-function initRecommendationSection() {
-  setupClones();
-  setupDots();
-  setupIcons();
-  setupEventListeners();
-  updateClasses();
-  updateDots();
-
-  sliderContainer.classList.add("no-transition");
-  centerMainCard();
-  requestAnimationFrame(() => sliderContainer.classList.remove("no-transition"));
 }
