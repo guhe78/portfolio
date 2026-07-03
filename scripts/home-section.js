@@ -3,11 +3,13 @@ const infoItemsGerman = [
   "Frontend Entwickler",
   "Verfügbar für Remote-Arbeit",
   "Fachinformatiker für Anwendungsentwicklung (IHK)",
+  "Verfügbar im Allgäu, Deutschland",
 ];
 const infoItemsEnglish = [
   "Frontend Developer",
   "Available for remote work",
   "Computer Science Expert: Software Development (IHK)",
+  "Available in Allgäu, Germany",
 ];
 const duplicatedItems = [];
 const animationSpeed = 0.5;

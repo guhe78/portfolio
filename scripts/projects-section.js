@@ -2,9 +2,9 @@ const projects = [
   {
     name: "Join",
     descriptionGerman:
-      "Dies ist ein Projekt-Management-Tool. Man kann Kontakte anlegen, Aufgaben erstellen und diesen dann Mitglieder zuweisen. Es gibt eine Kanban-Ansicht, in der man die Aufgaben per Drag & Drop verschieben kann. Ich habe es mit drei weiteren Teilnehmern in einem Team entwickelt.",
+      "Dies ist ein Projekt-Management-Tool. Man kann Kontakte anlegen, Aufgaben erstellen und diesen dann Mitglieder zuweisen. Es gibt eine Kanban-Ansicht. Ich habe es mit drei weiteren Teilnehmern in einem Team entwickelt.",
     descriptionEnglish:
-      "This is a project management tool. You can create contacts, create tasks, and assign members to them. There is a Kanban view where you can move tasks via drag & drop. I developed it with three other participants in a team.",
+      "This is a project management tool. You can create contacts, create tasks, and assign members to them. There is a Kanban view. I developed it with three other participants in a team.",
     tech: ["HTML", "CSS", "JavaScript", "Firebase"],
     techIcons: ["html", "css", "javascript", "firebase"],
     image: "assets/images/join.png",
