@@ -35,6 +35,13 @@ async function loadLanguage(lang) {
   const response = await fetch(`./locales/${lang}.json`);
   translations = await response.json();
 
+  setCurrentTranslations();
+}
+
+/**
+ * Sets the current translations for the page by updating the text content and placeholders of elements with the corresponding data attributes. This function is called after loading the translations for the current language.
+ */
+function setCurrentTranslations() {
   setTranslations();
   setPlaceholders();
 }

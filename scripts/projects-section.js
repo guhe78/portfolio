@@ -1,8 +1,10 @@
 const projects = [
   {
     name: "Join",
-    description:
+    descriptionGerman:
       "Dies ist ein Projekt-Management-Tool. Man kann Kontakte anlegen, Aufgaben erstellen und diesen dann Mitglieder zuweisen. Es gibt eine Kanban-Ansicht, in der man die Aufgaben per Drag & Drop verschieben kann. Ich habe es mit drei weiteren Teilnehmern in einem Team entwickelt.",
+    descriptionEnglish:
+      "This is a project management tool. You can create contacts, create tasks, and assign members to them. There is a Kanban view where you can move tasks via drag & drop. I developed it with three other participants in a team.",
     tech: ["HTML", "CSS", "JavaScript", "Firebase"],
     techIcons: ["html", "css", "javascript", "firebase"],
     image: "assets/images/join.png",
@@ -12,8 +14,10 @@ const projects = [
   },
   {
     name: "Sharkie",
-    description:
+    descriptionGerman:
       "Dies ist ein kleines 2D-Scrolling Game. Man steuert einen kleinen Hai durch zwei Level und muss Gegner besiegen. Am Ende wartet ein Endgegner der ebenfalls besiegt werden muss.",
+    descriptionEnglish:
+      "This is a small 2D scrolling game. You control a small shark through two levels and must defeat enemies. At the end, there is a final boss that must also be defeated.",
     tech: ["HTML", "CSS", "JavaScript"],
     techIcons: ["html", "css", "javascript"],
     image: "assets/images/sharkie.png",
@@ -23,8 +27,10 @@ const projects = [
   },
   {
     name: "Pokedex",
-    description:
+    descriptionGerman:
       "Dies ist eine Web-App. Sie zeigt Informationen zu allen Pokemons. Dabei greift sie auf Daten von 'The RESTful Pokémon API' zu.",
+    descriptionEnglish:
+      "This is a web app. It shows information about all Pokémon. It uses data from 'The RESTful Pokémon API'.",
     tech: ["HTML", "CSS", "JavaScript"],
     techIcons: ["html", "css", "javascript"],
     image: "assets/images/pokedex.png",
@@ -45,11 +51,13 @@ function initProjectsSection() {
     const projectInfo = document.getElementById(`project-info-container`);
     const projectRow = document.getElementById(project.id);
     let number = index + 1;
+    let projectDescription =
+      currentLanguage === "en" ? project.descriptionEnglish : project.descriptionGerman;
 
-    projectRow.innerHTML = projectInfoShortTemplate(project);
+    projectRow.innerHTML = projectInfoShortTemplate(project, projectDescription, number);
     const projectName = document.getElementById(`project-name-${project.id}`);
 
-    initEventListeners(projectRow, projectName, projectInfo, project, number);
+    initEventListeners(projectRow, projectName, projectInfo, project, number, projectDescription);
   });
 }
 
@@ -60,17 +68,25 @@ function initProjectsSection() {
  * @param {HTMLElement} projectInfo - The DOM element representing the project info container.
  * @param {Object} project - The project data object.
  * @param {number} number - The project number.
+ * @param {string} projectDescription - The project description based on the current language.
  */
-function initEventListeners(projectRow, projectName, projectInfo, project, number) {
+function initEventListeners(
+  projectRow,
+  projectName,
+  projectInfo,
+  project,
+  number,
+  projectDescription,
+) {
   projectRow.addEventListener("click", () => {
-    renderDialogContent(project, number);
+    renderDialogContent(project, projectDescription, number);
     openDialog();
     nextProject(number - 1);
   });
 
   projectRow.addEventListener("mouseenter", () => {
     projectName.innerHTML = project.name + icons.arrow_outward(14);
-    projectInfo.innerHTML = projectInfoHoverTemplate(project);
+    projectInfo.innerHTML = projectInfoHoverTemplate(project, projectDescription);
   });
 
   projectRow.addEventListener("mouseleave", () => {
@@ -83,9 +99,11 @@ function initEventListeners(projectRow, projectName, projectInfo, project, numbe
  * Renders the dialog content for a project and sets up the close button event listener.
  * @param {Object} project - The project data object.
  * @param {number} number - The project number.
+ * @param {string} projectDescription - The project description based on the current language.
  */
-function renderDialogContent(project, number) {
-  dialogContent.innerHTML = projectInfoDialogTemplate(project, number);
+function renderDialogContent(project, projectDescription, number) {
+  dialogContent.innerHTML = projectInfoDialogTemplate(project, projectDescription, number);
+  setCurrentTranslations();
   const closeDialogButton = document.getElementById("close-dialog-button");
   closeDialogButton.addEventListener("click", closeDialog);
 }
@@ -99,7 +117,11 @@ function nextProject(index) {
   const nextProjectButton = document.getElementById("next-project-button");
 
   nextProjectButton.addEventListener("click", () => {
-    renderDialogContent(projects[nextIndex], nextIndex + 1);
+    let projectDescription =
+      currentLanguage === "en"
+        ? projects[nextIndex].descriptionEnglish
+        : projects[nextIndex].descriptionGerman;
+    renderDialogContent(projects[nextIndex], projectDescription, nextIndex + 1);
     nextProject(nextIndex);
   });
 }
