@@ -124,12 +124,16 @@ footer {
   justify-self: start;
 }
 
-.footer-copy {
+.footer-middle {
   grid-column-end: 3;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.footer-middle a {
+  padding-bottom: 12px;
 }
 
 .social-links {
@@ -138,12 +142,14 @@ footer {
 }
 
 .nav-links li,
-footer li {
+footer li,
+.footer-middle a {
   position: relative;
 }
 
 .nav-links li::after,
-footer li::after {
+footer li::after,
+.footer-middle a::after {
   font-size: 24px;
   content: "•";
   position: absolute;
@@ -153,7 +159,8 @@ footer li::after {
 }
 
 .nav-links li:hover::after,
-footer li:hover::after {
+footer li:hover::after,
+.footer-middle a:hover::after {
   opacity: 1;
 }
 
@@ -167,6 +174,12 @@ footer li::after {
   left: -16px;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.footer-middle a::after {
+  left: 50%;
+  top: -24px;
+  transform: translateX(-50%);
 }
 
 .menu-toggle-button {

@@ -59,6 +59,9 @@
   "footer-location": "Füssen, Germany",
 
   "footer-github": "GitHub",
-  "footer-impressum": "Legal Notice",
+  "footer-impressum": {
+    "text": "Legal Notice & Privacy",
+    "link": "pages/imprint-privacypolicy.html"
+  },
   "footer-email": "Email"
 }
