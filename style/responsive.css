@@ -2,6 +2,23 @@
   .info-strip {
     bottom: clamp(40px, calc(-292.308px + 23.077vw), 400px);
   }
+
+  .scroll-down-container {
+    left: clamp(96px, calc(-258.462px + 24.615vw), 480px);
+  }
+
+  .social-links-homeview {
+    right: clamp(96px, calc(-258.462px + 24.615vw), 480px);
+  }
+
+  .scroll-down-line,
+  .social-links-line {
+    height: clamp(240px, calc(18.462px + 15.385vw), 480px);
+  }
+
+  .social-links-line {
+    height: clamp(186px, calc(-159.231px + 23.974vw), 560px);
+  }
 }
 
 @media (max-width: 1200px) {

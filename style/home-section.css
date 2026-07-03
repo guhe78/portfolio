@@ -4,6 +4,8 @@
   flex-direction: column;
   align-items: center;
   background-image: linear-gradient(45deg, #1c1c1c, #08463b);
+  position: relative;
+  z-index: 1;
 }
 
 .home-section {
@@ -76,9 +78,13 @@
   display: flex;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(3px);
 
   overflow: hidden;
   width: 100%;
+
+  pointer-events: none;
+  z-index: 3;
 }
 
 .info-track {
@@ -94,4 +100,97 @@
 
 .info-item {
   flex-shrink: 0;
+}
+
+.scroll-down-container,
+.social-links-homeview {
+  position: absolute;
+  bottom: 0px;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  z-index: 2;
+}
+
+.scroll-down-container {
+  left: clamp(16px, calc(-13.714px + 7.619vw), 96px);
+  gap: 24px;
+}
+
+.social-links-homeview {
+  right: clamp(16px, calc(-13.714px + 7.619vw), 96px);
+  gap: 12px;
+}
+
+.social-links-homeview > a {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.social-links-homeview > .social-links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  transform: none;
+}
+
+.social-links-homeview > .social-links-container a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+}
+
+.scroll-down-container:hover,
+.social-links-homeview:hover {
+  cursor: pointer;
+}
+
+.scroll-down-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 48px;
+  border: 1px solid white;
+  border-radius: 100px;
+}
+
+.scroll-down-arrow svg {
+  color: white;
+  display: block;
+  animation: scrollArrowBounce 1.4s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes scrollArrowBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-down-line {
+  border: 1px solid white;
+  height: clamp(224px, calc(218.057px + 1.524vw), 240px);
+}
+
+.social-links-line {
+  border: 1px solid white;
+  height: clamp(112px, calc(84.514px + 7.048vw), 186px);
 }

@@ -13,6 +13,13 @@ const infoItemsEnglish = [
 ];
 const duplicatedItems = [];
 const animationSpeed = 0.5;
+const socialLinks = [
+  { href: "https://github.com/guhe78", icon: icons.github(20) },
+  {
+    href: "https://www.linkedin.com/in/g%C3%BCnter-heldt-892320343/",
+    icon: icons.linkedin(20),
+  },
+];
 
 let position = 0;
 
@@ -22,6 +29,8 @@ let position = 0;
 function initHomeSection() {
   animateInfoStrip();
   toggleMobileMenu();
+  setScrollDownArrow();
+  setSocialLinksHomeview();
 }
 
 /**
@@ -93,5 +102,36 @@ function eventListenerMobileMenu(menuToggleButton, mobileMenu) {
     link.addEventListener("click", () => {
       mobileMenu.classList.remove("open");
     });
+  });
+}
+
+/**
+ * Sets up the scroll down arrow functionality. When the arrow is clicked, it smoothly scrolls the window down to the next section of the page. The arrow icon is also set using the SVG library.
+ */
+function setScrollDownArrow() {
+  const scrollDownArrow = document.getElementById("scroll-down-arrow");
+
+  scrollDownArrow.innerHTML = icons.arrow_down(13);
+
+  scrollDownArrow.addEventListener("click", () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  });
+}
+
+/**
+ * Sets the social links in the home view by creating anchor elements for each social link defined in the `socialLinks` array. Each anchor is appended to the social links container, allowing users to navigate to the respective social media profiles.
+ */
+function setSocialLinksHomeview() {
+  const socialLinksHomeview = document.getElementById("social-links-container");
+
+  socialLinks.forEach((link) => {
+    const anchor = document.createElement("a");
+    anchor.href = link.href;
+    anchor.target = "_blank";
+    anchor.innerHTML = link.icon;
+    socialLinksHomeview.appendChild(anchor);
   });
 }
