@@ -1,11 +1,15 @@
 const infoTrack = document.querySelector(".info-track");
-const infoItems = [
-  "Frontend Developer",
-  "Based in Füssen, Germany",
-  "Available for remote work",
+const infoItemsGerman = [
+  "Frontend Entwickler",
+  "Verfügbar für Remote-Arbeit",
   "Fachinformatiker für Anwendungsentwicklung (IHK)",
 ];
-const duplicatedItems = [...infoItems, ...infoItems];
+const infoItemsEnglish = [
+  "Frontend Developer",
+  "Available for remote work",
+  "Computer Science Expert: Software Development (IHK)",
+];
+const duplicatedItems = [];
 const animationSpeed = 0.5;
 
 let position = 0;
@@ -19,6 +23,19 @@ function initHomeSection() {
 }
 
 /**
+ * Sets the duplicated items for the info strip based on the current language. It clears the existing duplicated items and populates them with the appropriate language-specific items, ensuring that the info strip displays the correct content.
+ */
+function setDublicatedItems() {
+  if (currentLanguage === "en") {
+    duplicatedItems.length = 0;
+    duplicatedItems.push(...infoItemsEnglish, ...infoItemsEnglish);
+  } else {
+    duplicatedItems.length = 0;
+    duplicatedItems.push(...infoItemsGerman, ...infoItemsGerman);
+  }
+}
+
+/**
  * Animates the info strip by continuously moving the items to the left, creating a scrolling effect. When the position reaches half of the track width, it resets to create a seamless loop.
  */
 function animateInfoStrip() {
@@ -29,6 +46,8 @@ function animateInfoStrip() {
   if (position >= trackWidth) {
     position = 0;
   }
+
+  setDublicatedItems();
 
   infoTrack.innerHTML = duplicatedItems
     .map((item) => `<div class="info-item"><h3>${item}</h3></div>`)
