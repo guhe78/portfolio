@@ -15,7 +15,7 @@ function projectInfoShortTemplate(project) {
  * @param {*} project
  * @returns {string} The HTML template for the project hover information section.
  */
-function projectInfoHoverTemplate(project) {
+function projectInfoHoverTemplate(project, projectDescription) {
   return `
   <div class="${project.id} project-image">
     <img src="${project.image}" alt="${project.name}" />
@@ -29,7 +29,7 @@ function projectInfoHoverTemplate(project) {
  * @param {number} number
  * @returns {string} The HTML template for the project dialog information section.
  */
-function projectInfoDialogTemplate(project, number) {
+function projectInfoDialogTemplate(project, projectDescription, number) {
   return `
       <button id="close-dialog-button" class="close-dialog-button">${icons.close(18)}</button>
       <div class="project-info-dialog">
@@ -39,15 +39,15 @@ function projectInfoDialogTemplate(project, number) {
         </div>
         <div class="project-info-tech">
           <h3 data-key="project-what-is" class="fira-font">Was ist das?</h3>
-            <p data-key="project-description">${project.description}</p>
+            <p data-key="project-description">${projectDescription}</p>
             <div class="project-icons">${projectIconsName(project.techIcons, project.tech)}</div>
         </div>
         <div class="project-links-container">
-          <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link-button"><span>GitHub</span> ${icons.arrow_outward(18)}</a>
-          <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link-button"><span>Live Test</span> ${icons.arrow_outward(18)}</a>
+          <a href="${project.github}" target="_blank" rel="noopener noreferrer" class="project-link-button"><span data-key="project-github">GitHub</span> ${icons.arrow_outward(18)}</a>
+          <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link-button"><span data-key="project-live-test">Live Test</span> ${icons.arrow_outward(18)}</a>
         </div>
       </div>
       <img src="${project.image}" alt="${project.name}" />
-      <button id="next-project-button" class="next-project-button" data-key="next-project-button"><span>Nächstes Projekt</span> ${icons.arrow_forward(18)}</button>
+      <button id="next-project-button" class="next-project-button"><span data-key="next-project-button-text">Next</span> ${icons.arrow_forward(18)}</button>
       `;
 }
