@@ -56,6 +56,9 @@
   "footer-location": "Füssen, Deutschland",
 
   "footer-github": "GitHub",
-  "footer-impressum": "Impressum",
+  "footer-impressum": {
+    "text": "Impressum und Datenschutz",
+    "link": "pages/impressum-datenschutz.html"
+  },
   "footer-email": "Email"
 }

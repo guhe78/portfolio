@@ -45,13 +45,21 @@ async function loadLanguage(lang) {
 function setTranslations() {
   document.querySelectorAll("[data-key]").forEach((element) => {
     const key = element.dataset.key;
+    const data = translations[key];
 
-    if (translations[key]) {
-      element.textContent = translations[key];
+    if (!data) return;
 
-      if (element.hasAttribute("data-text")) {
-        element.setAttribute("data-text", translations[key]);
-      }
+    if (typeof data === "string") {
+      element.textContent = data;
+      return;
+    }
+
+    if (data.text) {
+      element.textContent = data.text;
+    }
+
+    if (element.tagName === "A" && data.link) {
+      element.href = data.link;
     }
   });
 }
