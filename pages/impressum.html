@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style/impressum.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png" />
     <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png" />
@@ -27,36 +28,56 @@
     <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
     <title>Günter Heldt Portfolio</title>
+    <script src="scripts/home-section.js" defer></script>
     <script src="../assets/icons/svg-library.js" defer></script>
     <script src="../script.js" defer></script>
   </head>
   <body>
-    <nav class="navbar">
-      <ul class="nav-links">
-        <li><a href="../index.html#aboutme">About Me</a></li>
-        <li><a href="../index.html#skills">Skills</a></li>
-        <li><a href="../index.html#projects">Projects</a></li>
-        <li><a href="../index.html#contact">Contact</a></li>
-      </ul>
-      <div class="navbar-name"><span>Günter</span> <span>Heldt</span></div>
-    </nav>
     <section class="impressum-section">
-      <h1>Impressum</h1>
-      <p>Angaben gemäß § 5 TMG:</p>
+      <h1>Impressum und Datenschutz</h1>
+      <h2>Impressum</h2>
+      <p>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
       <p>Günter Heldt<br />c/o COCENTER<br />Koppoldstar. 1<br />86551 Aichach</p>
       <p>Kontakt:<br />E-Mail:</p>
     </section>
-    <footer class="footer">
-      <div>
-        <p>Web Developer</p>
-        <p>Füssen Germany</p>
-      </div>
-      <p>&copy; Günter Heldt 2026</p>
-      <ul class="social-links">
-        <li><a href="https://github.com/guhe78" target="_blank">GitHub</a></li>
-        <li><a href="mailto:your.email@example.com">Email</a></li>
-        <li><a href="impressum.html">Legal Notice</a></li>
+    <section class="">
+      <h2>Datenschutz</h2>
+      <h3>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h3>
+      <p>Günter Heldt<br />c/o COCENTER<br />Koppoldstar. 1<br />86551 Aichach</p>
+      <h3>Haftung für Inhalte</h3>
+      <p>
+        Die Inhalte dieser Website wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit,
+        Vollständigkeit und Aktualität der Inhalte kann jedoch keine Gewähr übernommen werden.
+      </p>
+      <h3>Haftung für Links</h3>
+      <p>
+        Diese Website enthält Links zu eigenen Projekten auf Subdomains sowie gegebenenfalls zu
+        externen Webseiten Dritter. Für die Inhalte externer Webseiten sind ausschließlich deren
+        jeweilige Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen
+        Inhalte erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne
+        konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.
+      </p>
+      <h3>Urheberrecht</h3>
+      <p>
+        Die auf dieser Website veröffentlichten Inhalte, Texte, Grafiken und Quellcodes unterliegen
+        dem deutschen Urheberrecht, sofern nicht anders angegeben. Eine Vervielfältigung,
+        Bearbeitung oder Verbreitung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen
+        schriftlichen Zustimmung des jeweiligen Rechteinhabers.
+      </p>
+      <h3>Verwendete Dienste</h3>
+      <p>
+        Einige auf dieser Portfolioseite verlinkte Projekte nutzen externe Dienste und
+        Programmierschnittstellen, darunter:
+      </p>
+      <ul>
+        <li>PokéAPI</li>
+        <li>Firebase</li>
       </ul>
-    </footer>
+      <p>
+        Google Fonts werden lokal auf dem Server bereitgestellt, sodass beim Laden dieser Website
+        keine Verbindung zu den Servern von Google hergestellt wird.
+      </p>
+    </section>
+    <button class="back-button button" onclick="window.history.back()">Zurück</button>
   </body>
 </html>
