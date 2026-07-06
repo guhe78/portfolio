@@ -4,3 +4,11 @@ h3,
 p {
   hyphens: auto;
 }
+
+section ul {
+  padding: 16px;
+}
+
+.back-button {
+  margin-bottom: 32px;
+}

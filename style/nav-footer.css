@@ -204,6 +204,10 @@ footer li::after {
   transition: all 0.3s ease;
 }
 
+.footer-copyright {
+  color: rgba(61, 207, 182, 1);
+}
+
 @media (max-width: 1024px) {
   .menu-toggle-button {
     display: flex;
