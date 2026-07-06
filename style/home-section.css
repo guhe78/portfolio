@@ -124,14 +124,13 @@
   gap: 12px;
 }
 
-.email-link {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  transform: rotate(180deg);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap;
+.email-text {
+  writing-mode: sideways-lr;
+}
+
+.email-symbol {
+  width: 20px;
+  height: 20px;
 }
 
 .social-links-container {
@@ -149,11 +148,29 @@
   align-items: center;
   justify-content: center;
   transform: none;
+
+  position: relative;
 }
 
 .social-links-container a:hover {
   cursor: pointer;
   color: white;
+}
+
+.social-links-container a::after {
+  font-size: 24px;
+  content: "•";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-links-container a:hover::after {
+  opacity: 1;
 }
 
 .scroll-down-arrow {
