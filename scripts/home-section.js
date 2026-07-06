@@ -141,9 +141,7 @@ function setDesktopMobileEmailIcons() {
     emailLink.innerHTML = `
     <span class="email-symbol">${icons.mail(20)}</span>
     `;
-    emailLink.style.transform = "rotate(0deg)";
   } else {
     emailLink.innerHTML = `<span class="email-text">mail@guenter-heldt.de</span>`;
-    emailLink.style.transform = "rotate(180deg)";
   }
 }
