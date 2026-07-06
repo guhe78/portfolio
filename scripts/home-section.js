@@ -31,6 +31,8 @@ function initHomeSection() {
   toggleMobileMenu();
   setScrollDownArrow();
   setSocialLinksHomeview();
+  setDesktopMobileEmailIcons();
+  window.addEventListener("resize", setDesktopMobileEmailIcons);
 }
 
 /**
@@ -106,19 +108,13 @@ function eventListenerMobileMenu(menuToggleButton, mobileMenu) {
 }
 
 /**
- * Sets up the scroll down arrow functionality. When the arrow is clicked, it smoothly scrolls the window down to the next section of the page. The arrow icon is also set using the SVG library.
+ *  Sets up the scroll down arrow functionality by adding a click event listener that scrolls to the next section of the page when the arrow is clicked. It calculates the next section based on the current scroll position and smoothly scrolls to it.
  */
 function setScrollDownArrow() {
   const scrollDownArrow = document.getElementById("scroll-down-arrow");
+  if (!scrollDownArrow) return;
 
   scrollDownArrow.innerHTML = icons.arrow_down(13);
-
-  scrollDownArrow.addEventListener("click", () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  });
 }
 
 /**
@@ -134,4 +130,20 @@ function setSocialLinksHomeview() {
     anchor.innerHTML = link.icon;
     socialLinksHomeview.appendChild(anchor);
   });
+}
+
+/**
+ * Sets the email link in the home view based on the current window width. If the window width is less than or equal to 1024 pixels, it displays an email icon; otherwise, it displays the full email address. The function also adjusts the rotation of the email link for visual effect.
+ */
+function setDesktopMobileEmailIcons() {
+  const emailLink = document.getElementById("email-link");
+  if (window.innerWidth <= 1024) {
+    emailLink.innerHTML = `
+    <span class="email-symbol">${icons.mail(20)}</span>
+    `;
+    emailLink.style.transform = "rotate(0deg)";
+  } else {
+    emailLink.innerHTML = `<span class="email-text">mail@guenter-heldt.de</span>`;
+    emailLink.style.transform = "rotate(180deg)";
+  }
 }

@@ -11,7 +11,7 @@
     right: clamp(96px, calc(-258.462px + 24.615vw), 480px);
   }
 
-  .scroll-down-line,
+  .scroll-line,
   .social-links-line {
     height: clamp(240px, calc(18.462px + 15.385vw), 480px);
   }
@@ -104,6 +104,11 @@
   .social-links {
     grid-area: right;
   }
+
+  .title-buttons-container {
+    padding-top: 32px;
+    gap: 24px;
+  }
 }
 
 @media (max-width: 700px) {
@@ -119,16 +124,33 @@
 }
 
 @media (max-width: 600px) {
+  h1 {
+    line-height: 1;
+    letter-spacing: -2%;
+  }
+
+  .home-section {
+    gap: 12px;
+  }
+
+  .title-buttons-container {
+    padding-top: 32px;
+  }
+
   .project-item {
     flex-direction: column;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 389px) {
   .title-buttons-container {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+  }
+
+  .home-name {
+    white-space: inherit;
   }
 
   .text-border-container {
