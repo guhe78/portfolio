@@ -11,11 +11,11 @@
   width: 100%;
   height: 96px;
 
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  background-image: linear-gradient(0deg, var(--color-black-100), var(--color-black-60));
 }
 
 .navbar {
-  color: #ffffff;
+  color: var(--color-white-100);
   font-size: 20px;
   max-width: var(--section-width);
   width: 100%;
@@ -37,7 +37,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid var(--color-white-100);
   border-radius: 100px;
   width: 84px;
   height: 28px;
@@ -53,7 +53,7 @@
   position: absolute;
   top: 1px;
   left: 1px;
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--color-white-70);
   border-radius: 80px;
   transition: 0.4s;
 }
@@ -95,7 +95,7 @@
 
 .nav-links a:hover,
 footer a:hover {
-  color: #3dcfb6;
+  color: var(--color-teal-100);
 }
 
 .navbar-name {
@@ -200,12 +200,12 @@ footer li::after {
 .menu-toggle-button .menu-icon {
   width: 100%;
   height: 1px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: var(--color-white-100);
   transition: all 0.3s ease;
 }
 
 .footer-copyright {
-  color: rgba(61, 207, 182, 1);
+  color: var(--color-teal-100);
 }
 
 @media (max-width: 1024px) {
@@ -221,9 +221,9 @@ footer li::after {
     top: 96px;
     right: 16px;
     padding: 40px 77px;
-    background-image: linear-gradient(45deg, rgba(28, 28, 28, 1), rgba(8, 70, 59, 1));
+    background-image: linear-gradient(45deg, var(--color-dark-100), var(--color-teal-100));
 
-    border: 1px solid rgba(61, 207, 182, 1);
+    border: 1px solid var(--color-teal-100);
     border-radius: 30px;
     z-index: 1000;
   }

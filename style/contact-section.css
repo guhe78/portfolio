@@ -28,7 +28,7 @@
 }
 
 .contact-form > div {
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid var(--color-light-gray);
   padding: 32px;
   display: flex;
   flex-direction: column;
@@ -41,13 +41,13 @@
   background-color: transparent;
   border: none;
   border-radius: 8px;
-  color: #d9d9d9;
+  color: var(--color-light-gray);
 }
 
 .contact-form input:not([type="checkbox"]):hover,
 .contact-form textarea:hover {
   cursor: text;
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--color-white-12);
   border-radius: 8px;
 }
 
@@ -73,4 +73,12 @@
 
 .send-button {
   align-self: center;
+  padding: 12px 24px;
+  border: 1px solid var(--color-white-100);
+  border-radius: 24px;
+}
+
+.send-button:hover {
+  color: var(--color-white-50);
+  border: 1px solid var(--color-white-50);
 }

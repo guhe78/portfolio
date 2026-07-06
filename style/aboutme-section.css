@@ -6,8 +6,6 @@
 
 .aboutme-image-container {
   flex: 1;
-  align-self: flex-start;
-  justify-self: flex-start;
   height: auto;
   max-height: 708px;
 }
@@ -18,7 +16,7 @@
   max-height: 568px;
   height: 100%;
   object-fit: cover;
-  border: 1px solid #d9d9d9;
+  border: 1px solid var(--color-light-gray);
   border-radius: 30px;
 }
 
@@ -34,7 +32,6 @@
   flex: 1;
   width: 100%;
   max-width: 568px;
-  gap: 32px;
 }
 
 .aboutme-text-container ul {
