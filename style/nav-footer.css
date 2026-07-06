@@ -11,7 +11,7 @@
   width: 100%;
   height: 96px;
 
-  background-image: linear-gradient(0deg, var(--color-black-100), var(--color-black-60));
+  background: linear-gradient(0deg, var(--transparent) 13.56%, var(--color-black-60) 84.01%);
 }
 
 .navbar {

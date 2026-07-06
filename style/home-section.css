@@ -3,7 +3,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: linear-gradient(45deg, var(--color-dark-100), var(--color-dark-green));
+  background: linear-gradient(
+    55.22deg,
+    var(--color-dark-100) 36.26%,
+    var(--color-dark-green) 93.28%
+  );
+
   position: relative;
   z-index: 1;
 }
