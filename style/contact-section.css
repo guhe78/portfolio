@@ -35,6 +35,10 @@
   gap: 10px;
 }
 
+.contact-form > div:last-of-type {
+  border-top: none;
+}
+
 .contact-form input:not([type="checkbox"]),
 .contact-form textarea {
   font-size: 18px;
@@ -81,4 +85,8 @@
 .send-button:hover {
   color: var(--color-white-50);
   border: 1px solid var(--color-white-50);
+}
+
+.reaction-message {
+  font-size: 24px;
 }

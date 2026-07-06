@@ -2,7 +2,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background-image: radial-gradient(
+  background: radial-gradient(
     22.43% 43.85% at 1.22% 52.45%,
     var(--color-dark-green-30) 0%,
     var(--color-dark-100) 100%

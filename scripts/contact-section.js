@@ -31,7 +31,40 @@ function handleFormSubmit(event) {
 
     console.log("Formulardaten:", data);
     //await sendFormData(data);
+    sendReactionMessage();
+    clearForm();
   });
+}
+
+/**
+ * Clears the form input fields and resets the character count display.
+ */
+function clearForm() {
+  nameInput.value = "";
+  emailInput.value = "";
+  messageInput.value = "";
+  privacyCheckbox.checked = false;
+  updateCharCount();
+}
+
+/**
+ * Sends a reaction message to the user after form submission, displaying a thank you message in a dialog and closing it after 5 seconds.
+ */
+function sendReactionMessage() {
+  openDialog();
+
+  const dialogContent = document.getElementById("dialog-content");
+
+  dialogContent.innerHTML = `
+    <p class="reaction-message">
+      ${translations["contact-success"]}
+    </p>
+  `;
+
+  setTimeout(() => {
+    closeDialog();
+    dialogContent.innerHTML = "";
+  }, 5000);
 }
 
 /**
