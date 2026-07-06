@@ -38,6 +38,7 @@
     <title>Günter Heldt Portfolio</title>
     <script src="assets/icons/svg-library.js" defer></script>
     <script src="scripts/home-section.js" defer></script>
+    <script src="scripts/aboutme-section.js" defer></script>
     <script src="scripts/skill-section.js" defer></script>
     <script src="scripts/projects-section.js" defer></script>
     <script src="scripts/recommendation-section.js" defer></script>
@@ -106,10 +107,26 @@
         <div class="aboutme-image-container">
           <img src="assets/images/dummy.png" alt="Profilbild" class="aboutme-image" />
         </div>
-        <div class="aboutme-text-container text-border-container">
-          <p class="textcontainer-intro" data-key="about-me">Über mich</p>
-          <h2 data-key="about-me-title">Wer bin ich</h2>
-          <p data-key="about-me-description"></p>
+        <div class="aboutme-wrapper">
+          <p class="aboutme-text-intro" data-key="about-me">Über mich</p>
+          <div class="aboutme-text-container text-border-container">
+            <h2 data-key="about-me-title">Wer bin ich</h2>
+            <p data-key="about-me-description"></p>
+            <ul>
+              <li>
+                <div id="location-icon"></div>
+                <p data-key="about-me-location-text"></p>
+              </li>
+              <li>
+                <div id="cognition-icon"></div>
+                <p data-key="about-me-cognition-text"></p>
+              </li>
+              <li>
+                <div id="releases-icon"></div>
+                <p data-key="about-me-releases-text"></p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -260,7 +277,7 @@
     </section>
     <footer class="footer">
       <div class="footer-info">
-        <p class="footer-name" data-key="footer-name">Günter Heldt</p>
+        <p class="footer-name">Günter Heldt</p>
         <p class="footer-title" data-key="footer-title">Webentwickler</p>
         <p class="footer-location" data-key="footer-location">Füssen, Deutschland</p>
       </div>

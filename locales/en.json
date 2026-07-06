@@ -1,5 +1,5 @@
 {
-  "about-me": "About Me",
+  "about-me": "About me",
   "skills": "Skills",
   "projects": "Projects",
   "contact": "Contact",
@@ -7,63 +7,63 @@
   "home-title": "Frontend Developer",
   "home-name": "Günter Heldt",
 
-  "about-me-title": "Who Am I",
+  "about-me-title": "Who I Am",
+  "about-me-description": "I am a Frontend Developer with a passion for modern web development and user-friendly interfaces. My focus is on building responsive web applications using HTML, CSS, and JavaScript. After completing my training as an Application Developer, I continue to expand my knowledge through personal projects and new technologies. I work carefully, enjoy learning new things, and continuously improve my skills. I am currently deepening my expertise through a frontend development program at Developer Akademie, where I work extensively with modern frameworks such as Angular.",
 
-  "about-me-description": "I am an ambitious frontend developer with a passion for creating attractive and user-friendly web applications. With experience in HTML, CSS, JavaScript, and modern frameworks such as Angular, I strive to build innovative solutions that are both functional and visually appealing. My goal is to make a positive impact on the digital world through my work while continuously learning new technologies and expanding my skill set.",
+  "about-me-location-text": "Available in the Ostallgäu region or remotely",
+  "about-me-cognition-text": "I enjoy learning new things and embrace new challenges with enthusiasm.",
+  "about-me-releases-text": "I approach challenges creatively and with a solution-oriented mindset, whether working independently or as part of a team.",
 
   "technologies": "Technologies",
 
-  "skills-description": "This is an overview of my skills and the technologies I am familiar with. I have experience developing web applications using HTML, CSS, and JavaScript. Currently, I am learning modern frameworks such as Angular. In addition, I am always eager to expand my knowledge and learn new technologies.",
+  "skills-description": "Here is an overview of the technologies and tools I work with. My main focus is developing modern web applications using HTML, CSS, and JavaScript. At the same time, I continuously expand my knowledge of frameworks such as Angular and other modern web technologies.",
 
-  "skills-other": "Need Another Skill?",
+  "skills-other": "Looking for another technology?",
 
-  "skills-other-description": "Just ask me! I am always eager to learn new technologies and expand my portfolio of skills. If you require a specific technology or skill, feel free to contact me and I will do my best to learn it and integrate it into your projects.",
+  "skills-other-description": "I learn new technologies quickly and continuously expand my skill set. If your project requires a specific technology or framework, I am always eager to learn and take on new challenges.",
 
   "projects-intro": "Portfolio",
   "projects-title": "Featured Projects",
 
-  "projects-description": "Discover a selection of projects I created during my training at Developer Akademie.",
+  "projects-description": "Here you will find a selection of projects I developed during my frontend development program at Developer Akademie. Each project has helped me strengthen my frontend development skills.",
 
-  "next-project-button-text": "Next projekt",
+  "next-project-button-text": "Next Project",
 
-  "recommendation-title": "What My Colleagues Say About Me",
+  "recommendation-title": "What My Colleagues Say",
 
-  "recommendation-description-1": "Working with him has always been a very pleasant experience. He actively contributes to the team, listens to others, and finds good solutions together with his colleagues. Even when facing challenges, he remains calm and focused on finding solutions.",
+  "recommendation-description-1": "Working with him has always been a pleasure. He actively contributes to the team, listens carefully, and collaborates effectively to find the best solutions.",
+  "recommendation-description-2": "I was especially impressed by his careful and well-structured way of working.",
+  "recommendation-description-3": "He stands out for his strong motivation, quick understanding, and willingness to learn.",
 
-  "recommendation-description-2": "What impressed me most was his careful way of working. He works in a structured manner, pays attention to details, and delivers results where quality and clean implementation are the top priorities.",
+  "contact-intro": "Contact",
+  "contact-write-me": "Get in Touch",
 
-  "recommendation-description-3": "He stands out through his high motivation and willingness to learn. He approaches new technologies and tasks with curiosity and adapts reliably to new topics.",
-
-  "contact-intro": "Get In Touch",
-  "contact-write-me": "Write Me",
-
-  "contact-description": "If you have any questions or are interested in working together, feel free to contact me.",
+  "contact-description": "Do you have any questions or are you interested in working together? I look forward to hearing from you and will get back to you as soon as possible.",
 
   "contact-name": "Your Name?",
   "contact-email": "Your Email?",
-  "contact-message": "How Can I Help You?",
+  "contact-message": "How can I help you?",
 
-  "contact-name-placeholder": "Your name goes here..",
-  "contact-email-placeholder": "youremail@email.com",
-  "contact-message-placeholder": "Your message goes here..",
+  "contact-name-placeholder": "Your name",
+  "contact-email-placeholder": "name@email.com",
+  "contact-message-placeholder": "Your message...",
 
   "contact-privacy": "I have read the privacy policy and agree to the processing of my data as described.",
 
-  "contact-send": "Say Hello ;)",
+  "contact-send": "Say Hello",
 
   "error-email": "Please enter a valid email address.",
   "error-name": "Please enter your name.",
   "error-message": "Please enter a valid message.",
   "error-privacy": "Please accept the privacy policy.",
 
-  "footer-name": "Günter Heldt",
-  "footer-title": "Web Developer",
+  "footer-title": "Frontend Developer",
   "footer-location": "Füssen, Germany",
 
   "footer-github": "GitHub",
   "footer-impressum": {
-    "text": "Legal Notice & Privacy",
-    "link": "pages/imprint-privacypolicy.html"
+    "text": "Legal Notice & Privacy Policy",
+    "link": "pages/imprint-privacy-policy.html"
   },
   "footer-email": "Email"
 }
