@@ -4,6 +4,7 @@
  */
 function init() {
   initHomeSection();
+  initAboutMeSection();
   initSkillBadgeContainer();
   initProjectsSection();
   initRecommendationSection();

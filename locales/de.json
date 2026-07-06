@@ -4,57 +4,60 @@
   "projects": "Projekte",
   "contact": "Kontakt",
 
-  "home-title": "Frontend Entwickler",
+  "home-title": "Frontend-Entwickler",
   "home-name": "Günter Heldt",
 
-  "about-me-title": "Wer bin ich",
-  "about-me-description": "Ich bin ein ambitionierter Frontend-Entwickler mit einer Leidenschaft für die Erstellung ansprechender und benutzerfreundlicher Webanwendungen. Mit Erfahrung in HTML, CSS, JavaScript und modernen Frameworks wie Angular strebe ich danach, innovative Lösungen zu entwickeln, die nicht nur funktional, sondern auch ästhetisch ansprechend sind. Mein Ziel ist es, durch meine Arbeit einen positiven Einfluss auf die digitale Welt zu haben und ständig neue Technologien zu erlernen, um meine Fähigkeiten zu erweitern.",
+  "about-me-title": "Wer ich bin",
+  "about-me-description": "Ich bin Frontend-Entwickler mit Begeisterung für moderne Webentwicklung und benutzerfreundliche Oberflächen. Mein Schwerpunkt liegt auf der Entwicklung responsiver Webanwendungen mit HTML, CSS und JavaScript. Nach meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung erweitere ich mein Wissen kontinuierlich durch eigene Projekte und neue Technologien. Ich arbeite sorgfältig, lerne gerne Neues und entwickle meine Fähigkeiten stetig weiter. Aktuell vertiefe ich meine Kenntnisse im Rahmen einer Frontend-Weiterbildung bei der Developer Akademie und arbeite intensiv mit modernen Frameworks wie Angular.",
+
+  "about-me-location-text": "Im Raum Ostallgäu oder remote verfügbar",
+  "about-me-cognition-text": "Ich lerne gerne Neues und stelle mich motiviert neuen Herausforderungen.",
+  "about-me-releases-text": "Ich gehe Herausforderungen kreativ und lösungsorientiert an – sowohl selbstständig als auch im Team.",
 
   "technologies": "Technologien",
 
-  "skills-description": "Dies ist ein Überblick über meine Fähigkeiten und Technologien, mit denen ich vertraut bin. Ich habe Erfahrung in der Entwicklung von Webanwendungen mit HTML, CSS und JavaScript. Momentan lerne ich den Umgang mit modernen Frameworks wie Angular. Darüber hinaus bin ich stets bestrebt, mein Wissen zu erweitern und neue Technologien zu erlernen.",
+  "skills-description": "Hier finden Sie einen Überblick über die Technologien und Werkzeuge, mit denen ich arbeite. Mein Schwerpunkt liegt auf der Entwicklung moderner Webanwendungen mit HTML, CSS und JavaScript. Gleichzeitig erweitere ich kontinuierlich mein Wissen in Frameworks wie Angular sowie weiteren modernen Webtechnologien.",
 
-  "skills-other": "Benötigen Sie eine andere Fähigkeit?",
+  "skills-other": "Fehlt eine Technologie?",
 
-  "skills-other-description": "Fragen Sie mich! Ich bemühe mich stets, neue Technologien zu erlernen und mein Portfolio an Fähigkeiten zu erweitern. Sollten Sie eine bestimmte Technologie oder Fähigkeit benötigen, kontaktieren Sie mich, und ich werde mich bemühen, sie zu erlernen und in Ihre Projekte zu integrieren.",
+  "skills-other-description": "Ich eigne mir neue Technologien schnell an und erweitere mein Wissen kontinuierlich. Wenn Ihr Projekt bestimmte Technologien oder Frameworks erfordert, freue ich mich darauf, mich einzuarbeiten und neue Herausforderungen anzunehmen.",
 
   "projects-intro": "Portfolio",
   "projects-title": "Ausgewählte Projekte",
 
-  "projects-description": "Entdecken Sie hier eine Auswahl meiner Arbeiten die ich während meiner Fortbildung bei der Developer Akademie erstellt habe.",
+  "projects-description": "Hier finden Sie eine Auswahl von Projekten, die ich im Rahmen meiner Weiterbildung an der Developer Akademie entwickelt habe. Jedes Projekt hat dazu beigetragen, meine Kenntnisse in der Frontend-Entwicklung weiter auszubauen.",
 
   "next-project-button-text": "Nächstes Projekt",
 
-  "recommendation-title": "Was meine Kollegen über mich sagen",
+  "recommendation-title": "Feedback von Kollegen",
 
-  "recommendation-description-1": "Die Zusammenarbeit mit ihm war immer sehr angenehm. Er bringt sich aktiv ins Team ein, hört anderen zu und findet gemeinsam mit den Kollegen gute Lösungen.",
-  "recommendation-description-2":"Besonders beeindruckt hat mich seine sorgfältige Arbeitsweise.",
-  "recommendation-description-3":"Er zeichnet sich durch seine hohe Motivation und Lernbereitschaft aus.",
+  "recommendation-description-1": "Die Zusammenarbeit mit ihm war stets angenehm. Er bringt sich aktiv ins Team ein, hört aufmerksam zu und entwickelt gemeinsam mit anderen passende Lösungen.",
+  "recommendation-description-2": "Besonders beeindruckt hat mich seine sorgfältige und strukturierte Arbeitsweise.",
+  "recommendation-description-3": "Er zeichnet sich durch eine hohe Motivation, schnelle Auffassungsgabe und große Lernbereitschaft aus.",
 
-  "contact-intro": "Kontaktieren Sie mich",
+  "contact-intro": "Kontakt",
   "contact-write-me": "Schreiben Sie mir",
 
-  "contact-description": "Wenn Sie Fragen haben oder an einer Zusammenarbeit interessiert sind, zögern Sie nicht, mich zu kontaktieren.",
+  "contact-description": "Haben Sie Fragen oder Interesse an einer Zusammenarbeit? Ich freue mich auf Ihre Nachricht und melde mich schnellstmöglich bei Ihnen zurück.",
 
   "contact-name": "Ihr Name?",
   "contact-email": "Ihre E-Mail?",
   "contact-message": "Wie kann ich Ihnen helfen?",
 
-  "contact-name-placeholder": "Hier kommt Ihr Name hin..",
-  "contact-email-placeholder": "ihremail@email.de",
-  "contact-message-placeholder": "Hier kommt Ihre Nachricht hin..",
+  "contact-name-placeholder": "Ihr Name",
+  "contact-email-placeholder": "name@email.de",
+  "contact-message-placeholder": "Ihre Nachricht..",
 
   "contact-privacy": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
 
-  "contact-send": "Sagen Sie Hallo ;)",
+  "contact-send": "Hallo sagen",
 
   "error-email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
   "error-name": "Bitte geben Sie Ihren Namen ein.",
   "error-message": "Bitte geben Sie eine gültige Nachricht ein.",
   "error-privacy": "Bitte stimmen Sie der Datenschutzrichtlinie zu.",
 
-  "footer-name": "Günter Heldt",
-  "footer-title": "Webentwickler",
+  "footer-title": "Frontend-Entwickler",
   "footer-location": "Füssen, Deutschland",
 
   "footer-github": "GitHub",

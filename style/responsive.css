@@ -140,6 +140,14 @@
   .project-item {
     flex-direction: column;
   }
+
+  .dialog-content {
+    padding: 64px 12px;
+  }
+
+  .project-info-dialog {
+    gap: 18px;
+  }
 }
 
 @media (max-width: 389px) {
