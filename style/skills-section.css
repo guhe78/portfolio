@@ -4,8 +4,8 @@
   justify-content: center;
   background-image: radial-gradient(
     22.43% 43.85% at 1.22% 52.45%,
-    rgba(8, 70, 59, 0.3) 0%,
-    #1c1c1c 100%
+    var(--color-dark-green-30) 0%,
+    var(--color-dark-100) 100%
   );
 }
 

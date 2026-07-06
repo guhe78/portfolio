@@ -24,7 +24,7 @@
 .line {
   flex-grow: 1;
   height: 2px;
-  background-color: white;
+  background-color: var(--color-white-100);
 }
 
 .colleagues {
@@ -41,7 +41,7 @@
 }
 
 .quote-icon svg {
-  color: white;
+  color: var(--color-white-100);
   width: 89px;
   height: 64px;
 }
@@ -83,7 +83,7 @@
 }
 
 .recommendation-dot.active {
-  color: rgba(61, 207, 182, 1);
+  color: var(--color-teal-100);
 }
 
 .recommendation-slider-container {
@@ -107,12 +107,22 @@
 
 .recommendation-slider-container::before {
   left: 0;
-  background: linear-gradient(to right, #1c1c1c 0%, rgba(28, 28, 28, 0.35) 70%, transparent 100%);
+  background: linear-gradient(
+    to right,
+    var(--color-dark-100) 0%,
+    var(--color-dark-35) 70%,
+    transparent 100%
+  );
 }
 
 .recommendation-slider-container::after {
   right: 0;
-  background: linear-gradient(to left, #1c1c1c 0%, rgba(28, 28, 28, 0.35) 70%, transparent 100%);
+  background: linear-gradient(
+    to left,
+    var(--color-dark-100) 0%,
+    var(--color-dark-35) 70%,
+    transparent 100%
+  );
 }
 
 .card-slider-container {
@@ -135,7 +145,7 @@
   padding: 48px 40px;
 
   border-radius: 32px;
-  border: 1px solid rgba(61, 207, 182, 1);
+  border: 1px solid var(--color-teal-100);
 
   transition:
     background-color 0.3s ease,
@@ -143,17 +153,13 @@
 }
 
 .main-card {
-  background-color: rgba(61, 207, 182, 0.3);
+  background-color: var(--color-dark-35);
   transform: scale(1);
 }
 
 .side-card {
-  background-color: rgba(61, 207, 182, 0.1);
+  background-color: var(--color-teal-10);
   transform: scale(0.9);
-}
-
-.card-slider-container {
-  transition: transform 0.5s ease;
 }
 
 .card-slider-container.no-transition {

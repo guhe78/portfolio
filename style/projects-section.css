@@ -41,21 +41,16 @@
   display: flex;
   justify-content: space-between;
   padding: 40px 32px;
-  border-top: 1px solid #d9d9d9;
+  border-top: 1px solid var(--color-light-gray);
 }
 
 .project-list .project-item:last-child {
-  border-bottom: 1px solid #d9d9d9;
+  border-bottom: 1px solid var(--color-light-gray);
 }
 
 .project-item:hover {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: var(--color-white-12);
   cursor: pointer;
-}
-
-.project-info-container {
-  display: flex;
-  justify-content: center;
 }
 
 .project-image {
@@ -80,7 +75,11 @@
   height: 100%;
   z-index: -1;
 
-  background: repeating-linear-gradient(135deg, white 0 1.5px, transparent 0px 15px);
+  background: repeating-linear-gradient(
+    135deg,
+    var(--color-white-100) 0 1.5px,
+    transparent 0px 15px
+  );
 }
 
 .project-1 {
@@ -106,7 +105,11 @@
 }
 
 .dialog-content {
-  background: linear-gradient(55.22deg, #1c1c1c 36.26%, #08463b 93.28%);
+  background: linear-gradient(
+    55.22deg,
+    var(--color-dark-100) 36.26%,
+    var(--color-dark-green) 93.28%
+  );
   max-width: 1248px;
   width: 100%;
   padding: 91px 80px;
@@ -185,7 +188,7 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid var(--color-white-100);
   border-radius: 100px;
 
   padding: 12px 24px;
@@ -200,8 +203,8 @@
 }
 
 .project-link-button:hover {
-  color: rgba(61, 207, 182, 1);
-  border: 1px solid rgba(61, 207, 182, 1);
+  color: var(--color-teal-100);
+  border: 1px solid var(--color-teal-100);
 }
 
 .project-link-button:hover svg {
@@ -214,7 +217,7 @@
 }
 
 .close-dialog-button {
-  color: rgba(255, 255, 255, 1);
+  color: var(--color-white-100);
   top: 48px;
 }
 
@@ -233,7 +236,7 @@
 }
 
 .next-project-button:hover {
-  color: white;
+  color: var(--color-white-100);
 }
 
 .next-project-button svg {
@@ -256,6 +259,6 @@
   align-items: center;
 
   background-color: transparent;
-  color: rgba(61, 207, 182, 1);
+  color: var(--color-teal-100);
   border: none;
 }
