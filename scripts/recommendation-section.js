@@ -31,24 +31,19 @@ function setupClones() {
   const originalCards = Array.from(
     sliderContainer.querySelectorAll(".recommendation-card:not(.clone)"),
   );
-
   const prependClones = [
     originalCards[originalCards.length - 2].cloneNode(true),
     originalCards[originalCards.length - 1].cloneNode(true),
   ];
-
   const appendClones = [originalCards[0].cloneNode(true), originalCards[1].cloneNode(true)];
-
   prependClones.forEach((clone) => {
     clone.classList.add("clone");
     sliderContainer.insertBefore(clone, sliderContainer.firstElementChild);
   });
-
   appendClones.forEach((clone) => {
     clone.classList.add("clone");
     sliderContainer.appendChild(clone);
   });
-
   cards = Array.from(sliderContainer.querySelectorAll(".recommendation-card"));
   currentIndex = 2;
 }
@@ -59,7 +54,6 @@ function setupClones() {
 function setupDots() {
   const originalCardsCount = cards.length - 4;
   const dotIcon = icons.ellipse(8);
-
   for (let i = 0; i < originalCardsCount; i++) {
     const dot = document.createElement("div");
     dot.classList.add("recommendation-dot");
@@ -77,7 +71,6 @@ function setupIcons() {
   sliderContainer.querySelectorAll(".quote-icon").forEach((quoteMark) => {
     quoteMark.innerHTML = icons.quote();
   });
-
   leftArrowButton.innerHTML = `<span class="recommendation-button-text">${icons.arrow_back(20)}</span>`;
   rightArrowButton.innerHTML = `<span class="recommendation-button-text">${icons.arrow_forward(20)}</span>`;
 }
@@ -92,7 +85,6 @@ function getMetrics() {
   const gap = parseInt(gapStyle);
   const cardStep = cardWidth + gap;
   const centerOffset = (sliderViewport.offsetWidth - cardWidth) / 2;
-
   return { cardWidth, gap, cardStep, centerOffset };
 }
 
@@ -132,7 +124,9 @@ function updateDots() {
 function wrapIndex(index) {
   const cardsCount = cards.length;
   if (index < 2) return index + (cardsCount - 4);
+
   if (index >= cardsCount - 2) return index - (cardsCount - 4);
+
   return index;
 }
 
@@ -144,28 +138,49 @@ function slide(direction) {
   if (isAnimating) return;
 
   isAnimating = true;
+
   const { cardStep, centerOffset } = getMetrics();
-  const targetIndex = direction === "next" ? currentIndex + 1 : currentIndex - 1;
+  const targetIndex = currentIndex + (direction === "next" ? 1 : -1);
 
-  sliderContainer.style.transform = `translateX(${centerOffset - cardStep * targetIndex}px)`;
+  moveSlider(targetIndex);
 
-  const onTransitionEnd = (event) => {
-    if (event.target !== sliderContainer || event.propertyName !== "transform") return;
+  sliderContainer.addEventListener("transitionend", () => finishSlide(targetIndex), { once: true });
+}
 
-    sliderContainer.removeEventListener("transitionend", onTransitionEnd);
+/**
+ * Moves the slider to the specified index.
+ * @param {number} index - The target index to move the slider to.
+ */
+function moveSlider(index) {
+  const { cardStep, centerOffset } = getMetrics();
+
+  sliderContainer.style.transform = `translateX(${centerOffset - cardStep * index}px)`;
+}
+
+/**
+ * Finishes the slide animation and updates the slider state.
+ * @param {number} targetIndex - The target index after the slide animation.
+ */
+function finishSlide(targetIndex) {
+  const wrappedIndex = wrapIndex(targetIndex);
+
+  if (wrappedIndex !== targetIndex) {
     sliderContainer.classList.add("no-transition");
-    currentIndex = wrapIndex(targetIndex);
+
+    currentIndex = wrappedIndex;
     centerMainCard();
 
-    requestAnimationFrame(() => {
-      sliderContainer.classList.remove("no-transition");
-      updateClasses();
-      updateDots();
-      isAnimating = false;
-    });
-  };
+    sliderContainer.offsetHeight;
 
-  sliderContainer.addEventListener("transitionend", onTransitionEnd);
+    sliderContainer.classList.remove("no-transition");
+  } else {
+    currentIndex = targetIndex;
+  }
+
+  updateClasses();
+  updateDots();
+
+  isAnimating = false;
 }
 
 /**

@@ -134,6 +134,10 @@
   }
 
   .title-buttons-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
     padding-top: 32px;
   }
 
@@ -147,6 +151,10 @@
 
   .project-info-dialog {
     gap: 18px;
+  }
+
+  .recommendation-card {
+    max-width: 90%;
   }
 }
 
@@ -185,10 +193,6 @@
     width: 50%;
   }
 
-  .project-description {
-    max-width: 100%;
-  }
-
   .project-links-container {
     width: 100%;
     justify-content: space-evenly;
@@ -204,10 +208,6 @@
     max-height: 844px;
     height: 100%;
     gap: clamp(16px, calc(-8.606px + 6.309vw), 56px);
-  }
-
-  .recommendation-card {
-    max-width: 95%;
   }
 
   .contact-form > div {

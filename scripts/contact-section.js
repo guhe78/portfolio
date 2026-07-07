@@ -72,7 +72,7 @@ function sendReactionMessage() {
  */
 async function sendFormData(data) {
   try {
-    const res = await fetch("scripts/php/contact_form_mail.php", {
+    const res = await fetch("/scripts/php/contact_form_mail.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

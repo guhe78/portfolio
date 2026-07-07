@@ -27,7 +27,8 @@
 }
 
 .project-description {
-  width: clamp(358px, calc(321.6px + 9.333vw), 456px);
+  width: clamp(0px, 100%, 456px);
+  max-width: 100%;
   padding-top: 32px;
 }
 

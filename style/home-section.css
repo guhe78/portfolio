@@ -11,6 +11,7 @@
 
   position: relative;
   z-index: 1;
+  overflow-x: clip;
 }
 
 .home-section {
@@ -37,7 +38,8 @@
 
 .title-buttons-container {
   display: flex;
-  width: 363px;
+  max-width: 363px;
+  width: 100%;
   gap: 48px;
   padding-top: 40px;
 }
@@ -46,7 +48,7 @@
   padding: 12px 24px;
   border: 1px solid var(--color-white-100);
   border-radius: 24px;
-  width: 172px;
+  width: min(172px, 100%);
   overflow: hidden;
 }
 
