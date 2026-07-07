@@ -139,7 +139,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  width: clamp(358px, calc(256.229px + 26.095vw), 632px);
+  width: min(100%, 632px);
   height: 274px;
 
   padding: 48px 40px;
