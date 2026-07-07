@@ -7,9 +7,13 @@ const BODY = document.body;
 function initCloseDialog() {
   DIALOG.onclick = (event) => {
     if (event.target === DIALOG) {
-      closeDialog();
+      DIALOG.close();
     }
   };
+
+  DIALOG.addEventListener("close", () => {
+    BODY.classList.remove("no_scroll");
+  });
 }
 
 /**

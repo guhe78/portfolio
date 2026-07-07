@@ -9,6 +9,7 @@ function init() {
   initProjectsSection();
   initRecommendationSection();
   initContactSection();
+  initFooter();
   initCloseDialog();
   initLanguage();
 }

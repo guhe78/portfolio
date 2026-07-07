@@ -40,8 +40,7 @@ const projects = [
   },
 ];
 
-const dialogContent = document.getElementById("dialog-content");
-const dialog = document.getElementById("dialog");
+const dialogContent = document.getElementById("dialog");
 
 /**
  * Initializes the projects section by rendering each project in the DOM and setting up event listeners for user interactions. It handles click events to open a dialog with detailed project information, as well as mouse enter and leave events to show additional project info on hover.
@@ -57,7 +56,14 @@ function initProjectsSection() {
     projectRow.innerHTML = projectInfoShortTemplate(project, projectDescription, number);
     const projectName = document.getElementById(`project-name-${project.id}`);
 
-    initEventListeners(projectRow, projectName, projectInfo, project, number, projectDescription);
+    initProjectEventListeners(
+      projectRow,
+      projectName,
+      projectInfo,
+      project,
+      number,
+      projectDescription,
+    );
   });
 }
 
@@ -70,7 +76,7 @@ function initProjectsSection() {
  * @param {number} number - The project number.
  * @param {string} projectDescription - The project description based on the current language.
  */
-function initEventListeners(
+function initProjectEventListeners(
   projectRow,
   projectName,
   projectInfo,

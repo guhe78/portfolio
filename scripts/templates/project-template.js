@@ -31,6 +31,7 @@ function projectInfoHoverTemplate(project, projectDescription) {
  */
 function projectInfoDialogTemplate(project, projectDescription, number) {
   return `
+    <div class="project-dialog-content">
       <button id="close-dialog-button" class="close-dialog-button">${icons.close(18)}</button>
       <div class="project-info-dialog">
         <div class="project-info-header">
@@ -49,5 +50,7 @@ function projectInfoDialogTemplate(project, projectDescription, number) {
       </div>
       <img src="${project.image}" alt="${project.name}" />
       <button id="next-project-button" class="next-project-button"><span data-key="next-project-button-text">Next</span> ${icons.arrow_forward(18)}</button>
-      `;
+      </div>
+    </div>
+  `;
 }
