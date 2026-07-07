@@ -4,11 +4,11 @@
   }
 
   .scroll-down-container {
-    left: clamp(96px, calc(-258.462px + 24.615vw), 480px);
+    left: max(96px, calc((100vw - 1440px) / 2 + 96px));
   }
 
   .social-links-homeview {
-    right: clamp(96px, calc(-258.462px + 24.615vw), 480px);
+    right: max(96px, calc((100vw - 1440px) / 2 + 96px));
   }
 
   .scroll-line,
