@@ -135,8 +135,13 @@ footer {
   align-items: center;
 }
 
-.footer-middle a {
+.footer-impressum {
   padding-bottom: 12px;
+}
+
+.footer-impressum:hover {
+  cursor: pointer;
+  color: var(--color-teal-100);
 }
 
 .social-links {
@@ -146,13 +151,13 @@ footer {
 
 .nav-links li,
 footer li,
-.footer-middle a {
+.footer-impressum {
   position: relative;
 }
 
 .nav-links li::after,
 footer li::after,
-.footer-middle a::after {
+.footer-impressum::after {
   font-size: 24px;
   content: "•";
   position: absolute;
@@ -163,7 +168,7 @@ footer li::after,
 
 .nav-links li:hover::after,
 footer li:hover::after,
-.footer-middle a:hover::after {
+.footer-impressum:hover::after {
   opacity: 1;
 }
 
@@ -179,7 +184,7 @@ footer li::after {
   transform: translateY(-50%);
 }
 
-.footer-middle a::after {
+.footer-impressum::after {
   left: 50%;
   top: -24px;
   transform: translateX(-50%);

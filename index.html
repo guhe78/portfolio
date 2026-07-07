@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/contact-section.css" />
     <link rel="stylesheet" href="style/recommendation-section.css" />
     <link rel="stylesheet" href="style/dialog.css" />
+    <link rel="stylesheet" href="style/dialog-legal.css" />
     <link rel="stylesheet" href="style/nav-footer.css" />
     <link rel="stylesheet" href="style/responsive.css" />
     <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png" />
@@ -46,6 +47,9 @@
     <script src="scripts/i18n.js" defer></script>
     <script src="scripts/dialog.js" defer></script>
     <script src="scripts/templates/project-template.js" defer></script>
+    <script src="scripts/templates/imprint-privacypolicy-template.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/dialog-legal.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body onload="init()">
@@ -280,7 +284,7 @@
         <p class="footer-location">Ostallgäu, Deutschland</p>
       </div>
       <div class="footer-middle">
-        <a href="pages/impressum-datenschutz.html" data-key="footer-impressum">abc</a>
+        <div class="footer-impressum" id="footer-impressum" data-key="footer-impressum"></div>
         <p class="footer-copyright">&copy; Günter Heldt 2026</p>
       </div>
       <ul class="social-links">
@@ -290,10 +294,6 @@
         <li><a href="mailto:mail@guenter-heldt.de" data-key="footer-email">Email</a></li>
       </ul>
     </footer>
-    <dialog id="dialog">
-      <div class="dialog-content" id="dialog-content">
-        <button id="dialog-close-button" data-key="dialog-close">Schließen</button>
-      </div>
-    </dialog>
+    <dialog id="dialog"></dialog>
   </body>
 </html>

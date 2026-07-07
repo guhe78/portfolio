@@ -105,7 +105,7 @@
   align-items: center;
 }
 
-.dialog-content {
+.project-dialog-content {
   background: linear-gradient(
     55.22deg,
     var(--color-dark-100) 36.26%,
@@ -124,7 +124,7 @@
   position: relative;
 }
 
-.dialog-content img {
+.project-dialog-content img {
   max-width: 520px;
   width: 100%;
   max-height: 369px;
