@@ -29,8 +29,7 @@ function handleFormSubmit(event) {
 
     const data = getFormData();
 
-    console.log("Formulardaten:", data);
-    //await sendFormData(data);
+    await sendFormData(data);
     sendReactionMessage();
     clearForm();
   });
