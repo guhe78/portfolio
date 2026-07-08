@@ -215,7 +215,7 @@
           <p data-key="contact-description"></p>
         </div>
         <div class="contact-right-part">
-          <form class="contact-form" id="contact-form">
+          <form class="contact-form" id="contact-form" novalidate>
             <div class="form-group">
               <label for="name" data-key="contact-name">Ihr Name?</label>
               <input
@@ -271,7 +271,13 @@
                 data-key="contact-privacy-validation"
               ></small>
             </div>
-            <button class="send-button button" type="submit" data-key="contact-send"></button>
+            <button
+              class="send-button button"
+              id="send-button"
+              type="submit"
+              data-key="contact-send"
+              disabled
+            ></button>
           </form>
         </div>
       </div>
