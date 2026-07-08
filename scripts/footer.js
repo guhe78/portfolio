@@ -3,6 +3,7 @@
  */
 function initFooter() {
   initFooterEventListeners();
+  setScrollUpArrow();
 }
 
 /**
@@ -14,5 +15,17 @@ function initFooterEventListeners() {
   footerImpressum.addEventListener("click", () => {
     const currentLanguage = localStorage.getItem("language") || "de";
     openLegalDialog(currentLanguage);
+  });
+}
+
+function setScrollUpArrow() {
+  const footerUpArrows = document.querySelectorAll(".footer-up-arrow");
+  if (!footerUpArrows.length) return;
+
+  footerUpArrows.forEach((arrow) => {
+    arrow.innerHTML = icons.arrow_down(13);
+    arrow.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
   });
 }
