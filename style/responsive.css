@@ -162,6 +162,14 @@
   .recommendation-card {
     max-width: 90%;
   }
+
+  .left-arrow-up {
+    left: 30px;
+  }
+
+  .right-arrow-up {
+    right: 30px;
+  }
 }
 
 @media (max-width: 389px) {

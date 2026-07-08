@@ -214,6 +214,13 @@ function setScrollDownArrow() {
   if (!scrollDownArrow) return;
 
   scrollDownArrow.innerHTML = icons.arrow_down(13);
+
+  scrollDownArrow.addEventListener("click", () => {
+    const nextSection = document.getElementById("aboutme");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 }
 
 /**

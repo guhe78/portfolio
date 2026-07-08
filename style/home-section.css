@@ -134,6 +134,11 @@
   gap: 24px;
 }
 
+.scroll-down-arrow:hover {
+  cursor: pointer;
+  background-color: var(--color-white-50);
+}
+
 .social-links-homeview {
   right: clamp(16px, calc(-13.714px + 7.619vw), 96px);
   gap: 12px;
