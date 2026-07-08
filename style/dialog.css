@@ -1,11 +1,12 @@
 dialog {
   margin: auto;
   padding: 0;
-
   border: none;
-
   background-color: transparent;
   color: white;
+
+  max-height: 100dvh;
+  overflow: hidden;
 }
 
 dialog::backdrop {

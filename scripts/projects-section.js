@@ -25,19 +25,6 @@ const projects = [
     github: "https://github.com/guhe78/sharkie",
     id: "project-2",
   },
-  {
-    name: "Pokedex",
-    descriptionGerman:
-      "Dies ist eine Web-App. Sie zeigt Informationen zu allen Pokemons. Dabei greift sie auf Daten von 'The RESTful Pokémon API' zu.",
-    descriptionEnglish:
-      "This is a web app. It shows information about all Pokémon. It uses data from 'The RESTful Pokémon API'.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    techIcons: ["html", "css", "javascript"],
-    image: "assets/images/pokedex.png",
-    link: "https://pokedex.guenter-heldt.de/",
-    github: "https://github.com/guhe78/pokedex",
-    id: "project-3",
-  },
 ];
 
 const dialogContent = document.getElementById("dialog");
