@@ -23,13 +23,13 @@ function initContactSection() {
 function handleFormSubmit(event) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const isValid = checkName() & checkEmail() & checkMessage() & checkPrivacy();
+    //const isValid = checkName() & checkEmail() & checkMessage() & checkPrivacy();
 
-    if (!isValid) return;
+    //if (!isValid) return;
 
     const data = getFormData();
 
-    await sendFormData(data);
+    //await sendFormData(data);
     sendReactionMessage();
     clearForm();
   });
@@ -52,10 +52,10 @@ function clearForm() {
 function sendReactionMessage() {
   openDialog();
 
-  const dialogContent = document.getElementById("dialog-content");
+  const dialogContent = document.getElementById("dialog");
 
   dialogContent.innerHTML = `
-    <p class="reaction-message">
+    <p class="reaction-message-dialog">
       ${translations["contact-success"]}
     </p>
   `;

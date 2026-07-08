@@ -1,3 +1,7 @@
+/**
+ * Opens the legal dialog with the appropriate language content.
+ * @param {string} language - The language code ("en" for English, "de" for German).
+ */
 function openLegalDialog(language) {
   const dialogContent = document.getElementById("dialog");
   if (language === "en") {

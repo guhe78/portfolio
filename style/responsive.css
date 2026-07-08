@@ -22,7 +22,7 @@
 }
 
 @media (max-width: 1200px) {
-  .dialog-content {
+  .project-dialog-content {
     flex-direction: column-reverse;
     overflow-y: auto;
     border-radius: 20px;
@@ -145,7 +145,7 @@
     flex-direction: column;
   }
 
-  .dialog-content {
+  .project-dialog-content {
     padding: 64px 12px;
   }
 
@@ -202,7 +202,7 @@
     padding: clamp(6px, calc(-14px + 6.667vw), 12px) clamp(12px, calc(-28px + 13.333vw), 24px);
   }
 
-  .dialog-content {
+  .project-dialog-content {
     max-width: 366px;
     width: 100%;
     max-height: 844px;
