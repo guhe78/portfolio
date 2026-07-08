@@ -2,7 +2,7 @@ const DIALOG = document.getElementById("dialog");
 const BODY = document.body;
 
 /**
- * Initialize the dialog close functionality. When the user clicks outside the dialog content, the dialog will close.
+ * Initializes the dialog by setting up event listeners for closing the dialog when clicking outside of it and removing the "no_scroll" class from the body when the dialog is closed.
  */
 function initCloseDialog() {
   DIALOG.onclick = (event) => {

@@ -1,8 +1,10 @@
+/**
+ * Generates the German template for the imprint and privacy policy dialog.
+ * @returns {string} The HTML string for the German imprint and privacy policy dialog.
+ */
 function imprintPrivacyPolicyGermanTemplate() {
   return `
-  <section class="imprint-privacy-section">
-    <h2>Impressum und Datenschutz</h2>
-
+  <section class="imprint-privacy-dialog">
     <section class="impressum-section">
       <h2>Impressum</h2>
       <p>Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
@@ -128,11 +130,13 @@ function imprintPrivacyPolicyGermanTemplate() {
   `;
 }
 
+/**
+ * Generates the English template for the imprint and privacy policy dialog.
+ * @returns {string} The HTML string for the English imprint and privacy policy dialog.
+ */
 function imprintPrivacyPolicyEnglishTemplate() {
   return `
-  <section class="imprint-privacy-section">
-    <h2>Legal Notice & Privacy Policy</h2>
-
+  <section class="imprint-privacy-dialog">
     <section class="imprint-section">
       <h2>Legal Notice</h2>
 

@@ -87,6 +87,21 @@
   border: 1px solid var(--color-white-50);
 }
 
-.reaction-message {
-  font-size: 24px;
+.reaction-message-dialog {
+  background: linear-gradient(
+    55.22deg,
+    var(--color-dark-100) 36.26%,
+    var(--color-dark-green) 93.28%
+  );
+  max-width: 1248px;
+  width: 100%;
+  padding: clamp(12px, calc(-5.895px + 5.965vw), 80px);
+  border: 1px solid rgba(61, 207, 182, 1);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  font-family: "Karla";
+  font-size: clamp(1.125rem, 1.0263rem + 0.5263vw, 1.5rem);
 }
