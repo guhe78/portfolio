@@ -23,13 +23,13 @@ function initContactSection() {
 function handleFormSubmit(event) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    //const isValid = checkName() & checkEmail() & checkMessage() & checkPrivacy();
+    const isValid = checkName() & checkEmail() & checkMessage() & checkPrivacy();
 
-    //if (!isValid) return;
+    if (!isValid) return;
 
     const data = getFormData();
 
-    //await sendFormData(data);
+    await sendFormData(data);
     sendReactionMessage();
     clearForm();
   });
@@ -79,15 +79,6 @@ async function sendFormData(data) {
     });
 
     const result = await res.json();
-
-    if (result.success) {
-      console.log("Formular erfolgreich gesendet");
-    } else {
-      console.error("Fehler beim Senden des Formulars");
-    }
-  } catch (error) {
-    console.error("Fehler beim Senden des Formulars:", error);
-  }
 }
 
 /**
