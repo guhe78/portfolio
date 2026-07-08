@@ -218,7 +218,7 @@
 
 .project-number {
   font-family: "Karla";
-  font-size: clamp(4.5rem, 3.2rem + 5.3333vw, 8rem);
+  font-size: 4rem;
   line-height: 1;
   margin: 0;
 }
