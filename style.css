@@ -20,7 +20,7 @@
   /* Farben */
   --color-dark: #1c1c1c;
   --color-dark-green: rgba(8, 70, 59, 1);
-  --color-light-gray: #d9d9d9;
+  --color-light-gray: rgb(217, 217, 217);
 
   --color-white-12: rgba(255, 255, 255, 0.12);
   --color-white-50: rgba(255, 255, 255, 0.5);
@@ -36,6 +36,7 @@
   --color-dark-35: rgba(28, 28, 28, 0.35);
   --color-dark-100: rgba(28, 28, 28, 1);
   --color-dark-green-30: rgba(8, 70, 59, 0.3);
+  --color-dark-gray: rgb(61, 61, 61);
 }
 
 * {

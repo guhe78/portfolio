@@ -7,6 +7,7 @@ const nameError = document.getElementById("name-validation");
 const emailError = document.getElementById("email-validation");
 const messageError = document.getElementById("message-validation");
 const privacyError = document.getElementById("privacy-validation");
+const sendButton = document.getElementById("send-button");
 
 /**
  * Initializes the contact section by setting up event listeners for form submission and input field validation.
@@ -23,13 +24,13 @@ function initContactSection() {
 function handleFormSubmit(event) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const isValid = checkName() & checkEmail() & checkMessage() & checkPrivacy();
+    const isValid = checkFormValidity();
 
     if (!isValid) return;
 
     const data = getFormData();
 
-    await sendFormData(data);
+    //await sendFormData(data);
     sendReactionMessage();
     clearForm();
   });
@@ -63,6 +64,7 @@ function sendReactionMessage() {
   setTimeout(() => {
     closeDialog();
     dialogContent.innerHTML = "";
+    sendButton.disabled = true;
   }, 5000);
 }
 
@@ -93,19 +95,10 @@ async function sendFormData(data) {
  * Initializes event listeners for the input fields to validate user input and update character count.
  */
 function initEventListenerInputFields() {
-  emailInput.addEventListener("blur", checkEmail);
-  emailInput.addEventListener("input", checkEmail);
-
-  nameInput.addEventListener("blur", checkName);
-  nameInput.addEventListener("input", checkName);
-
-  messageInput.addEventListener("blur", checkMessage);
-  messageInput.addEventListener("input", () => {
-    checkMessage();
-    updateCharCount();
-  });
-
-  privacyCheckbox.addEventListener("change", checkPrivacy);
+  initNameEventListeners();
+  initEmailEventListeners();
+  initMessageEventListeners();
+  initPrivacyEventListeners();
 }
 
 /**
@@ -133,41 +126,78 @@ function getFormData() {
  * Validates the email input field.
  * @returns {boolean} True if the email is valid, false otherwise.
  */
-function checkEmail() {
-  const email = emailInput.value;
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const isValid = emailPattern.test(email);
+function checkEmail(showError = false) {
+  const email = emailInput.value.trim();
 
-  emailError.textContent = isValid ? "" : t("error-email");
+  const emailPattern =
+    /^[a-zA-Z0-9](?:[a-zA-Z0-9._%+-]{0,62}[a-zA-Z0-9])?@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+$/;
+
+  const isValid = emailPattern.test(email) && !email.includes("..");
+
+  emailError.textContent = !isValid && showError ? t("error-email") : "";
 
   return isValid;
+}
+
+/**
+ * Initializes event listeners for the email input field to validate user input and check form validity.
+ */
+function initEmailEventListeners() {
+  emailInput.addEventListener("blur", () => checkEmail(true));
+  emailInput.addEventListener("input", () => {
+    checkEmail();
+    checkFormValidity();
+  });
 }
 
 /**
  * Validates the name input field.
  * @returns {boolean} True if the name is valid, false otherwise.
  */
-function checkName() {
+function checkName(showError = false) {
   const name = nameInput.value;
   const isValid = name.trim() !== "";
 
-  nameError.textContent = isValid ? "" : t("error-name");
+  nameError.textContent = !isValid && showError ? t("error-name") : "";
 
   return isValid;
+}
+
+/**
+ * Initializes event listeners for the name input field to validate user input and check form validity.
+ */
+function initNameEventListeners() {
+  nameInput.addEventListener("blur", () => checkName(true));
+  nameInput.addEventListener("input", () => {
+    checkName();
+    checkFormValidity();
+  });
 }
 
 /**
  * Validates the message input field.
  * @returns {boolean} True if the message is valid, false otherwise.
  */
-function checkMessage() {
+function checkMessage(showError = false) {
   const message = messageInput.value;
   const messageLength = message.trim().length;
   const isValid = messageLength >= 9 && messageLength <= 200;
 
-  messageError.textContent = isValid ? "" : t("error-message");
+  messageError.textContent = !isValid && showError ? t("error-message") : "";
 
   return isValid;
+}
+
+/**
+ * Initializes event listeners for the message input field to validate user input, update character count, and check form validity.
+ */
+function initMessageEventListeners() {
+  messageInput.addEventListener("blur", () => checkMessage(true));
+  messageInput.addEventListener("input", () => {
+    checkMessage();
+    updateCharCount();
+    checkFormValidity();
+  });
 }
 
 /**
@@ -183,10 +213,38 @@ function checkPrivacy() {
 }
 
 /**
+ * Initializes event listeners for the privacy checkbox to validate its state and update form validity.
+ */
+function initPrivacyEventListeners() {
+  privacyCheckbox.addEventListener("change", () => {
+    checkPrivacy();
+    checkFormValidity();
+  });
+}
+
+/**
+ * Checks the overall validity of the form by validating each input field and the privacy checkbox.
+ * @returns {boolean} True if the form is valid, false otherwise.
+ */
+function checkFormValidity() {
+  const isValid = checkName() && checkEmail() && checkMessage() && checkPrivacy();
+
+  sendButton.disabled = !isValid;
+
+  return isValid;
+}
+
+/**
  * Updates the character count display for the message input field.
  */
 function updateCharCount() {
   const messageLength = messageInput.value.trim().length;
   const charCount = document.getElementById("char-count");
   charCount.textContent = messageLength;
+
+  if (messageLength < 9 || messageLength > 200) {
+    charCount.classList.add("char-count-not-valid");
+  } else {
+    charCount.classList.remove("char-count-not-valid");
+  }
 }
