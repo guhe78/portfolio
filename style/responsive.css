@@ -37,6 +37,10 @@
     max-width: 320px;
     max-height: 220px;
   }
+
+  .project-info-dialog {
+    gap: 24px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -61,7 +65,7 @@
   }
 
   .project-info-dialog {
-    gap: 32px;
+    gap: 18px;
   }
 
   .project-info-container {
@@ -106,11 +110,7 @@
 
 @media (max-width: 750px) {
   h2 {
-    font-size: 3rem;
-  }
-
-  h3 {
-    font-size: 1rem;
+    font-size: 2.5rem;
   }
 
   h4 {
@@ -160,7 +160,7 @@
   }
 
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   h4 {
