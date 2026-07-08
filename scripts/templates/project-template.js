@@ -50,7 +50,6 @@ function projectInfoDialogTemplate(project, projectDescription, number) {
       </div>
       <img src="${project.image}" alt="${project.name}" />
       <button id="next-project-button" class="next-project-button"><span data-key="next-project-button-text">Next</span> ${icons.arrow_forward(18)}</button>
-      </div>
     </div>
   `;
 }
