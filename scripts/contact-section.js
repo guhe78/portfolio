@@ -79,6 +79,14 @@ async function sendFormData(data) {
     });
 
     const result = await res.json();
+
+    if (result.success) {
+    } else {
+      console.error("Fehler beim Senden des Formulars");
+    }
+  } catch (error) {
+    console.error("Fehler beim Senden des Formulars:", error);
+  }
 }
 
 /**
