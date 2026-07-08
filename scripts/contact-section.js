@@ -30,7 +30,7 @@ function handleFormSubmit(event) {
 
     const data = getFormData();
 
-    //await sendFormData(data);
+    await sendFormData(data);
     sendReactionMessage();
     clearForm();
   });

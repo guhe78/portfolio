@@ -18,6 +18,10 @@ function initFooterEventListeners() {
   });
 }
 
+/**
+ * Sets up the scroll up arrow functionality for the footer.
+ * @returns {void}
+ */
 function setScrollUpArrow() {
   const footerUpArrows = document.querySelectorAll(".footer-up-arrow");
   if (!footerUpArrows.length) return;
