@@ -74,3 +74,13 @@ section ul {
   text-decoration: underline;
   color: var(--color-teal-100);
 }
+
+.imprint-privacy-policy-link {
+  color: var(--color-teal-100);
+  text-decoration: underline;
+}
+
+.imprint-privacy-policy-link:hover {
+  cursor: pointer;
+  color: var(--color-white-100);
+}

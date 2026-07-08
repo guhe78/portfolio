@@ -13,3 +13,17 @@ function openLegalDialog(language) {
   closeDialogButton.addEventListener("click", closeDialog);
   openDialog();
 }
+
+/**
+ * Initializes event listeners for the privacy policy link in the footer.
+ * When the link is clicked, it opens the legal dialog with the appropriate language content.
+ * @returns {void}
+ */
+function initPrivacyPolicyEventListeners() {
+  const privacyPolicy = document.getElementById("imprint-privacy-policy-link");
+
+  privacyPolicy.addEventListener("click", () => {
+    const currentLanguage = localStorage.getItem("language") || "de";
+    openLegalDialog(currentLanguage);
+  });
+}

@@ -121,10 +121,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 32px clamp(16px, calc(-13.714px + 7.619vw), 96px);
-  position: relative;
 }
 
 .footer-info {
+  position: relative;
   justify-self: start;
 }
 
@@ -216,7 +216,8 @@ footer li::after {
 
 .footer-up-arrow {
   position: absolute;
-  top: -30px;
+  top: -70px;
+  left: 20%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,14 +225,6 @@ footer li::after {
   height: 48px;
   border: 1px solid var(--color-teal-100);
   border-radius: 100px;
-}
-
-.left-arrow-up {
-  left: 50px;
-}
-
-.right-arrow-up {
-  right: 50px;
 }
 
 .footer-up-arrow:hover {

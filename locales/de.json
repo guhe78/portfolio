@@ -48,7 +48,9 @@
   "contact-email-placeholder": "name@email.de",
   "contact-message-placeholder": "Ihre Nachricht..",
 
-  "contact-privacy": "Ich habe die Datenschutzrichtlinie gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+  "contact-privacy-prefix": "Ich habe die ",
+  "contact-privacy-link": "Datenschutzerklärung",
+  "contact-privacy-suffix": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
 
   "contact-send": "Hallo sagen",
   "contact-success": "Vielen Dank für Ihre Nachricht! Ich werde mich schnellstmöglich bei Ihnen melden.",
