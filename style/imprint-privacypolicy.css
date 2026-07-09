@@ -5,7 +5,7 @@ p {
   hyphens: auto;
 }
 
-body {
+.body-legal-privacy {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
