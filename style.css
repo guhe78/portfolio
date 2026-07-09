@@ -46,7 +46,22 @@
 }
 
 html {
+  background-color: var(--color-dark-100);
   scroll-padding-top: 50px;
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-dark-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-teal-100);
+  border-radius: 20px;
 }
 
 body {
