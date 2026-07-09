@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style/imprint-privacypolicy.css" />
+    <link rel="stylesheet" href="../style/nav-footer.css" />
+    <link rel="stylesheet" href="../style/responsive.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="../assets/favicon/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="../assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Günter Heldt</title>
+    <script src="../assets/icons/svg-library.js" defer></script>
+    <script src="../scripts/contact-section.js" defer></script>
+    <script src="../scripts/i18n.js" defer></script>
+    <script src="../scripts/footer.js" defer></script>
+    <script src="../scripts/legal-privacy.js" defer></script>
+    <script src="../script.js" defer></script>
+  </head>
+  <body
+    onload="initLegalPrivacy()"
+    data-page="legal"
+    data-de-page="impressum.html"
+    data-en-page="legal-notice.html"
+  >
+    <div class="navbar-background">
+      <nav class="navbar">
+        <div class="navbar-left" id="navbar-left">
+          <input type="checkbox" id="toggle-language" class="input-language-toggle" />
+          <label class="switch" id="language-switch" for="toggle-language">
+            <span class="de">DE</span>
+            <span class="en">EN</span>
+          </label>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html#aboutme" data-key="about-me">Über mich</a></li>
+            <li><a href="../index.html#skills" data-key="skills">Fähigkeiten</a></li>
+            <li><a href="../index.html#projects" data-key="projects">Projekte</a></li>
+            <li><a href="../index.html#contact" data-key="contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <a href="/index.html" class="navbar-name-link">
+          <span class="navbar-firstname">Günter</span>
+          <span class="navbar-lastname">Heldt</span>
+        </a>
+        <button class="menu-toggle-button" id="menu-toggle" aria-label="Toggle Menu">
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+        </button>
+      </nav>
+    </div>
+    <section class="legal-notice-section">
+      <div class="legal-notice-content">
+        <h2>Legal Notice</h2>
+
+        <p>Information according to § 5 Digital Services Act (DDG)</p>
+
+        <p>Günter Heldt</p>
+        <p>c/o COCENTER</p>
+        <p>Koppoldstar. 1</p>
+        <p>86551 Aichach</p>
+        <p>Germany</p>
+
+        <p>Contact Email: mail@guenter-heldt.de</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-info">
+        <a href="/index.html" class="navbar-name-link">
+          <span class="navbar-firstname">Günter</span>
+          <span class="navbar-lastname">Heldt</span>
+        </a>
+        <p class="footer-title" data-key="footer-title">Webentwickler</p>
+        <p class="footer-location">Ostallgäu, Deutschland</p>
+      </div>
+      <div class="footer-middle">
+        <a class="footer-legal-privacy" id="footer-impressum" data-key="footer-legal"></a>
+        <a class="footer-legal-privacy" id="footer-privacy-policy" data-key="footer-privacy"></a>
+        <p class="footer-copyright">&copy; Günter Heldt 2026</p>
+      </div>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/guhe78" target="_blank" data-key="footer-github">GitHub</a>
+        </li>
+        <li><a href="mailto:mail@guenter-heldt.de" data-key="footer-email">Email</a></li>
+      </ul>
+    </footer>
+    <dialog id="dialog"></dialog>
+  </body>
+</html>

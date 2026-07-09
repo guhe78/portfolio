@@ -9,7 +9,6 @@ function init() {
   initProjectsSection();
   initRecommendationSection();
   initContactSection();
-  initPrivacyPolicyEventListeners();
   initFooter();
   initCloseDialog();
   initLanguage();

@@ -108,9 +108,9 @@
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
   h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   h4 {
@@ -138,6 +138,17 @@
   .title-buttons-container {
     padding-top: 32px;
     gap: 24px;
+  }
+}
+
+@media (max-width: 850px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .legal-notice-section {
+    padding: 149px 64px;
+    padding-bottom: 0;
   }
 }
 
@@ -199,14 +210,15 @@
     left: 30px;
   }
 
-  .right-arrow-up {
-    right: 30px;
+  .legal-notice-section {
+    padding: 124px 32px;
+    padding-bottom: 0;
   }
 }
 
 @media (max-width: 389px) {
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   h4 {
@@ -273,5 +285,10 @@
   .contact-form input:not([type="checkbox"]),
   .contact-form textarea {
     font-size: 14px;
+  }
+
+  .legal-notice-section {
+    padding: 96px 8px;
+    padding-bottom: 0;
   }
 }

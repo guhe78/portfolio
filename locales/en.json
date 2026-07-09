@@ -63,9 +63,13 @@
   "footer-title": "Frontend Developer",
 
   "footer-github": "GitHub",
-  "footer-impressum": {
-    "text": "Legal Notice & Privacy Policy",
-    "link": "pages/imprint-privacypolicy.html"
+  "footer-legal": {
+    "text": "Legal Notice",
+    "link": "/pages/legal-notice.html"
+  },
+  "footer-privacy": {
+    "text": "Privacy Policy",
+    "link": "/pages/privacy-policy.html"
   },
   "footer-email": "Email"
 }

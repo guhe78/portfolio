@@ -47,9 +47,7 @@
     <script src="scripts/i18n.js" defer></script>
     <script src="scripts/dialog.js" defer></script>
     <script src="scripts/templates/project-template.js" defer></script>
-    <script src="scripts/templates/imprint-privacypolicy-template.js" defer></script>
     <script src="scripts/footer.js" defer></script>
-    <script src="scripts/dialog-legal.js" defer></script>
     <script src="script.js" defer></script>
   </head>
   <body onload="init()">
@@ -57,7 +55,7 @@
       <nav class="navbar">
         <div class="navbar-left" id="navbar-left">
           <input type="checkbox" id="toggle-language" class="input-language-toggle" />
-          <label class="switch" for="toggle-language">
+          <label class="switch" id="language-switch" for="toggle-language">
             <span class="de">DE</span>
             <span class="en">EN</span>
           </label>
@@ -68,10 +66,10 @@
             <li><a href="#contact" data-key="contact">Kontakt</a></li>
           </ul>
         </div>
-        <div class="navbar-name">
+        <a href="/index.html" class="navbar-name-link">
           <span class="navbar-firstname">Günter</span>
           <span class="navbar-lastname">Heldt</span>
-        </div>
+        </a>
         <button class="menu-toggle-button" id="menu-toggle" aria-label="Toggle Menu">
           <span class="menu-icon"></span>
           <span class="menu-icon"></span>
@@ -290,13 +288,16 @@
     </section>
     <footer class="footer">
       <div class="footer-info">
-        <div class="footer-up-arrow"></div>
-        <p class="footer-name">Günter Heldt</p>
+        <a href="#home" class="navbar-name-link">
+          <span class="navbar-firstname">Günter</span>
+          <span class="navbar-lastname">Heldt</span>
+        </a>
         <p class="footer-title" data-key="footer-title">Webentwickler</p>
         <p class="footer-location">Ostallgäu, Deutschland</p>
       </div>
       <div class="footer-middle">
-        <div class="footer-impressum" id="footer-impressum" data-key="footer-impressum"></div>
+        <a class="footer-legal-privacy" id="footer-impressum" data-key="footer-legal"></a>
+        <a class="footer-legal-privacy" id="footer-privacy-policy" data-key="footer-privacy"></a>
         <p class="footer-copyright">&copy; Günter Heldt 2026</p>
       </div>
       <ul class="social-links">

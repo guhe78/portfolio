@@ -63,9 +63,13 @@
   "footer-title": "Frontend-Entwickler",
 
   "footer-github": "GitHub",
-  "footer-impressum": {
-    "text": "Impressum und Datenschutz",
-    "link": "pages/impressum-datenschutz.html"
+  "footer-legal": {
+    "text": "Impressum",
+    "link": "/pages/impressum.html"
+  },
+  "footer-privacy": {
+    "text": "Datenschutzerklärung",
+    "link": "/pages/datenschutz.html"
   },
   "footer-email": "Email"
 }
