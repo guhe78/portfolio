@@ -18,11 +18,12 @@ function initSkillBadgeContainer() {
   const container = document.getElementById("skill-badges-container");
 
   programmingLanguages.forEach((lang) => {
-    container.innerHTML += `
-    <div class="skill-item">
-      ${icons[lang.icon](30)}
+    const skillItem = document.createElement("div");
+    skillItem.className = "skill-item";
+    skillItem.innerHTML = `
+      ${icons[lang.icon](60)}
       <p>${lang.name}</p>
-    </div>
-  `;
+    `;
+    container.appendChild(skillItem);
   });
 }
