@@ -5,49 +5,42 @@ p {
   hyphens: auto;
 }
 
-section ul {
-  padding: 16px;
-}
-
-.back-button {
-  margin-bottom: 32px;
-  padding: 12px 24px;
-  border: 1px solid var(--color-white-100);
-  border-radius: 24px;
-}
-
-.back-button:hover {
-  color: var(--color-white-50);
-  border: 1px solid var(--color-white-50);
-}
-
-.imprint-privacy-dialog {
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   background: linear-gradient(
     55.22deg,
     var(--color-dark-100) 36.26%,
     var(--color-dark-green) 93.28%
   );
+}
+
+.footer {
+  margin-top: auto;
+}
+
+section ul {
+  padding: 16px;
+}
+
+.legal-notice-section {
   max-width: 1248px;
   width: 100%;
-  max-height: min(90dvh, 900px);
-  padding: clamp(4px, calc(-16px + 6.667vw), 80px);
-  border: 1px solid rgba(61, 207, 182, 1);
-  border-radius: 30px;
+  padding: 149px 96px;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
-  overflow: hidden;
 
   font-family: "Karla";
 }
 
-.legal-dialog-scroll-container {
-  width: 100%;
-  overflow-y: auto;
-  min-height: 0;
-  flex: 1;
-  padding-right: 8px;
+.legal-notice-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .legal-close-button {
@@ -66,11 +59,11 @@ section ul {
   border: 1px solid var(--color-teal-100);
 }
 
-.imprint-privacy-dialog a {
+.legal-notice-content a {
   text-decoration: underline;
 }
 
-.imprint-privacy-dialog a {
+.legal-notice-content a {
   text-decoration: underline;
   color: var(--color-teal-100);
 }

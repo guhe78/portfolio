@@ -1,0 +1,4 @@
+function initLegalPrivacy() {
+  initLanguage();
+  initFooter();
+}

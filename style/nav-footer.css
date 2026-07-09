@@ -42,7 +42,6 @@
   width: 84px;
   height: 28px;
   cursor: pointer;
-  transition: 0.4s;
   font-size: 16px;
 }
 
@@ -55,7 +54,15 @@
   left: 1px;
   background: var(--color-white-70);
   border-radius: 80px;
-  transition: 0.4s;
+  transition: transform 0.4s ease;
+}
+
+.input-language-toggle:checked + .switch::after {
+  transform: translateX(42px);
+}
+
+.switch.initializing::after {
+  transition: none;
 }
 
 .input-language-toggle {
@@ -72,17 +79,18 @@
   font-weight: 400;
 }
 
+.de,
+.en {
+  width: 20px;
+  text-align: center;
+}
+
 .de {
   font-weight: 700;
 }
 
 .input-language-toggle:checked + .switch .en {
   font-weight: 700;
-}
-
-.input-language-toggle:checked + .switch::after {
-  left: 1px;
-  transform: translateX(100%);
 }
 
 .nav-links {
@@ -98,11 +106,22 @@ footer a:hover {
   color: var(--color-teal-100);
 }
 
-.navbar-name {
+.navbar-name-link {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   font-size: 32px;
+  font-weight: 900;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-name-link:hover {
+  cursor: pointer;
+  -webkit-text-fill-color: transparent;
+
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--color-white-100);
 }
 
 .navbar-firstname {
@@ -136,11 +155,11 @@ footer {
   align-items: center;
 }
 
-.footer-impressum {
+.footer-legal-privacy {
   padding-bottom: 12px;
 }
 
-.footer-impressum:hover {
+.footer-legal-privacy:hover {
   cursor: pointer;
   color: var(--color-teal-100);
 }
@@ -152,13 +171,13 @@ footer {
 
 .nav-links li,
 footer li,
-.footer-impressum {
+.footer-legal-privacy {
   position: relative;
 }
 
 .nav-links li::after,
 footer li::after,
-.footer-impressum::after {
+.footer-legal-privacy::after {
   font-size: 24px;
   content: "•";
   position: absolute;
@@ -169,7 +188,7 @@ footer li::after,
 
 .nav-links li:hover::after,
 footer li:hover::after,
-.footer-impressum:hover::after {
+.footer-legal-privacy:hover::after {
   opacity: 1;
 }
 
@@ -185,9 +204,9 @@ footer li::after {
   transform: translateY(-50%);
 }
 
-.footer-impressum::after {
+.footer-legal-privacy::after {
   left: 50%;
-  top: -24px;
+  top: -18px;
   transform: translateX(-50%);
 }
 
@@ -212,44 +231,6 @@ footer li::after {
 
 .footer-copyright {
   color: var(--color-teal-100);
-}
-
-.footer-up-arrow {
-  position: absolute;
-  top: -70px;
-  left: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30px;
-  height: 48px;
-  border: 1px solid var(--color-teal-100);
-  border-radius: 100px;
-}
-
-.footer-up-arrow:hover {
-  cursor: pointer;
-  background-color: var(--color-white-50);
-}
-
-.footer-up-arrow svg {
-  color: var(--color-teal-100);
-  display: block;
-  animation: scrollArrowUpBounce 1.4s ease-in-out infinite;
-  transform: rotate(180deg);
-  will-change: transform;
-}
-
-@keyframes scrollArrowUpBounce {
-  0% {
-    transform: rotate(180deg) translateY(0);
-  }
-  50% {
-    transform: rotate(180deg) translateY(8px);
-  }
-  100% {
-    transform: rotate(180deg) translateY(0);
-  }
 }
 
 @media (max-width: 1024px) {
