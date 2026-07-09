@@ -43,22 +43,6 @@ section ul {
   gap: 24px;
 }
 
-.legal-close-button {
-  background-color: var(--transparent);
-  padding: 12px 24px;
-  border: 1px solid var(--color-white-100);
-  border-radius: 100px;
-  font-size: 24px;
-  font-family: "Karla";
-  color: var(--color-white-100);
-}
-
-.legal-close-button:hover {
-  cursor: pointer;
-  color: var(--color-teal-100);
-  border: 1px solid var(--color-teal-100);
-}
-
 .legal-notice-content a {
   text-decoration: underline;
 }
