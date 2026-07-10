@@ -72,27 +72,23 @@ function setCurrentTranslations() {
 }
 
 /**
- * Sets the text content of elements with the `data-key` attribute based on the translations for the current language. It also updates the `data-text` attribute if present, allowing for dynamic text updates in the UI.
+ * Updates the text content of elements with the `data-key` attribute based on the translations for the current language. It looks up the translation for each key and sets the text content accordingly. If the element is an anchor tag and has a corresponding link in the translations, it also updates the `href` attribute.
  */
 function setTranslations() {
   document.querySelectorAll("[data-key]").forEach((element) => {
-    const key = element.dataset.key;
-    const data = translations[key];
+    const data = translations[element.dataset.key];
 
     if (!data) return;
 
-    if (typeof data === "string") {
-      element.textContent = data;
-      return;
+    const text = typeof data === "string" ? data : data.text;
+
+    if (text) {
+      element.textContent = text;
+
+      if (element.dataset.text !== undefined) element.dataset.text = text;
     }
 
-    if (data.text) {
-      element.textContent = data.text;
-    }
-
-    if (element.tagName === "A" && data.link) {
-      element.href = data.link;
-    }
+    if (data.link && element.tagName === "A") element.href = data.link;
   });
 }
 
