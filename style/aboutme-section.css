@@ -1,7 +1,7 @@
 .aboutme-section-content {
   display: flex;
   justify-content: space-between;
-  gap: clamp(16px, calc(-13.714px + 7.619vw), 96px);
+  gap: 96px;
 }
 
 .aboutme-image-container {

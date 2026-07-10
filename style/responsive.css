@@ -22,17 +22,6 @@
 }
 
 @media (max-width: 1200px) {
-  .project-dialog-content {
-    flex-direction: column-reverse;
-    border-radius: 20px;
-    padding: 95px 12px;
-    max-width: 650px;
-    width: 100%;
-    max-height: min(90dvh, 900px);
-    gap: clamp(16px, calc(-8.606px + 6.309vw), 56px);
-    overflow-y: auto;
-  }
-
   .project-dialog-content img {
     max-width: 320px;
     max-height: 220px;
@@ -44,6 +33,10 @@
 }
 
 @media (max-width: 1024px) {
+  h1 {
+    font-size: 6rem;
+  }
+
   h2 {
     font-size: 3.5rem;
   }
@@ -54,6 +47,10 @@
 
   h4 {
     font-size: 1.1rem;
+  }
+
+  section {
+    padding: 0 72px;
   }
 
   .project-list {
@@ -76,6 +73,10 @@
   .contact-section-content {
     flex-direction: column;
     gap: 77px;
+  }
+
+  .aboutme-section-content {
+    gap: 64px;
   }
 
   .aboutme-image-container {
@@ -113,50 +114,34 @@
   }
 }
 
-@media (max-width: 1024px) and (orientation: landscape) {
-  .aboutme-image-container img {
-    height: min(80vh, 380px);
-    width: auto;
-  }
-
-  .project-dialog-content {
-    padding: 48px 8px;
-    max-height: calc(100dvh - 16px);
-    overflow-y: auto;
-  }
-  .project-dialog-content p {
-    padding-right: 16px;
-  }
-
-  .project-info-dialog {
-    max-height: none;
-  }
-
-  .project-dialog-content img {
-    display: none;
-  }
-
-  .close-dialog-button {
-    top: 16px;
-  }
-
-  .next-project-button {
-    bottom: 12px;
-  }
-
-  .close-dialog-button,
-  .next-project-button {
-    right: 18px;
-  }
-}
-
 @media (max-width: 850px) {
   h2 {
     font-size: 3rem;
   }
 
-  h4 {
-    font-size: 0.9rem;
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  section {
+    padding: 0 56px;
+  }
+
+  .project-dialog-content {
+    flex-direction: column-reverse;
+    border-radius: 20px;
+    padding: 95px 32px;
+    width: 100%;
+    max-height: min(90dvh, 900px);
+  }
+
+  .project-info-dialog {
+    max-width: 850px;
+  }
+
+  .project-links-container {
+    width: 100%;
+    justify-content: space-evenly;
   }
 
   .aboutme-section-content {
@@ -187,20 +172,13 @@
   }
 }
 
-@media (max-height: 700px) {
-  .info-strip {
-    display: none;
-  }
-
-  .scroll-line,
-  .social-links-line {
-    height: 20px;
-  }
-}
-
-@media (max-width: 850px) {
+@media (max-width: 800px) {
   h2 {
     font-size: 2.5rem;
+  }
+
+  .social-links-line {
+    height: 200px;
   }
 
   .legal-notice-section {
@@ -210,6 +188,34 @@
 }
 
 @media (max-width: 700px) {
+  body {
+    gap: 72px;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  .home-title {
+    font-size: 1.7rem;
+  }
+
+  .scroll-down-container {
+    left: 64px;
+  }
+
+  .social-links-homeview {
+    right: 64px;
+  }
+
+  .aboutme-section-content {
+    gap: 32px;
+  }
+
   .aboutme-image-container {
     justify-content: center;
   }
@@ -223,40 +229,49 @@
     justify-self: unset;
     align-self: unset;
   }
+
+  .project-number {
+    font-size: 1.6rem;
+  }
 }
 
 @media (max-width: 600px) {
   h1 {
+    font-size: 3.5rem;
     line-height: 1;
     letter-spacing: -2%;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.5remrem;
   }
 
-  h4 {
-    font-size: 0.6rem;
+  section {
+    padding: 0 24px;
+  }
+
+  .home-title {
+    font-size: 1.5rem;
   }
 
   .home-section {
     gap: 12px;
   }
 
-  .title-buttons-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-top: 32px;
+  .home-button {
+    padding: 12px 12px;
+  }
+
+  .scroll-down-container {
+    left: 16px;
+  }
+
+  .social-links-homeview {
+    right: 16px;
   }
 
   .project-item {
     flex-direction: column;
-  }
-
-  .project-dialog-content {
-    padding: 64px 12px;
   }
 
   .project-info-dialog {
@@ -277,23 +292,47 @@
   }
 }
 
-@media (max-width: 389px) {
-  h2 {
-    font-size: 1.5rem;
+@media (max-width: 450px) {
+  .scroll-line {
+    height: 150px;
   }
 
-  h4 {
-    font-size: 0.5rem;
+  .social-links-line {
+    height: 150px;
+  }
+
+  .project-dialog-content {
+    padding: 64px 12px;
+  }
+
+  .project-links-container {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 389px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  section {
+    padding: 0 8px;
   }
 
   .title-buttons-container {
-    flex-direction: column;
-    align-items: center;
     gap: 8px;
   }
 
   .home-name {
     white-space: inherit;
+  }
+
+  .scroll-line {
+    height: 120px;
+  }
+
+  .social-links-line {
+    height: 120px;
   }
 
   .text-border-container {
@@ -351,5 +390,91 @@
   .legal-notice-section {
     padding: 96px 8px;
     padding-bottom: 0;
+  }
+}
+
+@media (max-width: 1200px) and (orientation: landscape) {
+  .scroll-line,
+  .social-links-line {
+    height: 180px;
+  }
+}
+
+@media (max-width: 1024px) and (orientation: landscape) {
+  .home-section {
+    gap: 16px;
+  }
+
+  .title-buttons-container {
+    padding-top: 0;
+  }
+
+  .info-strip {
+    padding: 8px 24px;
+    bottom: 16px;
+  }
+
+  .scroll-line,
+  .social-links-line {
+    height: 100px;
+  }
+
+  .aboutme-image-container img {
+    height: min(80vh, 380px);
+    width: auto;
+  }
+
+  .project-dialog-content {
+    padding: 48px 8px;
+    max-height: calc(100dvh - 16px);
+  }
+
+  .project-dialog-content p {
+    padding-right: 16px;
+  }
+
+  .project-info-dialog {
+    max-height: none;
+  }
+
+  .project-dialog-content img {
+    display: none;
+  }
+
+  .close-dialog-button {
+    top: 16px;
+  }
+
+  .next-project-button {
+    bottom: 12px;
+  }
+
+  .close-dialog-button,
+  .next-project-button {
+    right: 18px;
+  }
+}
+
+@media (max-width: 900px) and (orientation: landscape) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .project-info-dialog {
+    max-width: 850px;
+  }
+}
+
+@media (max-width: 750px) and (orientation: landscape) {
+  .scroll-down-container {
+    left: 48px;
+  }
+
+  .social-links-homeview {
+    right: 48px;
   }
 }

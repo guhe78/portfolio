@@ -79,10 +79,14 @@ body {
   hyphens: auto;
 }
 
+main {
+  flex: 1;
+}
+
 section {
   max-width: var(--section-width);
   width: 100%;
-  padding: 0 clamp(16px, calc(-13.714px + 7.619vw), 96px);
+  padding: 0 96px;
 
   display: flex;
   flex-direction: column;
@@ -92,7 +96,7 @@ section {
 
 h1 {
   font-family: "Karla";
-  font-size: clamp(3.875rem, 6.286vw + 2.343rem, 8rem);
+  font-size: 8rem;
   font-weight: 700;
   line-height: 1.1;
   margin: 0;
@@ -107,21 +111,21 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
   font-weight: 600;
   line-height: 1.3;
   margin: 0;
 }
 
 h4 {
-  font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+  font-size: 1.5rem;
   font-weight: 600;
-  line-height: 1.4;
+  line-height: 1.2;
   margin: 0;
 }
 
 p {
-  font-size: clamp(1rem, 0.9678rem + 0.1747vw, 1.125rem);
+  font-size: 1rem;
   line-height: 1.2;
   margin: 0;
 }
