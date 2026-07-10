@@ -15,6 +15,10 @@
   justify-content: center;
 }
 
+.skills-other-highlight {
+  color: var(--color-white-100);
+}
+
 .skillset-container {
   max-width: 520px;
   width: 100%;

@@ -18,7 +18,8 @@
 
   "skills-description": "Here is an overview of the technologies and tools I work with. My main focus is developing modern web applications using HTML, CSS, and JavaScript. At the same time, I continuously expand my knowledge of frameworks such as Angular and other modern web technologies.",
 
-  "skills-other": "Looking for another technology?",
+  "skills-other": "Looking for another",
+  "skills-other-highlight": "technology?",
 
   "skills-other-description": "I learn new technologies quickly and continuously expand my skill set. If your project requires a specific technology or framework, I am always eager to learn and take on new challenges.",
 
