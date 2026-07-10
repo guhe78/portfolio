@@ -27,7 +27,7 @@
 
 .home-title {
   font-family: "Fira Code";
-  font-size: clamp(1.5rem, 1.404vw + 1.237rem, 2.5rem);
+  font-size: 2.5rem;
   text-align: center;
 }
 
@@ -130,7 +130,7 @@
 }
 
 .scroll-down-container {
-  left: clamp(16px, calc(-13.714px + 7.619vw), 96px);
+  left: 96px;
   gap: 24px;
 }
 
@@ -140,7 +140,7 @@
 }
 
 .social-links-homeview {
-  right: clamp(16px, calc(-13.714px + 7.619vw), 96px);
+  right: 96px;
   gap: 12px;
 }
 
