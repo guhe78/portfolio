@@ -102,6 +102,15 @@
 
   pointer-events: none;
   z-index: 3;
+
+  font-family: "Karla";
+  color: var(--color-teal-100);
+}
+
+.info-strip h3 {
+  font-family: "Karla";
+  font-weight: 400;
+  color: var(--color-teal-100);
 }
 
 .info-track {
@@ -164,7 +173,7 @@
 }
 
 .social-links-container a {
-  color: var(--color-teal-100);
+  color: var(--color-white-100);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -205,7 +214,7 @@
 }
 
 .scroll-down-arrow svg {
-  color: var(--color-teal-100);
+  color: var(--color-white-100);
   display: block;
   animation: scrollArrowDownBounce 1.4s ease-in-out infinite;
   will-change: transform;
