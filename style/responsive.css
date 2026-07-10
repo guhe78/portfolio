@@ -235,6 +235,12 @@
   }
 }
 
+@media (max-width: 650px) {
+  .recommendation-card {
+    max-width: 90%;
+  }
+}
+
 @media (max-width: 600px) {
   h1 {
     font-size: 3.5rem;
@@ -276,10 +282,6 @@
 
   .project-info-dialog {
     gap: 18px;
-  }
-
-  .recommendation-card {
-    max-width: 90%;
   }
 
   .left-arrow-up {
