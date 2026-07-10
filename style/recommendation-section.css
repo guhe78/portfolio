@@ -75,6 +75,10 @@
   transform: translateX(-5px);
 }
 
+.recommendation-button-text {
+  color: var(--color-white-100);
+}
+
 .recommendation-dots-container {
   display: flex;
   justify-content: center;

@@ -42,11 +42,11 @@
   display: flex;
   justify-content: space-between;
   padding: 40px 32px;
-  border-top: 1px solid var(--color-light-gray);
+  border-top: 1px solid var(--color-teal-100);
 }
 
 .project-list .project-item:last-child {
-  border-bottom: 1px solid var(--color-light-gray);
+  border-bottom: 1px solid var(--color-teal-100);
 }
 
 .project-item:hover {
@@ -204,6 +204,7 @@
 .project-link-button svg {
   width: 11px;
   height: 11px;
+  color: var(--color-teal-100);
   transition: transform 0.1s ease-in;
 }
 

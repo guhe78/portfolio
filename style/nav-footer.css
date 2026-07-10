@@ -37,7 +37,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid var(--color-white-100);
+  border: 1px solid var(--color-teal-100);
   border-radius: 100px;
   width: 84px;
   height: 28px;
@@ -58,7 +58,7 @@
 }
 
 .input-language-toggle:checked + .switch::after {
-  transform: translateX(42px);
+  transform: translateX(40px);
 }
 
 .switch.initializing::after {
@@ -83,6 +83,7 @@
 .en {
   width: 20px;
   text-align: center;
+  color: var(--color-teal-50);
 }
 
 .de {
