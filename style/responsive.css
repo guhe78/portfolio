@@ -53,6 +53,19 @@
     padding: 0 72px;
   }
 
+  .aboutme-image-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    background: repeating-linear-gradient(
+      45deg,
+      var(--color-white-100) 0 1.5px,
+      transparent 1.5px 15px
+    );
+  }
+
   .project-list {
     width: clamp(280px, 90vw, 720px);
   }
@@ -238,6 +251,10 @@
 @media (max-width: 650px) {
   .recommendation-card {
     max-width: 90%;
+  }
+
+  .aboutme-image-wrapper:hover::after {
+    opacity: 0;
   }
 }
 
