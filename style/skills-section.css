@@ -50,7 +50,7 @@
   transition: transform 0.3s ease;
 }
 
-.skill-item svg:hover {
+.skill-item:hover svg {
   scale: 1.1;
 }
 
