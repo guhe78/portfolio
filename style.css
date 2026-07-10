@@ -74,11 +74,14 @@ body {
   align-items: center;
   font-family: "Fira Code";
 
-  overflow-x: hidden;
-
   gap: 96px;
 
   hyphens: auto;
+}
+
+html,
+body {
+  overflow-x: clip;
 }
 
 main {

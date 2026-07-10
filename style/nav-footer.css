@@ -52,7 +52,7 @@
   position: absolute;
   top: 1px;
   left: 1px;
-  background: var(--color-white-70);
+  background: var(--color-white-50);
   border-radius: 80px;
   transition: transform 0.4s ease;
 }
@@ -83,11 +83,12 @@
 .en {
   width: 20px;
   text-align: center;
-  color: var(--color-teal-50);
+  color: var(--color-white-100);
 }
 
 .de {
   font-weight: 700;
+  color: var(--color-white-100);
 }
 
 .input-language-toggle:checked + .switch .en {
