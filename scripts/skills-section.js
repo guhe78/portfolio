@@ -7,6 +7,10 @@ const programmingLanguages = [
   { name: "Growth mindset", icon: "growth_mindset" },
 ];
 
+/**
+ * Initializes the skill badge container by creating and appending skill items for each programming language defined in the programmingLanguages array. Each skill item consists of an icon and a name, and the last item includes a hover effect that displays additional skills.
+ * @returns {void}
+ */
 function initSkillBadgeContainer() {
   const container = document.getElementById("skill-badges-container");
 

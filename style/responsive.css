@@ -53,6 +53,10 @@
     padding: 0 72px;
   }
 
+  .home-button .home-button-text {
+    animation: homeButtonSwap 4s ease-in-out infinite;
+  }
+
   .aboutme-image-wrapper::after {
     content: "";
     position: absolute;

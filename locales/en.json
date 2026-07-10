@@ -1,8 +1,20 @@
 {
-  "about-me": "About me",
-  "skills": "Skills",
-  "projects": "Projects",
-  "contact": "Contact",
+  "about-me": {
+    "text": "About me",
+    "link": "/index.html#aboutme"
+  },
+  "skills": {
+    "text": "Skills",
+    "link": "/index.html#skills"
+  },
+  "projects": {
+    "text": "Projects",
+    "link": "/index.html#projects"
+  },
+  "contact": {
+    "text": "Contact",
+    "link": "/index.html#contact"
+  },
 
   "home-title": "Frontend Developer",
   "home-name": "Günter Heldt",
