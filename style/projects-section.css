@@ -90,6 +90,14 @@
 }
 
 .project-2 {
+  align-self: center;
+}
+
+.project-3 {
+  align-self: center;
+}
+
+.project-4 {
   align-self: flex-end;
 }
 

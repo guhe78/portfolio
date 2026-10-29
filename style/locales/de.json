@@ -1,0 +1,90 @@
+{
+  "about-me": {
+    "text": "Über mich",
+    "link": "/index.html#aboutme"
+  },
+  "skills": {
+    "text": "Fähigkeiten",
+    "link": "/index.html#skills"
+  },
+  "projects": {
+    "text": "Projekte",
+    "link": "/index.html#projects"
+  },
+  "contact": {
+    "text": "Kontakt",
+    "link": "/index.html#contact"
+  },
+
+  "home-title": "Frontend-Entwickler",
+  "home-name": "Günter Heldt",
+
+  "about-me-title": "Wer ich bin",
+  "about-me-description": "Ich bin Frontend-Entwickler mit Begeisterung für moderne Webentwicklung und benutzerfreundliche Oberflächen. Mein Schwerpunkt liegt auf der Entwicklung responsiver Webanwendungen mit HTML, CSS und JavaScript. Nach meiner Ausbildung zum Fachinformatiker für Anwendungsentwicklung erweitere ich mein Wissen kontinuierlich durch eigene Projekte und neue Technologien. Ich arbeite sorgfältig, lerne gerne Neues und entwickle meine Fähigkeiten stetig weiter. Aktuell vertiefe ich meine Kenntnisse im Rahmen einer Frontend-Weiterbildung bei der Developer Akademie und arbeite intensiv mit modernen Frameworks wie Angular.",
+
+  "about-me-location-text": "Im Raum Ostallgäu oder remote verfügbar",
+  "about-me-cognition-text": "Ich lerne gerne Neues und stelle mich motiviert neuen Herausforderungen.",
+  "about-me-releases-text": "Ich gehe Herausforderungen kreativ und lösungsorientiert an – sowohl selbstständig als auch im Team.",
+
+  "technologies": "Technologien",
+
+  "skills-description": "Hier finden Sie einen Überblick über die Technologien und Werkzeuge, mit denen ich arbeite. Mein Schwerpunkt liegt auf der Entwicklung moderner Webanwendungen mit HTML, CSS und JavaScript. Gleichzeitig erweitere ich kontinuierlich mein Wissen in Frameworks wie Angular sowie weiteren modernen Webtechnologien.",
+
+  "skills-other": "Fehlt eine",
+  "skills-other-highlight": "Technologie?",
+
+  "skills-other-description": "Ich eigne mir neue Technologien schnell an und erweitere mein Wissen kontinuierlich. Wenn Ihr Projekt bestimmte Technologien oder Frameworks erfordert, freue ich mich darauf, mich einzuarbeiten und neue Herausforderungen anzunehmen.",
+
+  "extra-skills-hint-text": "Interessen",
+
+  "projects-intro": "Portfolio",
+  "projects-title": "Ausgewählte Projekte",
+
+  "projects-description": "Hier finden Sie eine Auswahl von Projekten, die ich im Rahmen meiner Weiterbildung an der Developer Akademie entwickelt habe. Jedes Projekt hat dazu beigetragen, meine Kenntnisse in der Frontend-Entwicklung weiter auszubauen.",
+
+  "next-project-button-text": "Nächstes Projekt",
+
+  "recommendation-title": "Feedback von Kollegen",
+
+  "recommendation-description-1": "Die Zusammenarbeit mit ihm war stets angenehm. Er bringt sich aktiv ins Team ein, hört aufmerksam zu und entwickelt gemeinsam mit anderen passende Lösungen.",
+  "recommendation-description-2": "Besonders beeindruckt hat mich seine sorgfältige und strukturierte Arbeitsweise.",
+  "recommendation-description-3": "Er zeichnet sich durch eine hohe Motivation, schnelle Auffassungsgabe und große Lernbereitschaft aus.",
+
+  "contact-intro": "Kontakt",
+  "contact-write-me": "Schreiben Sie mir",
+
+  "contact-description": "Haben Sie Fragen oder Interesse an einer Zusammenarbeit? Ich freue mich auf Ihre Nachricht und melde mich schnellstmöglich bei Ihnen zurück.",
+
+  "contact-name": "Ihr Name?",
+  "contact-email": "Ihre E-Mail?",
+  "contact-message": "Wie kann ich Ihnen helfen?",
+
+  "contact-name-placeholder": "Ihr Name",
+  "contact-email-placeholder": "name@email.de",
+  "contact-message-placeholder": "Ihre Nachricht..",
+
+  "contact-privacy-prefix": "Ich habe die ",
+  "contact-privacy-link": "Datenschutzerklärung",
+  "contact-privacy-suffix": " gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+
+  "contact-send": "Hallo sagen",
+  "contact-success": "Vielen Dank für Ihre Nachricht! Ich werde mich schnellstmöglich bei Ihnen melden.",
+
+  "error-email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+  "error-name": "Bitte geben Sie Ihren Namen ein.",
+  "error-message": "Bitte geben Sie eine gültige Nachricht ein.",
+  "error-privacy": "Bitte stimmen Sie der Datenschutzrichtlinie zu.",
+
+  "footer-title": "Frontend-Entwickler",
+
+  "footer-github": "GitHub",
+  "footer-legal": {
+    "text": "Impressum",
+    "link": "/pages/impressum.html"
+  },
+  "footer-privacy": {
+    "text": "Datenschutzerklärung",
+    "link": "/pages/datenschutz.html"
+  },
+  "footer-email": "Email"
+}

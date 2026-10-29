@@ -25,6 +25,31 @@ const projects = [
     github: "https://github.com/guhe78/sharkie",
     id: "project-2",
   },
+  {
+    name: "Memory",
+    descriptionGerman:
+      "Das klassische Memory-Spiel. Man muss Paare von Karten finden, indem man sie aufdeckt. Das Spiel endet, wenn alle Paare gefunden wurden.",
+    descriptionEnglish:
+      "This is the classic Memory game. You have to find pairs of cards by flipping them over. The game ends when all pairs have been found.",
+    tech: ["HTML", "CSS", "TypeScript"],
+    techIcons: ["html", "css", "typescript"],
+    image: "assets/images/memory.png",
+    link: "https://memory.guenter-heldt.de/",
+    github: "https://github.com/guhe78/memory",
+    id: "project-3",
+  },
+  {
+    name: "Poll App",
+    descriptionGerman:
+      "Dies ist eine kleine Umfrage-App. Man kann Fragen erstellen und Antworten sammeln.",
+    descriptionEnglish: "This is a small survey app. You can create questions and collect answers.",
+    tech: ["HTML", "CSS", "TypeScript", "Angular", "Supabase"],
+    techIcons: ["html", "css", "typescript", "angular", "supabase"],
+    image: "assets/images/poll.png",
+    link: "https://poll-app.guenter-heldt.de/",
+    github: "https://github.com/guhe78/poll_app",
+    id: "project-4",
+  },
 ];
 
 const dialogContent = document.getElementById("dialog");

@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/home-section.css" />
+    <link rel="stylesheet" href="style/aboutme-section.css" />
+    <link rel="stylesheet" href="style/skills-section.css" />
+    <link rel="stylesheet" href="style/projects-section.css" />
+    <link rel="stylesheet" href="style/contact-section.css" />
+    <link rel="stylesheet" href="style/recommendation-section.css" />
+    <link rel="stylesheet" href="style/dialog.css" />
+    <link rel="stylesheet" href="style/imprint-privacypolicy.css" />
+    <link rel="stylesheet" href="style/nav-footer.css" />
+    <link rel="stylesheet" href="style/responsive.css" />
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="assets/favicon/android-icon-192x192.png"
+    />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png" />
+    <link rel="manifest" href="assets/favicon/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/favicon/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Günter Heldt</title>
+    <script src="assets/icons/svg-library.js" defer></script>
+    <script src="scripts/home-section.js" defer></script>
+    <script src="scripts/aboutme-section.js" defer></script>
+    <script src="scripts/skills-section.js" defer></script>
+    <script src="scripts/projects-section.js" defer></script>
+    <script src="scripts/recommendation-section.js" defer></script>
+    <script src="scripts/contact-section.js" defer></script>
+    <script src="scripts/i18n.js" defer></script>
+    <script src="scripts/dialog.js" defer></script>
+    <script src="scripts/templates/project-template.js" defer></script>
+    <script src="scripts/templates/skills-template.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body onload="init()">
+    <div class="navbar-background">
+      <nav class="navbar">
+        <div class="navbar-left" id="navbar-left">
+          <input type="checkbox" id="toggle-language" class="input-language-toggle" />
+          <label class="switch" id="language-switch" for="toggle-language">
+            <span class="de">DE</span>
+            <span class="en">EN</span>
+          </label>
+          <ul class="nav-links" id="nav-links">
+            <li><a data-key="about-me">Über mich</a></li>
+            <li><a data-key="skills">Fähigkeiten</a></li>
+            <li><a data-key="projects">Projekte</a></li>
+            <li><a data-key="contact">Kontakt</a></li>
+          </ul>
+        </div>
+        <a href="/index.html" class="navbar-name-link">
+          <span class="navbar-firstname">Günter</span>
+          <span class="navbar-lastname">Heldt</span>
+        </a>
+        <button class="menu-toggle-button" id="menu-toggle" aria-label="Toggle Menu">
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+          <span class="menu-icon"></span>
+        </button>
+      </nav>
+    </div>
+    <div class="home-section-background">
+      <section id="home" class="home-section">
+        <p class="home-title" data-key="home-title">Frontend Entwickler</p>
+        <h1 class="home-name" data-key="home-name">Günter Heldt</h1>
+        <div class="title-buttons-container">
+          <a class="home-button button" href="#projects">
+            <span class="home-button-text" data-text="Projekte" data-key="projects"></span>
+          </a>
+          <a class="home-button button" href="#contact">
+            <span class="home-button-text" data-text="Kontakt" data-key="contact"></span>
+          </a>
+        </div>
+        <div class="info-strip">
+          <div class="info-track"></div>
+        </div>
+        <div class="scroll-down-container">
+          <div class="scroll-down-arrow" id="scroll-down-arrow"></div>
+          <div class="scroll-line" id="scroll-down-line"></div>
+        </div>
+        <div class="social-links-homeview">
+          <div class="social-links-container" id="social-links-container">
+            <a id="email-link" class="email-link" href="mailto: mail@guenter-heldt.de"></a>
+          </div>
+          <div class="social-links-line" id="social-links-line"></div>
+        </div>
+      </section>
+    </div>
+    <section id="aboutme">
+      <div class="aboutme-section-content">
+        <div class="aboutme-image-container">
+          <div class="aboutme-image-wrapper">
+            <img src="assets/images/profile/profile.jpg" alt="Profilbild" class="aboutme-image" />
+          </div>
+        </div>
+        <div class="aboutme-wrapper">
+          <h4 class="aboutme-text-intro" data-key="about-me">Über mich</h4>
+          <div class="aboutme-text-container text-border-container">
+            <h2 data-key="about-me-title">Wer bin ich</h2>
+            <p data-key="about-me-description"></p>
+            <ul class="aboutme-bulletpoints-list">
+              <li>
+                <div id="location-icon"></div>
+                <p class="aboutme-bulletpoints-text" data-key="about-me-location-text"></p>
+              </li>
+              <li>
+                <div id="cognition-icon"></div>
+                <p class="aboutme-bulletpoints-text" data-key="about-me-cognition-text"></p>
+              </li>
+              <li>
+                <div id="releases-icon"></div>
+                <p class="aboutme-bulletpoints-text" data-key="about-me-releases-text"></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="skills-section-background">
+      <section id="skills">
+        <h4 class="section-headline" data-key="technologies">Technologien</h4>
+        <div class="skills-section-content">
+          <div class="skillset-container text-border-container">
+            <h2 data-key="skills"></h2>
+            <p data-key="skills-description"></p>
+            <h3>
+              <span data-key="skills-other"></span>
+              <span class="skills-other-highlight" data-key="skills-other-highlight"></span>
+            </h3>
+            <p data-key="skills-other-description"></p>
+          </div>
+          <div class="skill-badges-container" id="skill-badges-container"></div>
+        </div>
+      </section>
+    </div>
+    <section id="projects">
+      <h4 class="section-headline" data-key="projects-intro">Portfolio</h4>
+      <div class="project-section-content">
+        <div class="projects-head">
+          <h2 data-key="projects-title">Ausgewählte Projekte</h2>
+          <p class="project-description" data-key="projects-description">
+            Entdecken Sie hier eine Auswahl meiner Arbeiten die ich während meiner Fortbildung bei
+            der Developer Akademie erstellt habe.
+          </p>
+        </div>
+        <div class="projects-list-container">
+          <ul id="project-list" class="project-list">
+            <li id="project-1" class="project-item"></li>
+            <li id="project-2" class="project-item"></li>
+          </ul>
+          <div id="project-info-container" class="project-info-container"></div>
+        </div>
+      </div>
+    </section>
+    <section class="recommendation-section" id="recommendation">
+      <div class="recommendation-section-content">
+        <h3 class="recommendation-title" data-key="recommendation-title">
+          Was meine Kollegen über mich sagen
+        </h3>
+        <div class="recommendation-slider-container" id="recommendation-slider-container">
+          <div class="card-slider-container" id="card-slider-container">
+            <div class="recommendation-card">
+              <div class="quote-icon"></div>
+              <p data-key="recommendation-description-1"></p>
+              <div class="recommendation-author" data-key="recommendation-author-1">
+                <div class="line"></div>
+                <span class="colleagues">M. M.</span>
+              </div>
+            </div>
+            <div class="recommendation-card">
+              <div class="quote-icon"></div>
+              <p data-key="recommendation-description-2"></p>
+              <div class="recommendation-author" data-key="recommendation-author-2">
+                <div class="line"></div>
+                <span class="colleagues">E. M.</span>
+              </div>
+            </div>
+            <div class="recommendation-card">
+              <div class="quote-icon"></div>
+              <p data-key="recommendation-description-3"></p>
+              <div class="recommendation-author" data-key="recommendation-author-3">
+                <div class="line"></div>
+                <span class="colleagues">P. H.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recommendation-controls">
+          <button class="recommendation-button-left button" id="prev-recommendation"></button>
+          <div class="recommendation-dots-container" id="recommendation-dots-container"></div>
+          <button class="recommendation-button-right button" id="next-recommendation"></button>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <h4 class="content-headline" data-key="contact-intro">Kontaktieren Sie mich</h4>
+      <div class="contact-section-content">
+        <div class="contact-left-part">
+          <h2 data-key="contact-write-me">Schreiben Sie mir</h2>
+          <p data-key="contact-description"></p>
+        </div>
+        <div class="contact-right-part">
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name" data-key="contact-name">Ihr Name?</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                data-placeholder-key="contact-name-placeholder"
+                required
+              />
+              <small class="validation-message" id="name-validation"></small>
+            </div>
+            <div class="form-group">
+              <label for="email" data-key="contact-email">Ihre E-Mail?</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                data-placeholder-key="contact-email-placeholder"
+                required
+              />
+              <small
+                class="validation-message"
+                id="email-validation"
+                data-key="contact-email-validation"
+              ></small>
+            </div>
+            <div class="form-group">
+              <label for="message" data-key="contact-message">Wie kann ich Ihnen helfen?</label>
+              <textarea
+                id="message"
+                name="message"
+                data-placeholder-key="contact-message-placeholder"
+                required
+              ></textarea>
+              <small
+                class="validation-message"
+                id="message-validation"
+                data-key="contact-message-validation"
+              ></small>
+              <small class="char-count"><span id="char-count">0</span>/200</small>
+            </div>
+            <div class="form-group">
+              <label for="privacy">
+                <input type="checkbox" id="privacy" name="privacy" required />
+                <span class="contact-privacy-highlight" data-key="contact-privacy-prefix"></span>
+                <a
+                  class="imprint-privacy-policy-link"
+                  role="button"
+                  tabindex="0"
+                  data-key="footer-privacy"
+                >
+                </a>
+                <span class="contact-privacy-highlight" data-key="contact-privacy-suffix"></span>
+              </label>
+              <small
+                class="validation-message"
+                id="privacy-validation"
+                data-key="contact-privacy-validation"
+              ></small>
+            </div>
+            <button
+              class="send-button button"
+              id="send-button"
+              type="submit"
+              data-key="contact-send"
+              disabled
+            ></button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-info">
+        <a href="#home" class="navbar-name-link">
+          <span class="navbar-firstname">Günter</span>
+          <span class="navbar-lastname">Heldt</span>
+        </a>
+        <p class="footer-title" data-key="footer-title">Webentwickler</p>
+        <p class="footer-location">Ostallgäu, Deutschland</p>
+      </div>
+      <div class="footer-middle">
+        <a class="footer-legal-privacy" id="footer-impressum" data-key="footer-legal"></a>
+        <a class="footer-legal-privacy" id="footer-privacy-policy" data-key="footer-privacy"></a>
+        <p class="footer-copyright">&copy; Günter Heldt 2026</p>
+      </div>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/guhe78" target="_blank" data-key="footer-github">GitHub</a>
+        </li>
+        <li><a href="mailto:mail@guenter-heldt.de" data-key="footer-email">Email</a></li>
+      </ul>
+    </footer>
+    <dialog id="dialog"></dialog>
+  </body>
+</html>

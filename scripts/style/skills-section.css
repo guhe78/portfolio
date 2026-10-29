@@ -1,0 +1,131 @@
+.skills-section-background {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background: radial-gradient(
+    22.43% 43.85% at 1.22% 52.45%,
+    var(--color-dark-green-30) 0%,
+    var(--color-dark-100) 100%
+  );
+}
+
+.skills-section-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills-other-highlight {
+  color: var(--color-white-100);
+}
+
+.skillset-container {
+  max-width: 520px;
+  width: 100%;
+}
+
+.skill-badges-container {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+  gap: clamp(40px, calc(28.114px + 3.048vw), 72px);
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  max-width: 50%;
+  width: 104px;
+  height: 116px;
+  overflow: visible;
+
+  padding: 10px 14px;
+}
+
+.skill-item svg {
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover svg {
+  scale: 1.1;
+}
+
+.skill-item p {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.skill-icon {
+  position: relative;
+  width: 60px;
+  height: 60px;
+}
+
+.skill-item-growth svg {
+  color: var(--color-teal-100);
+}
+
+.skill-icon-hover {
+  position: absolute;
+  top: -80px;
+  left: -5px;
+
+  width: 120px;
+  height: 100px;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+
+  pointer-events: none;
+}
+
+.skill-item-growth:hover .skill-icon-hover {
+  opacity: 1;
+}
+
+.skill-icon-hover > svg {
+  position: absolute;
+  inset: 0;
+  width: 120px;
+  height: 100px;
+}
+
+.skill-icon-hover-content {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 5px 12px 20px;
+
+  z-index: 1;
+}
+
+.skill-icon-hover-content p {
+  margin: 0;
+  font-family: "Karla";
+  font-size: 14px;
+  line-height: 1.2;
+  color: var(--color-dark-100);
+  text-align: center;
+}
+
+.skill-icon-hover-skills {
+  margin-top: 8px;
+
+  display: flex;
+  gap: 10px;
+}
+
+.skill-icon-hover-skills svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-dark-100);
+}

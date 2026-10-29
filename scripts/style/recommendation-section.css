@@ -1,0 +1,171 @@
+.recommendation-section {
+  padding: 0 0;
+}
+
+.recommendation-section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(16px, calc(-13.714px + 7.619vw), 96px) 0;
+  gap: 48px;
+}
+
+.recommendation-title {
+  text-align: center;
+}
+
+.recommendation-author {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.line {
+  flex-grow: 1;
+  height: 2px;
+  background-color: var(--color-white-100);
+}
+
+.colleagues {
+  white-space: nowrap;
+}
+
+.quote-icon {
+  display: none;
+  position: absolute;
+
+  top: -10px;
+  left: -45px;
+  z-index: 9999;
+}
+
+.quote-icon svg {
+  color: var(--color-white-100);
+  width: 89px;
+  height: 64px;
+}
+
+.main-card .quote-icon {
+  display: block;
+}
+
+.recommendation-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.recommendation-button-left,
+.recommendation-button-right {
+  gap: 8px;
+  border: none;
+  width: 40px;
+  height: 40px;
+}
+
+.recommendation-button-left:hover,
+.recommendation-button-right:hover {
+  background-color: transparent;
+  transform: translateX(5px);
+}
+
+.recommendation-button-left:hover {
+  transform: translateX(-5px);
+}
+
+.recommendation-button-text {
+  color: var(--color-white-100);
+}
+
+.recommendation-dots-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.recommendation-dot.active {
+  color: var(--color-teal-100);
+}
+
+.recommendation-slider-container {
+  width: 100%;
+  overflow-y: visible;
+  overflow-x: hidden;
+  position: relative;
+  padding: 10px 0;
+}
+
+.recommendation-slider-container::before,
+.recommendation-slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: clamp(0px, calc(-111.429px + 28.571vw), 300px);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.recommendation-slider-container::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    var(--color-dark-100) 0%,
+    var(--color-dark-35) 70%,
+    transparent 100%
+  );
+}
+
+.recommendation-slider-container::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    var(--color-dark-100) 0%,
+    var(--color-dark-35) 70%,
+    transparent 100%
+  );
+}
+
+.card-slider-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: clamp(8px, calc(-6.857px + 3.81vw), 48px);
+
+  transition: transform 0.5s ease;
+}
+
+.recommendation-card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: min(100%, 632px);
+  height: 274px;
+
+  padding: 48px 40px;
+
+  border-radius: 32px;
+  border: 1px solid var(--color-teal-100);
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.main-card {
+  background-color: var(--color-teal-30);
+  transform: scale(1);
+}
+
+.side-card {
+  background-color: var(--color-teal-10);
+  transform: scale(0.9);
+}
+
+.card-slider-container.no-transition {
+  transition: none;
+}

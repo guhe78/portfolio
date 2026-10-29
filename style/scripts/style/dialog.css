@@ -1,0 +1,18 @@
+dialog {
+  margin: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  color: white;
+
+  max-height: 100dvh;
+  overflow: hidden;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.no_scroll {
+  overflow: hidden;
+}

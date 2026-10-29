@@ -1,0 +1,254 @@
+.home-section-background {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    55.22deg,
+    var(--color-dark-100) 36.26%,
+    var(--color-dark-green) 93.28%
+  );
+
+  position: relative;
+  z-index: 1;
+  overflow-x: clip;
+}
+
+.home-section {
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  overflow-x: clip;
+}
+
+.home-title {
+  font-family: "Fira Code";
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--color-light-gray);
+}
+
+.home-name {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.title-buttons-container {
+  display: flex;
+  max-width: 363px;
+  width: 100%;
+  gap: 48px;
+  padding-top: 40px;
+}
+
+.home-button {
+  padding: 12px 24px;
+  border: 1px solid var(--color-white-100);
+  border-radius: 24px;
+  width: min(172px, 100%);
+  overflow: hidden;
+}
+
+.home-button:hover {
+  color: var(--color-white-50);
+  border: 1px solid var(--color-white-50);
+}
+
+.home-button-text {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.home-button-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 700%;
+  top: 0;
+  white-space: nowrap;
+}
+
+.home-button:hover .home-button-text {
+  animation: homeButtonSwap 2s ease-in-out infinite;
+}
+
+@keyframes homeButtonSwap {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-700%);
+  }
+}
+
+.info-strip {
+  transform: rotate(-3deg);
+  position: absolute;
+  bottom: 40px;
+
+  padding: 12px 32px;
+
+  display: flex;
+  align-items: center;
+  background-color: var(--color-white-12);
+  backdrop-filter: blur(5.3px);
+
+  overflow: hidden;
+  width: 100%;
+
+  pointer-events: none;
+  z-index: 3;
+
+  font-family: "Karla";
+  color: var(--color-teal-100);
+}
+
+.info-strip h3 {
+  font-family: "Karla";
+  font-weight: 400;
+  color: var(--color-teal-100);
+}
+
+.info-track {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+
+.info-track svg {
+  flex-shrink: 0;
+  display: block;
+}
+
+.info-item {
+  flex-shrink: 0;
+}
+
+.scroll-down-container,
+.social-links-homeview {
+  position: absolute;
+  bottom: 0;
+  color: var(--color-teal-100);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.scroll-down-container {
+  left: 96px;
+  gap: 24px;
+}
+
+.scroll-down-arrow:hover {
+  cursor: pointer;
+  background-color: var(--color-white-50);
+}
+
+.social-links-homeview {
+  right: 96px;
+  gap: 12px;
+}
+
+.email-text {
+  writing-mode: sideways-lr;
+}
+
+.email-symbol {
+  width: 20px;
+  height: 20px;
+}
+
+.social-links-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  transform: none;
+}
+
+.social-links-container a {
+  color: var(--color-white-100);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+
+  position: relative;
+}
+
+.social-links-container a:hover {
+  cursor: pointer;
+  color: var(--color-white-100);
+}
+
+.social-links-container a::after {
+  font-size: 24px;
+  content: "•";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.social-links-container a:hover::after {
+  opacity: 1;
+}
+
+.scroll-down-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 48px;
+  border: 1px solid var(--color-teal-100);
+  border-radius: 100px;
+}
+
+.scroll-down-arrow svg {
+  color: var(--color-white-100);
+  display: block;
+  animation: scrollArrowDownBounce 1.4s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes scrollArrowDownBounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-line {
+  height: clamp(224px, calc(218.057px + 1.524vw), 240px);
+}
+
+.social-links-line {
+  height: clamp(112px, calc(84.514px + 7.048vw), 186px);
+}
+
+.scroll-line,
+.social-links-line {
+  border: 1px solid var(--color-teal-100);
+}
+
+.make-visible {
+  display: flex;
+}
+
+.make-not-visible {
+  display: none;
+}

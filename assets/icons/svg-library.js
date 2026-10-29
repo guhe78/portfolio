@@ -179,4 +179,33 @@ const icons = {
     </defs>
     </svg>
   `,
+
+  supabase: (size = 60) => `
+    <svg width="${size}" height="${size}" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_130405_851)">
+<g clip-path="url(#clip1_130405_851)">
+<path d="M34.5043 59.003C32.9712 60.9327 29.8621 59.8767 29.8246 57.4109L29.2832 21.3616H53.5234C57.9136 21.3616 60.3633 26.4326 57.6349 29.8687L34.5043 59.003Z" fill="url(#paint0_linear_130405_851)"/>
+<path d="M34.5043 59.003C32.9712 60.9327 29.8621 59.8767 29.8246 57.4109L29.2832 21.3616H53.5234C57.9136 21.3616 60.3633 26.4326 57.6349 29.8687L34.5043 59.003Z" fill="url(#paint1_linear_130405_851)" fill-opacity="0.2"/>
+<path d="M24.6462 0.997011C26.1793 -0.932767 29.2884 0.12325 29.3259 2.58908L29.5618 38.6384H5.62717C1.23692 38.6384 -1.21282 33.5674 1.51567 30.1313L24.6462 0.997011Z" fill="currentColor"/>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_130405_851" x1="27.3427" y1="34.0016" x2="48.8865" y2="43.034" gradientUnits="userSpaceOnUse">
+<stop stop-color="#CCCECE"/>
+<stop offset="1" stop-color="white"/>
+</linearGradient>
+<linearGradient id="paint1_linear_130405_851" x1="28.3719" y1="11.6912" x2="38.1977" y2="30.1849" gradientUnits="userSpaceOnUse">
+<stop/>
+<stop offset="1" stop-opacity="0"/>
+</linearGradient>
+<clipPath id="clip0_130405_851">
+<rect width="60" height="60" fill="white"/>
+</clipPath>
+<clipPath id="clip1_130405_851">
+<rect width="58.4187" height="60" fill="white" transform="translate(0.368896)"/>
+</clipPath>
+</defs>
+</svg>
+
+  `,
 };
